@@ -1,0 +1,36 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+<section class="hire-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="hire-content">
+                    <p>Get a Checkup From Doctors</p>
+                    <h2>Make An Online Appointment?</h2>
+                    <h5>Get appointments of specialist doctors:  +707 355-633-755</h5>
+                    <a class="default-btn" href="#0">Book Appointment <span></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

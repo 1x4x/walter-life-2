@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            color: #ffffff;
+            background-color: #000000;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .box {
+            width: 500px;
+            height: auto;
+            border: 3px solid #2f2d2d;
+            display: inline-block;
+            margin: 10px;
+            vertical-align: top;
+            border-radius: 5px;
+        }
+
+        .boxheading {
+            color: #ff00ff;
+            background-color: #2f2d2d;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

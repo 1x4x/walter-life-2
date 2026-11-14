@@ -1,0 +1,114 @@
+.breads {
+  margin-top: 90px;
+  padding: 100px 0;
+  background-color: #fafafa;
+}
+
+.breads-dark {
+  background-color: #020202;
+}
+
+.breadcrumb {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.breadcrumb ul {
+  margin-bottom: 0;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.breadcrumb ul li a {
+  color: #999;
+}
+
+.breadcrumb ul li:before {
+  font-size: 10px;
+}
+
+.breadcrumb h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.breadcrumb.bread-center {
+  display: block;
+  text-align: center;
+}
+
+.breadcrumb.bread-center h3 {
+  margin-bottom: 12px;
+  font-size: 26px;
+}
+
+.breadcrumb.bread-contrast * {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.breadcrumb.bread-contrast li.active {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 767px) {
+  .breadcrumb {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .breadcrumb h3 {
+    margin-bottom: 12px;
+  }
+}
+
+.breads .breadcrumb ul {
+  list-style: none;
+}
+
+.breads .breadcrumb ul li {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.breads .breadcrumb ul li a {
+  color: #ffffff;
+}
+
+.breads {
+  position: relative;
+}
+
+.breads::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.breads .breadcrumb ul > li + li::before {
+  padding: 0 5px;
+  color: #ffffff;
+  content: "/\00a0";
+}
+
+.breadcrumb {
+  position: relative;
+  z-index: 2;
+}
+

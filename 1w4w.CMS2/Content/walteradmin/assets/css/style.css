@@ -1,0 +1,56 @@
+﻿.form-control {
+    color: #479825 !important;
+    /*color: #555555 !important;*/
+    background-color: #333333 !important;
+    border: 1px solid #4e4e4e !important;
+}
+
+.input-group-text {
+    border: 1px solid #4e4e4e !important;
+}
+
+
+
+.form-check-input, .form-check-input:active, .form-check-input:hover {
+    background-color: #333333 !important;
+    border: 2px solid rgba(111, 111, 111, 0.50);
+    border-bottom-color: rgba(111, 111, 111, 0.50);
+    border-top-color: rgba(111, 111, 111, 0.50);
+    border-left-color: rgba(111, 111, 111, 0.50);
+    border-right-color: rgba(111, 111, 111, 0.50);
+    box-shadow: 0 0 0 .25rem rgba(111, 111, 111, .25);
+}
+
+.form-switch .form-check-input {
+    /*--bs-form-switch-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba%280, 0, 0, 0.25%29'/%3e%3c/svg%3e);*/
+    width: 2em;
+    margin-left: -2.5em;
+    background-image: var(--bs-form-switch-bg);
+    background-position: left center;
+    border-radius: 2em;
+    transition: background-position .15s ease-in-out;
+}
+
+.form-check-input:focus {
+    border-color: #949ca8;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(111, 111, 111, .25);
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: .25em;
+}
+
+.form-check .form-check-input {
+    float: left;
+    margin-left: -1.5em;
+}
+
+.form-label {
+    color: #479825;
+}
+
+.card-body {
+    outline: 3px solid #479825;
+    border-radius: 10px;
+}

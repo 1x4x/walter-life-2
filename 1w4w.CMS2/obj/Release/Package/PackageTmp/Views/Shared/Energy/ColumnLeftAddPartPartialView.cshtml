@@ -1,0 +1,225 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    string websiteid = System.Web.Configuration.WebConfigurationManager.AppSettings["websiteid"];
+    string baseurl = "/content/energy";
+    //var pageid = Request.QueryString["pageid"];
+    string pageid = (string)Url.RequestContext.RouteData.Values["id"];
+    if (string.IsNullOrEmpty(pageid))
+    {
+        pageid = "1"; // starpage
+    }
+
+
+    var usermodel = Model.usermodel as _1w4w.CMS.Models.UserModel;
+    var accesslevel = "";
+    if (usermodel != null)
+    {
+        accesslevel = usermodel.accesslevel ?? "";
+    }
+    if (pageid == null) { pageid = "1"; }
+    if (pageid == "undefined") { pageid = "1"; }
+    if (string.IsNullOrEmpty(pageid)) { pageid = "1"; }
+    _1w4w.CMS.Models.PageModel pagemodel = Model.PageModels.Where(x => x.id == Convert.ToInt32(pageid)).SingleOrDefault();
+    List<_1w4w.CMS.Models.PagePartModel> pagepartmodel = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid)).ToList();
+    var list1 = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid) && x.placementid == 1);
+    var list2 = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid) && x.placementid == 2);
+    var count1 = list1.Count();
+    var count2 = list2.Count();
+
+}
+
+
+    <div id="addtextdiv" name="addtextdiv" class="addcontentdiv" style="display:none;">
+        <form id="addtextform" name="addtextform" action="/pagepart/addparttext" method="post">
+
+            <h3 style="color:#ffffff; background-color:#000000;">Add TEXT PagePart of column <span id="placementidtext" name="placementidtext"></span></h3>
+            <p style="color: #ffffff; background-color: #000000; font-size: 18px;">Write the text you want in the word like editor</p>
+            <br />
+
+
+            <script src="/content/ckeditor/ckeditor.js"></script>
+            <textarea cols="80" id="pageparttext" name="pageparttext" rows="30"></textarea>
+            <script>
+                // This call can be placed at any point after the
+                // <textarea>, or inside a <head><script> in a
+                // window.onload event handler.
+
+                // Replace the <textarea id="editor"> with an CKEditor
+                // instance, using default configurations.
+                CKEDITOR.replace('pageparttext');
+            </script>
+
+
+            <input type="hidden" id="parttype" name="parttype" value="text" />
+            <input type="hidden" id="pageid" name="pageid" value="@pageid" />
+            <input type="hidden" id="placementid" name="placementid" value="1" />
+            <input type="hidden" id="websiteid" name="websiteid" value="@websiteid" />
+            <br />
+
+
+
+            @if (Model.UploadedImageModels != null)
+            {
+                //foreach (var item2 in Model.UploadedImageModels.Where(x => x.websiteid == 1))
+                foreach (var item2 in Model.UploadedImageModels)
+                {
+                    var divname = "uploadedimage" + item2.id;
+                    var copytoclipboardlink = "copytoclipboardlink" + item2.id;
+                    var imagepath = "/content/upload/image/" + item2.name;
+
+                    <div id="@divname" name="cateringdiv" class="filterdiv @item2.uploadedimagecategory">
+                        <span onclick="javascript: document.getElementById('imagepath1').value='@imagepath'; document.getElementById('imagepath').value='@imagepath';"><img src="/content/upload/image/@item2.name" border="0" class="uploadedimage2"></span><br />
+                    </div>
+                }
+            }
+            <br />
+
+
+            <span style="color:#ffffff; background-color:#000000;">imagepath</span><br />
+            <input type="text" id="imagepath1" name="imagepath1" style="width: 100%; height:40px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0">
+            <br />
+            <br />
+
+
+            <span style="color:#ffffff; background-color:#000000;">imagetext</span><br />
+            <textarea id="imagetext" name="imagetext" style="width: 100%; height: 130px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0"></textarea>
+            <br />
+
+
+            <span style="color:#ffffff; background-color:#000000;">pagepartstyle</span><br />
+            <textarea id="pagepartstyle" name="pagepartstyle" style="width: 100%; height: 100px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0"></textarea>
+
+            <div style="width: 99%; text-align:right;">
+                <input type="submit" value="Add" class="addcontentbutton" />
+                <input type="button" value="Cancel" class="addcontentbutton" onclick="javascript:hidealladdcontentdivs();" />
+                <!--<input type="button" onclick="javascript: form['addhtmlform'].submit();" value="Save" class="addcontentbutton" />-->
+            </div>
+            <!--#4a4a4a-->
+        </form>
+    </div>
+    <div id="addhtmldiv" name="addhtmldiv" class="addcontentdiv" style="display:none;">
+        <form id="addhtmlform" name="addhtmlform" action="/pagepart/addparthtml" method="post">
+
+            <h3 style="color:#ffffff; background-color:#000000;">Add HTML PagePart of column <span id="placementidhtml" name="placementidhtml"></span></h3>
+            <p style="color:#ffffff; background-color:#000000; font-size:18px;">Here you can write html to show text and images as in the old website</p>
+            <br />
+
+            <input type="hidden" id="parttype" name="parttype" value="html" />
+            <input type="hidden" id="pageid" name="pageid" value="@pageid" />
+            <input type="hidden" id="placementid" name="placementid" value="1" />
+            <input type="hidden" id="websiteid" name="websiteid" value="@websiteid" />
+            <br />
+
+            <span style="color:#ffffff; background-color:#000000;">pageparttext</span><br />
+            <textarea id="pageparttext" name="pageparttext" style="width: 100%; height: 700px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0"></textarea>
+
+            <span style="color:#ffffff; background-color:#000000;">pagepartstyle</span><br />
+            <textarea id="pagepartstyle" name="pagepartstyle" style="width: 100%; height: 100px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0"></textarea>
+
+            <div style="width: 99%; text-align:right;">
+                <input type="submit" value="Add" class="addcontentbutton" />
+                <input type="button" value="Cancel" class="addcontentbutton" onclick="javascript:hidealladdcontentdivs();" />
+                <!--<input type="button" onclick="javascript: form['addhtmlform'].submit();" value="Save" class="addcontentbutton" />-->
+            </div>
+            <!--#4a4a4a-->
+        </form>
+    </div>
+    <div id="addimagediv" name="addimagediv" class="addcontentdiv" style="display:none;">
+        <form id="addimageform" name="addimageform" action="/pagepart/addpartimage" method="post">
+
+            <h3 style="color:#ffffff; background-color:#000000;">Add IMAGE PagePart of column <span id="placementidimage" name="placementidimage"></span></h3>
+            <p style="color:#ffffff; background-color:#000000; font-size:18px;">Either upload a new image or use an existing one</p>
+            <br />
+
+            <input type="hidden" id="parttype" name="parttype" value="image" />
+            <input type="hidden" id="pageid" name="pageid" value="@pageid" />
+            <input type="hidden" id="placementid" name="placementid" value="1" />
+            <input type="hidden" id="websiteid" name="websiteid" value="@websiteid" />
+            <input type="hidden" id="imagepath" name="imagepath" />
+            <br />
+
+
+
+            @if (Model.UploadedImageModels != null)
+            {
+                //foreach (var item2 in Model.UploadedImageModels.Where(x => x.websiteid == 1))
+                foreach (var item2 in Model.UploadedImageModels)
+                {
+                    var divname = "uploadedimage" + item2.id;
+                    var copytoclipboardlink = "copytoclipboardlink" + item2.id;
+                    var imagepath = "/content/upload/image/" + item2.name;
+
+                    <div id="@divname" name="divname" class="filterdiv @item2.uploadedimagecategory">
+                        <span onclick="javascript: document.getElementById('imagepath2').value='@imagepath'; document.getElementById('imagepath').value='@imagepath';"><img src="/content/upload/image/@item2.name" border="0" class="uploadedimage2"></span><br />
+                    </div>
+                }
+            }
+
+
+
+            <br />
+
+            <span style="color:#ffffff; background-color:#000000;">imagepath</span><br />
+            <input type="text" id="imagepath2" name="imagepath2" style="width: 100%; height:40px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0">
+            <br />
+            <br />
+
+            <span style="color:#ffffff; background-color:#000000;">imagetext</span><br />
+            <textarea id="imagetext" name="imagetext" style="width: 100%; height: 130px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0"></textarea>
+            <br />
+
+            <span style="color:#ffffff; background-color:#000000;">pagepartstyle</span><br />
+            <textarea id="pagepartstyle" name="pagepartstyle" style="width: 100%; height: 100px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0"></textarea>
+
+            <div style="width: 99%; text-align:right;">
+                <input type="submit" value="Add" class="addcontentbutton" />
+                <input type="button" value="Cancel" class="addcontentbutton" onclick="javascript:hidealladdcontentdivs();" />
+                <!--<input type="button" onclick="javascript: form['addhtmlform'].submit();" value="Save" class="addcontentbutton" />-->
+            </div>
+            <!--#4a4a4a-->
+        </form>
+    </div>
+    <div id="addtodayslunchdiv" name="addtodayslunchdiv" class="addcontentdiv" style="display:none;">
+        <form id="addaddtodayslunchform" name="addaddtodayslunchform" action="/pagepart/addtodayslunch" method="post">
+
+            <h3 style="color:#ffffff; background-color:#000000;">Show TODAYSLUNCH PagePart in column <span id="placementidimage" name="placementidimage"></span></h3>
+            <p style="color:#ffffff; background-color:#000000; font-size:18px;">Show this weeks lunches</p>
+            <br />
+
+            <input type="hidden" id="parttype" name="parttype" value="image" />
+            <input type="hidden" id="pageid" name="pageid" value="@pageid" />
+            <input type="hidden" id="placementid" name="placementid" value="1" />
+            <input type="hidden" id="websiteid" name="websiteid" value="@websiteid" />
+            <input type="hidden" id="imagepath" name="imagepath" />
+            <br />
+
+
+            Dagens Lunch<br />
+            Vecka 47 @_1w4w.CMS.Manager.DateManager.GetIso8601WeekOfYearNow()
+
+
+
+            <br />
+
+            <span style="color:#ffffff; background-color:#000000;">imagepath</span><br />
+            <input type="text" id="imagepath2" name="imagepath2" style="width: 100%; height:40px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0">
+            <br />
+            <br />
+
+            <span style="color:#ffffff; background-color:#000000;">imagetext</span><br />
+            <textarea id="imagetext" name="imagetext" style="width: 100%; height: 130px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0"></textarea>
+            <br />
+
+            <span style="color:#ffffff; background-color:#000000;">pagepartstyle</span><br />
+            <textarea id="pagepartstyle" name="pagepartstyle" style="width: 100%; height: 100px; border: 2px solid #808080; border-radius: 10px; background-color: #333333; padding: 10px; color: #ffffff;" border="0"></textarea>
+
+            <div style="width: 99%; text-align:right;">
+                <input type="submit" value="Add" class="addcontentbutton" />
+                <input type="button" value="Cancel" class="addcontentbutton" onclick="javascript:hidealladdcontentdivs();" />
+                <!--<input type="button" onclick="javascript: form['addhtmlform'].submit();" value="Save" class="addcontentbutton" />-->
+            </div>
+            <!--#4a4a4a-->
+        </form>
+    </div>
+ 
+

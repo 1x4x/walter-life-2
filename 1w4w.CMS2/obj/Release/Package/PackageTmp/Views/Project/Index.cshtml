@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var unfinishedProjectsList = (List<ProjectManagement2.Models.ProjectModel>)ViewBag.UnfinishedProjectsList;
+    var finishedProjectsList = (List<ProjectManagement2.Models.ProjectModel>)ViewBag.FinishedProjectsList;
+    var unfinishedTasksList = (List<ProjectManagement2.Models.TaskModel>)ViewBag.UnfinishedTasksList;
+    var finishedTasksList = (List<ProjectManagement2.Models.TaskModel>)ViewBag.FinishedTasksList;
+}
+<style>
+    .box4 {
+        display: inline-block;
+        padding: 10px;
+        border: 3px solid #333333;
+        border-radius: 10px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+        padding-right: 20px;
+        cursor: pointer;
+    }
+</style>
+@if (unfinishedProjectsList != null)
+{
+    var color = "";
+    var color2 = "";
+    var bordercolor = "";
+    //foreach (ProjectManagement2.Models.ProjectModel item in (List<ProjectManagement2.Models.ProjectModel>)list)
+    foreach (ProjectManagement2.Models.ProjectModel item in unfinishedProjectsList)
+    {
+        if (item.percentcompleted == 0) { color = "#333333"; color2 = "#dddddd"; bordercolor = "#dddddd"; } // grey
+        else if (item.percentcompleted > 0 && item.percentcompleted <= 33) { color = "#E2445C"; color2 = "#000000"; bordercolor = "#dddddd"; } // red
+        else if (item.percentcompleted > 33 && item.percentcompleted <= 59) { color = "#FCAA3D"; color2 = "#000000"; bordercolor = "#dddddd"; } // yellow
+        else if (item.percentcompleted > 59 && item.percentcompleted <= 100) { color = "#00C874"; color2 = "#000000"; bordercolor = "#dddddd"; } // green
+
+        <div class="box4" style="border: 5px solid @color2; background-color:@color;">
+            <div style="        color: @color2;
+        background-color: @color;
+        border-radius: 30px;
+        display: inline-block;
+        position: relative;
+        padding: 4px;
+        right: 20px;
+        top: -35px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        border-left: 3px solid @color2;
+        border-top: 3px solid @color2;
+        border-right: 3px solid @color2;
+">
+                @item.percentcompleted%
+            </div>
+            <span style="color:@color2;" onclick="window.location.href = '/home/update/@item.id'; cursor: pointer;"><b>@item.title (@item.id)</b></span>
+
+
+            <div style="        color: @color2;
+        background-color: @color;
+        border-radius: 30px;
+        display: inline-block;
+        position: relative;
+        padding: 4px;
+        right: 10px;
+        bottom: -25px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        border-left: 3px solid @color2;
+        border-bottom: 3px solid @color2;
+        border-right: 3px solid @color2;
+" onclick="if(confirm('Delete project? @item.title ') == true) { window.location.href='/home/delete/@item.id' };">
+                &nbsp;X&nbsp;
+            </div>
+        </div>
+    }
+}
+
+
+
+
+
+
+
+
+@if (finishedProjectsList != null)
+{
+    var color3 = "#333333";
+    var color4 = "#ffffff";
+    foreach (ProjectManagement2.Models.ProjectModel item in finishedProjectsList)
+    {
+        <div class="box4" style="border: 1px solid @color3;">
+            <div style="color:@color4; background-color:@color3; border-radius:30px; display:inline-block; position:relative; padding:4px; right:20px; top:-35px; font-size:14px; font-weight:bold;">
+                @item.percentcompleted%
+            </div>
+            <span style="color:@color3;" onclick="window.location.href='/home/update/@item.id';"><b>@item.title (@item.id)</b></span>
+            äbäu
+
+
+            <div style="color:@color4; background-color:@color3; border-radius:30px; display:inline-block; position:relative; padding:4px; right:10px; bottom:-25px; font-size:14px; font-weight:bold; cursor:pointer;" onclick="if(confirm('Delete project? @item.title ') == true) { window.location.href='/home/delete/@item.id' };">
+                x @item.id
+            </div>
+        </div>
+    }
+}
+
+
+
+
+

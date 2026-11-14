@@ -1,0 +1,71 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+<div class="partner-area bg-grey">
+    <div class="container">
+        <div class="section-title">
+            <h2>Trusted Partners</h2>
+        </div>
+        <div id="partner-carousel" class="partner-carousel owl-carousel owl-theme owl-loaded">
+            <div class="partner-slide-item">
+                <a href="#0">
+                    <img src="@baseurl/assets/img/partner-logo/client-1.jpg" alt="partner-image">
+                </a>
+            </div>
+            <div class="partner-slide-item">
+                <a href="#0">
+                    <img src="@baseurl/assets/img/partner-logo/client-2.jpg" alt="partner-image">
+                </a>
+            </div>
+            <div class="partner-slide-item">
+                <a href="#0">
+                    <img src="@baseurl/assets/img/partner-logo/client-3.jpg" alt="partner-image">
+                </a>
+            </div>
+            <div class="partner-slide-item">
+                <a href="#0">
+                    <img src="@baseurl/assets/img/partner-logo/client-4.jpg" alt="partner-image">
+                </a>
+            </div>
+            <div class="partner-slide-item">
+                <a href="#0">
+                    <img src="@baseurl/assets/img/partner-logo/client-5.jpg" alt="partner-image">
+                </a>
+            </div>
+            <div class="partner-slide-item">
+                <a href="#0">
+                    <img src="@baseurl/assets/img/partner-logo/client-6.jpg" alt="partner-image">
+                </a>
+            </div>
+            <div class="partner-slide-item">
+                <a href="#0">
+                    <img src="@baseurl/assets/img/partner-logo/client-7.jpg" alt="partner-image">
+                </a>
+            </div>
+            <div class="partner-slide-item">
+                <a href="#0">
+                    <img src="@baseurl/assets/img/partner-logo/client-8.jpg" alt="partner-image">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

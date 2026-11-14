@@ -1,0 +1,890 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    string websiteid = System.Web.Configuration.WebConfigurationManager.AppSettings["websiteid"];
+
+    string baseurl = "/content/energy";
+    //string baseurl = "/content/energy";
+    //string baseurl = "/views/shared/energy";
+
+
+    // light or darkmode for this website
+    var mode = "Light";
+    //var manager = new _1w4w.CMS.Manager.ColorModeManager();
+    //var websiteid = Model.Website.id;
+    //mode = manager.GetMode(websiteid) ?? "Light";
+    //if (manager != null)
+    //{
+    //    mode = _1w4w.CMS.Manager.ColorModeManager.GetMode(Model.Website.id);
+    //}
+    //var cateringOrderRowList = Model.CateringOrderRowModels.Where(x => x.orderid == orderid);
+
+
+    // lets make sure we have a pageid to work with
+    var pageid = Request.QueryString["pageid"];
+    if (pageid == null) { pageid = "1"; }
+    if (pageid == "undefined") { pageid = "1"; }
+    if (string.IsNullOrEmpty(pageid)) { pageid = "1"; }
+    _1w4w.CMS.Models.PageModel pagemodel = Model.PageModels.Where(x => x.id == Convert.ToInt32(pageid)).SingleOrDefault();
+
+
+
+    var usermodel = Model.usermodel as _1w4w.CMS.Models.UserModel;
+    var accesslevel = "";
+    if (usermodel != null)
+    {
+        accesslevel = usermodel.accesslevel ?? "";
+    }
+
+
+    //string host = HttpContext.Current.Request.Url.Host.ToLower();
+
+}
+
+
+
+<!doctype html>
+<html lang="zxx">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title -->
+    <title>@Model.Website.title</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="@baseurl/assets/img/favicon.png">
+    <!-- Bootstrap Min CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/bootstrap.min.css">
+    <!-- Animate Min CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/animate.min.css">
+    <!-- Font Awesome Min CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/fontawesome.min.css">
+    <!-- Flaticon CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/flaticon.css">
+    <!-- Remixicon CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/remixicon.css">
+    <!-- Mean Menu CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/meanmenu.css">
+    <!-- Magnific Popup Min CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/magnific-popup.min.css">
+    <!-- Swiper Min CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/swiper.min.css">
+    <!-- Owl Carousel Min CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/owl.carousel.min.css">
+    <!-- jquery ui Min CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/jquery-ui.min.css">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/nice-select.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="@baseurl/assets/css/responsive.css">
+
+
+
+
+    <!--Font Awesome local files:START-->
+    @*<link rel="stylesheet" href="/content/fontawesome-pro-5.13.0-web/css/all.min.css">*@
+    <script defer src="/content/fontawesome-pro-5.13.0-web/js/brands.js"></script>
+    <script defer src="/content/fontawesome-pro-5.13.0-web/js/solid.js"></script>
+    <script defer src="/content/fontawesome-pro-5.13.0-web/js/fontawesome.js"></script>
+    <script defer src="/content/fontawesome-pro-5.13.0-web/js/sharp-thin.js"></script>
+    @*<script defer src="/content/fontawesome-pro-5.13.0-web/js/duotone-thin.js"></script>*@
+    @*<script defer src="/content/fontawesome-pro-5.13.0-web/js/sharp-duotone-thin.js"></script>*@
+    <!--Font Awesome local files:END-->
+
+
+    <script defer src="/content/energy/1w4w.js"></script>
+
+
+    <!--coloris:start-->
+    <script src="/Content/coloris/coloris.min.js"></script>
+    <script src="/Content/coloris/coloris.js"></script>
+    <link href="/Content/coloris/coloris.css" rel="stylesheet" />
+    <link href="/Content/coloris/coloris.min.css" rel="stylesheet" />
+    <!--coloris:end-->
+    <!--fontawesome:start-->
+    <link href="/Content/fontawesome-pro-5.13.0-web/css/all.min.css" rel="stylesheet" />
+    <link href="/Content/fontawesome-pro-5.13.0-web/css/brands.min.css" rel="stylesheet" />
+    <link href="/Content/fontawesome-pro-5.13.0-web/css/duotone.min.css" rel="stylesheet" />
+    <link href="/Content/fontawesome-pro-5.13.0-web/css/fontawesome.min.css" rel="stylesheet" />
+    <link href="/Content/fontawesome-pro-5.13.0-web/css/light.min.css" rel="stylesheet" />
+    <link href="/Content/fontawesome-pro-5.13.0-web/css/regular.min.css" rel="stylesheet" />
+    <link href="/Content/fontawesome-pro-5.13.0-web/css/solid.min.css" rel="stylesheet" />
+    <link href="/Content/fontawesome-pro-5.13.0-web/css/v4-shims.min.css" rel="stylesheet" />
+    <!--fontawesome:start-->
+    <!--1w4w:start-->
+    <script src="@baseurl/1w4w.js"></script>
+    @*<script src="/Content/animatedborder.css"></script>*@
+    <!--1w4w:end-->
+    @*
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/content/editor1/css/froala_editor.css">
+        <link rel="stylesheet" href="/content/editor1/css/froala_style.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/code_view.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/colors.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/draggable.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/emoticons.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/image_manager.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/image.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/line_breaker.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/table.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/char_counter.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/video.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/fullscreen.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/file.css">
+        <link rel="stylesheet" href="/content/editor1/css/plugins/quick_insert.css">
+        <link rel="stylesheet" href="/content/editor1/css/themes/dark.min.css">
+        <link rel="stylesheet" href="/content/editor1/css/themes/red.min.css">
+        <link rel="stylesheet" href="/content/editor1/css/themes/gray.min.css">
+        <link rel="stylesheet" href="/content/editor1/css/themes/royal.min.css">
+    *@
+    <style>
+        /*
+                body {
+                    text-align: center;
+                }
+            */
+        section {
+            width: 81%;
+            /*height: 800px;*/
+            margin: auto;
+            text-align: left;
+            /*background-color: #333333;*/
+            display: block;
+        }
+    </style>
+
+    @* https://zoltantothcom.github.io/vanilla-js-dropdown/ *@
+    @*
+        <link rel="stylesheet" href="/content/dropdown/src/styles/vanilla-js-dropdown.css">
+        <script src="/content/dropdown/src/javascript/vanilla-js-dropdown.min.js"></script>
+    *@
+</head>
+
+<body>
+
+    <!-- Start Preloader Section -->
+    <div class="preloader">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="lds-spinner">
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                    <div></div><div></div><div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader Section -->
+    @Html.Partial("~/Views/Shared/Energy/NavbarPartialView.cshtml")
+    <div id="admindiv" name="admindiv" style="display: none; border-bottom: 1px solid #1dc2cf;">
+        <style>
+            .admindiv {
+                position: absolute;
+                z-index: 3; /* put .gold-box above .green-box and .dashed-box */
+                background: gold;
+                width: 80%;
+                left: 60px;
+                top: 3em;
+            }
+        </style>
+        <div style="text-align:center; padding:20px;">
+
+            <ul style="width:60% !important; display: inline-flex;">
+                @if (accesslevel == "superadmin")
+                {
+
+                }
+                <li style="padding-right:30px;">
+                    <a href="#"><u style="color: #cccccc">Pages</u></a>
+                </li>
+                <li style="padding-right:30px;">
+                    <a href="#"><u style="color: #cccccc">Todays Lunch</u></a>
+                </li>
+                <li style="padding-right:30px;">
+                    <a href="#"><u style="color: #cccccc">Template</u></a>
+                </li>
+
+                <li style="padding-right:30px;">
+                    <a href="javascript:toggle('cateringdiv');">Catering</a>
+                </li>
+                <li style="padding-right:30px;">
+                    <a href="/user/logout">Logout</a>
+                </li>
+            </ul>
+
+        </div>
+        <br />
+    </div>
+
+
+
+    <div id="cateringdiv" name="cateringdiv" style="display:none;">
+        <br />
+        <div style="text-align:center;">
+            <div class="topic12">Catering <span style="color: #1dc2cf !important;">Order</span></div>
+            Här visas alla cateringordrar uppdelade i de 3 statusarna
+            <u style="color: #1dc2cf !important;">Beställd</u>, <u style="color: #1dc2cf !important;">Levererad</u>, <u style="color: #1dc2cf !important;">Annullerad</u> (kan/ska ej genomföras)<br />
+            <br />
+            @{
+                if (Model.CateringOrderModels != null)
+                {
+                    var orderedcount = Model.CateringOrderModels.Where(x => x.status == "ordered").Count();
+                    var deliveredcount = Model.CateringOrderModels.Where(x => x.status == "delivered").Count();
+                    var annulledcount = Model.CateringOrderModels.Where(x => x.status == "annulled").Count();
+
+
+                    int counter = 0;
+                    var alternatingbg = "";
+                    var alternatingfg = "";
+                    <div style="border-top: 1px solid #1dc2cf;">
+                        <br />
+                        <h4 style="color:#ffff00; background-color:#333333;">Beställda (@orderedcount)</h4>
+                        <table style="margin:auto; margin-bottom:30px;">
+                            @foreach (var item in Model.CateringOrderModels.Where(x => x.status == "ordered"))
+                            {
+                                var orderid = item.id;
+
+                                counter++;
+                                if (counter % 2 == 0)
+                                {
+                                    alternatingfg = "#ffffff";
+                                    alternatingbg = "#444444";
+                                }
+                                else
+                                {
+                                    alternatingfg = "#ffffff";
+                                    alternatingbg = "#222222";
+                                }
+                                <tr>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        @item.id<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Skapad / Uppdaterad</b><br />
+                                        @item.created<br />
+                                        @item.updated<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Adress</b><br />
+                                        @item.fullname<br />
+                                        @item.address<br />
+                                        @item.zipcode<br />
+                                        @item.city<br />
+                                        <br />
+                                        @item.orgnr<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Kontakt</b><br />
+                                        @item.phone<br />
+                                        @item.email<br />
+
+
+
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        @if (Model.CateringOrderRowModels != null)
+                                        {
+                                            foreach (var item2 in Model.CateringOrderRowModels.Where(x => x.orderid == orderid))
+                                            {
+                                                <b>@item2.amount x @item2.name</b><br />
+                                            }
+                                        }
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <a href="/cateringorder/setasdelivered/@item.id"><i class="fa-solid fa-circle-check" style="color:#00ff00;" alt="Levererad" title="Levererad"></i></a><br />
+                                        <!--<a href="/cateringorder/setasannulled/@item.id"><i class="fa-solid fa-square-minus" style="color:#ffff00;" alt="Annullerad" title="Annullerad"></i></a><br />-->
+                                        <!--<a href="/cateringorder/setasdeleted/@item.id"><i class="fa-solid fa-circle-xmark" style="color: #ff0000;" alt="Borttagen" title="Borttagen"></i></a><br />-->
+                                        <a href="/cateringorder/setasannulled/@item.id"><i class="fa-solid fa-circle-xmark" style="color: #ff0000;" alt="Annullerad" title="Annullerad"></i></a><br />
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+
+
+                    <div style="border-top: 1px solid #1dc2cf;">
+                        <br />
+                        <h4 style="color: #00ff00; background-color: #333333;">Levererade (@deliveredcount)</h4>
+                        <table style="margin:auto; margin-bottom:30px;">
+                            @foreach (var item in Model.CateringOrderModels.Where(x => x.status == "delivered"))
+                            {
+                                var orderid = item.id;
+                                counter++;
+                                if (counter % 2 == 0)
+                                {
+                                    alternatingfg = "#ffffff";
+                                    alternatingbg = "#444444";
+                                }
+                                else
+                                {
+                                    alternatingfg = "#ffffff";
+                                    alternatingbg = "#222222";
+                                }
+                                <tr>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        @item.id<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Skapad / Uppdaterad</b><br />
+                                        @item.created<br />
+                                        @item.updated<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Adress</b><br />
+                                        @item.fullname<br />
+                                        @item.address<br />
+                                        @item.zipcode<br />
+                                        @item.city<br />
+                                        <br />
+                                        @item.orgnr<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Kontakt</b><br />
+                                        @item.phone<br />
+                                        @item.email<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        @if (Model.CateringOrderRowModels != null)
+                                        {
+                                            foreach (var item2 in Model.CateringOrderRowModels.Where(x => x.orderid == orderid))
+                                            {
+                                                <b>@item2.amount x @item2.name</b><br />
+                                            }
+                                        }
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <a href="/cateringorder/setasordered/@item.id"><i class="fa-solid fa-square-minus" style="color:#ffff00;" alt="Beställd" title="Beställd"></i></a><br />
+                                        <!--<a href="/cateringorder/setasordered/@item.id"><i class="fa-solid fa-circle-xmark" style="color: #ff0000;" alt="Beställd" title="Beställd"></i></a><br />-->
+                                        <!--<a href="/cateringorder/setasannulled/@item.id"><i class="fa-solid fa-square-minus" style="color:#ffff00;" alt="Annullerad" title="Annullerad"></i></a><br />-->
+                                        <a href="/cateringorder/setasannulled/@item.id"><i class="fa-solid fa-circle-xmark" style="color: #ff0000;" alt="Annullerad" title="Annullerad"></i></a><br />
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+
+
+
+                    <div style="border-top: 1px solid #1dc2cf;">
+                        <br />
+                        <h4 style="color: #ff0000; background-color: #333333;">Annullerade (@annulledcount)</h4>
+                        <table style="margin:auto; margin-bottom:30px;">
+                            @foreach (var item in Model.CateringOrderModels.Where(x => x.status == "annulled"))
+                            {
+                                var orderid = item.id;
+                                counter++;
+                                if (counter % 2 == 0)
+                                {
+                                    alternatingfg = "#ffffff";
+                                    alternatingbg = "#444444";
+                                }
+                                else
+                                {
+                                    alternatingfg = "#ffffff";
+                                    alternatingbg = "#222222";
+                                }
+                                <tr>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        @item.id<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Skapad / Uppdaterad</b><br />
+                                        @item.created<br />
+                                        @item.updated<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Adress</b><br />
+                                        @item.fullname<br />
+                                        @item.address<br />
+                                        @item.zipcode<br />
+                                        @item.city<br />
+                                        <br />
+                                        @item.orgnr<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <b style="color:@alternatingfg;">Kontakt</b><br />
+                                        @item.phone<br />
+                                        @item.email<br />
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        @if (Model.CateringOrderRowModels != null)
+                                        {
+                                            foreach (var item2 in Model.CateringOrderRowModels.Where(x => x.orderid == orderid))
+                                            {
+                                                <b>@item2.amount x @item2.name</b><br />
+                                            }
+                                        }
+                                    </td>
+                                    <td style="color:@alternatingfg; background-color:@alternatingbg; padding:10px; border:1px solid #1dc2cf; border-radius:10px; vertical-align:top;">
+                                        <a href="/cateringorder/setasordered/@item.id"><i class="fa-solid fa-square-minus" style="color:#ffff00;" alt="Beställd" title="Beställd"></i></a><br />
+                                        <a href="/cateringorder/setasdelivered/@item.id"><i class="fa-solid fa-circle-check" style="color:#00ff00;" alt="Levererad" title="Levererad"></i></a><br />
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                }
+            }
+        </div>
+
+    </div>
+
+    <div id="basketdiv" name="basketdiv" style="display:none;">
+        <style>
+            .basketdiv {
+                position: absolute;
+                z-index: 3; /* put .gold-box above .green-box and .dashed-box */
+                background: gold;
+                width: 80%;
+                left: 60px;
+                top: 3em;
+            }
+
+            label, .cateringordernote {
+                color: #000000;
+            }
+        </style>
+        <form action="/order/create" method="post" id="orderform" name="orderform">
+            <div class="blog-single-item" style="border: 3px solid #1dc2cf; border-radius: 10px;">
+                <!--
+                <div class="blog-image">
+                    <a href="single-blog.html">
+                        <img src="@baseurl/assets/img/blog/blog-3.jpg" alt="image">
+                    </a>
+                </div>
+                -->
+                @{
+                    var tempvalue = "aaaa1";
+                }
+                <div class="blog-description" style="text-align:center;">
+                    <ul class="blog-list">
+                        <li>
+                            <h1>Din Varukorg</h1>
+                        </li>
+                    </ul>
+                    <div class="blog-content">
+                        <div id="ordercontainer" name="ordercontainer" style="display:none;"></div>
+                        <input type="hidden" name="ordercontainer2" id="ordercontainer2" value="" />
+                        <input type="hidden" name="ordercontainer2cleandata" id="ordercontainer2cleandata" value="" />
+
+                        <div>
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <label for="fullname">Namn</label>
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <input value="@tempvalue" id="fullname" name="fullname" placeholder="" class="walterinput" style="text-align:center; border-radius:10px; margin-bottom:4px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <label for="address">Adress</label>
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <input value="@tempvalue" id="address" name="address" placeholder="" class="walterinput" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <label for="zipcode">Postnr</label>
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <input value="@tempvalue" id="zipcode" name="zipcode" placeholder="" class="walterinput" style="text-align: center; border-radius: 10px; margin-bottom: 4px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <label for="city">Ort</label>
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <input value="@tempvalue" id="city" name="city" placeholder="" class="walterinput" style="text-align: center; border-radius: 10px; margin-bottom: 4px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        &nbsp;
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <label for="orgnr">Orgnr</label>
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <input value="@tempvalue" id="orgnr" name="orgnr" placeholder="" class="walterinput" style="text-align: center; border-radius: 10px; margin-bottom: 4px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <label for="phone">Telefon</label>
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <input value="@tempvalue" id="phone" name="phone" placeholder="" class="walterinput" style="text-align: center; border-radius: 10px; margin-bottom: 4px;" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:center;">
+                                        <label for="email">Epost</label>
+                                    </td>
+                                    <td style="text-align:center;">
+                                        <input value="@tempvalue" id="email" name="email" placeholder="" class="walterinput" style="text-align: center; border-radius: 10px; margin-bottom: 4px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="blog-btn" style="text-align:left; padding-left:20px;">
+                            <a href="javascript:document.getElementById('orderform').submit();" class="default-btn">Beställ <span></span></a>
+                            <a href="#0" class="default-btn-one" onclick="javascript: clearordercontainer();">Rensa <span></span></a>
+                        </div>
+                        <div class="blog-btn" style="text-align: left; padding-left: 20px;">
+                            <table border="0">
+                                <tr>
+                                    <td style="font-size:36px;"><i class="fa-solid fa-tags" style="color: #1dc2cf;"></i></td>
+                                    <td style="width:10px;"></td>
+                                    <td class="cateringordernote">Beställer du innan kl 12.00 så levererar vi redan nästa vardag! :)</td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    @{
+        //if (pagemodel.)
+        //{
+
+
+
+        @Html.Partial("~/Views/Shared/Energy/BigLeftSmallRightColumnPartialView.cshtml")
+
+        //}
+    }
+
+    @{
+
+        /*Html.Partial("~/Views/Shared/Energy/HomePartialView.cshtml")*/
+    }
+    @*Html.Partial("~/Views/Shared/Energy/TodaysLunchPartialView.cshtml")*@
+
+
+    @{
+        // only show catering on pageid 3
+        if (pageid == "3")
+        {
+            @Html.Partial("~/Views/Shared/Energy/CateringPartialView.cshtml")
+        }
+    }
+
+
+
+
+
+    @*Html.Partial("~/Views/Shared/Energy/HiddenButCanBeUsedPagePartsPartialView.cshtml")*@
+
+
+    @{
+        //if ( HttpContext.Current.Request.QueryString["Id"] == "2")
+        //{
+        //Html.Partial("~/Views/Shared/Energy/TodaysLunchPartialView.cshtml");
+        //}
+    }
+
+
+
+
+
+    <div style="background-color:gold !important;">
+        @RenderBody()
+    </div>
+
+
+    @*Html.Partial("~/Views/Shared/Energy/FooterPartialView.cshtml")*@
+    @Html.Partial("~/Views/Shared/Energy/CopyrightPartialView.cshtml")
+
+
+    @{
+        var m = Request.QueryString["m"];
+        if (!string.IsNullOrEmpty(m))
+        {
+            <style>
+                #messagediv {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 40;
+                    padding: 30px;
+                    background-color: #324f53;
+                    border: 3px solid #1dc2cf;
+                    border-radius: 5px;
+                }
+                /*#messagediv.fadeout {
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: visibility 0s 2s, opacity 2s linear;
+                    }
+
+                    #messagediv..fadein {
+                        visibility: visible;
+                        opacity: 1;
+                        transition: opacity 2s linear;
+                    }           */
+
+
+                /*.successfully-logged-in.hide-opacity {
+                    opacity: 0;
+                }
+
+                .successfully-logged-in {
+                    color: #ffffff;
+                    text-align: center;
+                    transition: opacity 3s ease-in-out;
+                    opacity: 1;
+                }*/
+            </style>
+
+
+
+
+            <div id="messagediv" name="messagediv" class="animated fadeOut">
+                @if (m == "1")
+                {
+                    <span style="color:#d57f16 !important;">Logged in Successfully!</span>
+                }
+                @if (m == "2")
+                {
+                    <span style="color:#ff0000 !important;">Could not login </span>
+                }
+            </div>
+
+
+            if (accesslevel == "admin")
+            {
+
+                <script>
+                    // this script will every half second set the content of the
+                    // textarea "text1" to the same content as the div "editor"
+                    // https://stackoverflow.com/questions/24388822/trigger-javascript-event-if-div-innertext-change/52954089
+                    // https://jsfiddle.net/BrtAK/
+                    var i = 0;
+                    var setintervalid = setInterval(settextinputtosamecontentasdivwhendivcontentchanges, 3500);
+                    function settextinputtosamecontentasdivwhendivcontentchanges() {
+                        i++;
+                        var editor1 = document.getElementById('editor');
+                        var editor2 = document.getElementById('editor2');
+
+                        var text1 = document.getElementById('text1');
+                        var text2 = document.getElementById('text2');
+                    }
+                </script>
+
+            }
+
+
+
+
+        }
+    }
+
+
+
+    <form action="/file/fileupload" method="post" id="fileform1" name="fileform1" enctype="multipart/form-data" style="display:none;">
+        <section class="price-area pt-70 pb-100" style="padding:20px;">
+
+            <div style="position: relative; z-index: 11;">
+                <h4>Upload File</h4>
+                <label for="uploadedfiles" class="custom-file-upload" style="background-color:#eeeeee; color:#000000;"><i class="fa fa-cloud-upload"></i></label>
+                <input type="file" name="uploadedfiles" id="uploadedfiles" multiple="multiple" style="width: 100%;" />
+                <input type="button" value="Upload" onclick="javascript: if (document.getElementById('uploadedfiles').value != null) { document.forms['fileform1'].submit(); } else { alert('Please select a file to upload'); };" class="walterbutton" style="width:100px; border-radius:10px;" />
+
+                <br />
+                <br />
+                <p>The files will be uploaded to <b>/content/upload/file/1.pdf</b>. You can upload multiple files at the same time</p>
+            </div>
+            @if (Model.UploadedFileModels != null)
+            {
+                foreach (var item2 in Model.UploadedFileModels)
+                {
+                    <div class="wwcontainer">
+                        <img src="~/Content/energy/assets/file1.png" style="height:100px; width:auto; border-radius:10px;" />
+                        <div class="wwcentered textstyle1"><b>@item2.id</b><br /></div>
+                        <div class="wwcentered textstyle2">
+                            <!--<span style="font-weight:bold;" onclick="createFileTagInClipboard('/content/upload/file/@item2.name');">@item2.name</span>-->
+                            <span style="font-weight:bold;" onclick="createFileTagInClipboard('/content/upload/file/@item2.name');">@item2.name</span>
+                        </div>
+                    </div>
+                }
+            }
+
+        </section>
+    </form>
+
+
+    <form action="/file/imageupload" method="post" id="imageform1" name="imageform1" enctype="multipart/form-data" style="display:none;">
+        <section class="price-area pt-70 pb-100" style="padding:20px;">
+
+            <div style="position: relative; z-index: 11;">
+                <h4>Upload Image</h4>
+                <label for="uploadedimages" class="custom-file-upload" style="background-color:#eeeeee; color:#000000;"><i class="fa fa-cloud-upload"></i></label>
+                <input type="file" name="uploadedimages" id="uploadedimages" multiple="multiple" accept="image/png, image/gif, image/jpeg" style="width: 100%;" />
+                <input type="button" value="Upload" onclick="javascript: if(document.getElementById('uploadedimages').value != null) { document.forms['imageform1'].submit(); } else { alert('Please select a picture to upload'); };" class="walterbutton" style="width:100px; border-radius:10px;" />
+                <br />
+                <br />
+                <p>The images will be uploaded to <b>/content/upload/image/1.png</b>. You can upload multiple images at the same time</p>
+            </div>
+
+            @if (Model.UploadedImageModels != null)
+            {
+                //foreach (var item2 in Model.UploadedImageModels.Where(x => x.websiteid == 1))
+                foreach (var item2 in Model.UploadedImageModels)
+                {
+                    var copytoclipboardlink = "copytoclipboardlink" + item2.id;
+                    <div class="wwcontainer">
+                        <!--<img src="~/Content/upload/image/@item2.name" class="uploadedimage popup-img" onclick="createImageTagInClipboard('/content/upload/image/@item2.name'); document.getElementById('imageform1').style.display='none'; document.getElementById('fileform1').style.display='none';" />-->
+                        <img src="~/Content/upload/image/@item2.name" class="uploadedimage popup-img" onclick="javascript: alert('pungis11!!!'); insertselectedimagepath('/content/upload/image/@item2.name'); document.getElementById('imageform1').style.display='none'; document.getElementById('fileform1').style.display='none';" />
+                        <div class="wwcentered textstyle1"><b>@item2.id</b><br /></div>
+                    </div>
+                }
+            }
+        </section>
+    </form>
+
+
+    <!-- Start Go Top Section -->
+    <div class="go-top">
+        <i class="fas fa-chevron-up"></i>
+        <!--<i class="fas fa-chevron-up"></i>-->
+    </div>
+    <!-- End Go Top Section -->
+    <!-- jQuery Min JS -->
+    <script src="@baseurl/assets/js/jquery.min.js"></script>
+    <!-- Bootstrap Min JS -->
+    <script src="@baseurl/assets/js/bootstrap.min.js"></script>
+    <!-- Mean Menu JS  -->
+    <script src="@baseurl/assets/js/jquery.meanmenu.js"></script>
+    <!-- Appear Min JS -->
+    <script src="@baseurl/assets/js/jquery.appear.min.js"></script>
+    <!-- CounterUp Min JS -->
+    <script src="@baseurl/assets/js/jquery.waypoints.min.js"></script>
+    <script src="@baseurl/assets/js/jquery.counterup.min.js"></script>
+    <!-- Owl Carousel Min JS -->
+    <script src="@baseurl/assets/js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup Min JS -->
+    <script src="@baseurl/assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Isotope Min JS -->
+    <script src="@baseurl/assets/js/isotope.pkgd.min.js"></script>
+    <!-- Swiper Min JS -->
+    <script src="@baseurl/assets/js/swiper.min.js"></script>
+    <!-- jquery ui Min JS -->
+    <script src="@baseurl/assets/js/jquery-ui.min.js"></script>
+    <!-- Nice Select Min JS -->
+    <script src="@baseurl/assets/js/jquery.nice-select.min.js"></script>
+    <!-- WOW Min JS -->
+    <script src="@baseurl/assets/js/wow.min.js"></script>
+    <!-- Main JS -->
+    <script src="@baseurl/assets/js/main.js"></script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+<style>
+
+    body {
+        background-color: #eeeeee !important;
+        color: #000000 !important;
+    }
+    /**/
+    .dark-mode {
+        background-color: #222222;
+        /*background-color: #aaaaaa;*/
+        color: #ffffff;
+    }
+
+    a.dark-mode2 {
+        background-color: #222222;
+        /*background-color: #aaaaaa;*/
+        color: #ffffff;
+        color: #ff0000;
+    }
+</style>
+
+
+<script>
+@{
+    //var mode = _1w4w.CMS.Manager.ColorModeManager.GetMode(1);
+    if (mode == "Dark")
+    {
+        <text>toggledarkmode();</text>
+    }
+    else
+    {
+
+    }
+
+    //var aa = document.queryselectorall
+}
+</script>
+
+<style>
+    /*
+        #todayslunchpart1 {
+
+        }
+
+        .fr-command {
+            color: #00ffff !important;
+        }
+    */
+
+
+</style>
+@* https://stackoverflow.com/questions/69929918/how-to-hide-p-data-f-id-tag-from-website *@
+<script>
+    let pbfelements = document.querySelectorAll('p[data-f-id="pbf"]');
+    pbfelements.forEach(function (elem) {
+        elem.remove();
+    });
+
+
+    toggledarkmode();
+
+
+
+    // Enable bootstrap tooltips everywhere
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>
+
+
+
+@*
+    <script>
+        var colorSelect = new CustomSelect({
+            elem: 'select'
+        });
+    </script>
+*@
+
+

@@ -1,0 +1,125 @@
+﻿@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+<section class="testimonial-design-two section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h6 class="sub-title">Our Patients Say</h6>
+                    <h2>Our Feedback</h2>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="testimonial-slide-two">
+                    <div class="owl-carousel owl-theme">
+                        <!-- testimonials item -->
+                        <div class="single-testimonial-two">
+                            <div class="testimonial-two-content">
+                                <div class="testimonial-text">
+                                    <div class="logo-box">
+                                        <img src="@baseurl/assets/img/client/testimonial-logo-1.png" alt="logo">
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboredolore magna aliqua</p>
+                                    <div class="rating-box">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="author-info-box">
+                                    <div class="author-img">
+                                        <img src="assets/img/client/testimonial-1.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="author-bio-info">
+                                        <h3>Stanley Tate</h3>
+                                        <span>Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- testimonials item -->
+                        <div class="single-testimonial-two">
+                            <div class="testimonial-two-content">
+                                <div class="testimonial-text">
+                                    <div class="logo-box">
+                                        <img src="@baseurl/assets/img/client/testimonial-logo-2.png" alt="logo">
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboredolore magna aliqua</p>
+                                    <div class="rating-box">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="author-info-box">
+                                    <div class="author-img">
+                                        <img src="@baseurl/assets/img/client/testimonial-2.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="author-bio-info">
+                                        <h3>Lana Shelton</h3>
+                                        <span>Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- testimonials item -->
+                        <div class="single-testimonial-two">
+                            <div class="testimonial-two-content">
+                                <div class="testimonial-text">
+                                    <div class="logo-box">
+                                        <img src="@baseurl/assets/img/client/testimonial-logo-3.png" alt="logo">
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laboredolore magna aliqua</p>
+                                    <div class="rating-box">
+                                        <ul>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                            <li><i class="fa fa-star"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="author-info-box">
+                                    <div class="author-img">
+                                        <img src="@baseurl/assets/img/client/testimonial-3.jpg" alt="testimonial">
+                                    </div>
+                                    <div class="author-bio-info">
+                                        <h3>Mario Houston</h3>
+                                        <span>Customer</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

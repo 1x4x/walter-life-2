@@ -1,0 +1,197 @@
+﻿@model ProjectManagement2.Models.ProjectModel
+
+@{
+    ViewBag.Title = "Update";
+    var model2 = (ProjectManagement2.Models.ProjectModel)ViewBag.Project;
+    var unfinishedTasksList = (List<ProjectManagement2.Models.TaskModel>)ViewBag.UnfinishedTasksList;
+    var finishedTasksList = (List<ProjectManagement2.Models.TaskModel>)ViewBag.FinishedTasksList;
+}
+<script>
+    function toggle(element) {
+        var x = document.getElementById(element);
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+<style>
+    .box4 {
+        display: inline-block;
+        padding: 10px;
+        border: 3px solid #333333;
+        border-radius: 10px;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 20px;
+        padding-right: 20px;
+    }
+</style>
+
+<h2>
+    @(model2.title ?? "")
+
+
+    <a href="javascript:toggle('updateprojectform');" class="nav-link" style="display:inline-block;">
+        <span id="showupdateprojectform" name="showupdateprojectform" style="">
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16" style="color: #880088;">
+                <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
+            </svg>
+        </span>
+    </a>
+
+    <a href="javascript:window.location.href='/task/create/@Url.RequestContext.RouteData.Values["id"]';" class="nav-link" style="display:inline-block;">
+        <span id="createtask" name="createtask" style="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bookmark-plus-fill" viewBox="0 0 16 16" style="color:#008800;">
+                <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5m6.5-11a.5.5 0 0 0-1 0V6H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V7H10a.5.5 0 0 0 0-1H8.5z" />
+            </svg>
+        </span>
+    </a>
+
+    <a href="javascript:window.location.href='/';" class="nav-link" style="display:inline-block;">
+        <span id="back" name="back" style="">
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16" style="color:#008800;">
+                <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z" />
+                <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+            </svg>
+        </span>
+    </a>
+</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal" id="updateprojectform" name="updateprojectform" style="display:none;">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id)
+
+        Update Project<br />
+        <br />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control", @Value = model2.title } })
+                @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.owner, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.owner, new { htmlAttributes = new { @class = "form-control", @Value = model2.owner } })
+                @Html.ValidationMessageFor(model => model.owner, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.status, new { htmlAttributes = new { @class = "form-control", @Value = model2.status } })
+                @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.percentcompleted, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.percentcompleted, new { htmlAttributes = new { @class = "form-control", @Value = model2.percentcompleted } })
+                @Html.ValidationMessageFor(model => model.percentcompleted, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
+<script>
+    document.getElementById("title").focus();
+</script>
+
+
+
+<br />
+
+
+<h4 style="display:none;">
+    Tasks222
+    <a href="javascript:window.location.href='/task/create';" class="nav-link" style="display:inline-block;">
+
+        <span id="createtask" name="createtask" style="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bookmark-plus-fill" viewBox="0 0 16 16" style="color:#008800;">
+                <path fill-rule="evenodd" d="M2 15.5V2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.74.439L8 13.069l-5.26 2.87A.5.5 0 0 1 2 15.5m6.5-11a.5.5 0 0 0-1 0V6H6a.5.5 0 0 0 0 1h1.5v1.5a.5.5 0 0 0 1 0V7H10a.5.5 0 0 0 0-1H8.5z" />
+            </svg>
+        </span>
+    </a>
+</h4>
+
+
+
+
+@if (unfinishedTasksList != null)
+{
+    var color = "#333333";
+    var color2 = "#ffff00";
+    foreach (ProjectManagement2.Models.TaskModel item in unfinishedTasksList)
+    {
+        color = item.color;
+        color2 = item.color;
+
+        <div class="box4" style="border: 3px solid @color !important;outline: 6px solid @color !important; margin:6px; text-align:center;">
+            <!--
+            <div style="color:@color2; background-color:@color; border-radius:30px; display:inline-block; position:relative; padding:4px; right:20px; top:-40px; font-size:14px; font-weight:bold;">
+                @item.status
+            </div>
+            -->
+            <span style="color:@color;" onclick="window.location.href='/task/update/@item.id';"><b>@item.title (@item.id)</b></span>
+
+
+            <div style="color:@color2; background-color:@color; border-radius:30px; display:inline-block; position:relative; padding:4px; right:10px; bottom:-30px; font-size:14px; font-weight:bold; cursor:pointer;" onclick="if(confirm('Delete task? @item.title ') == true) { window.location.href='/task/delete/@item.id' };">
+                x @item.id
+            </div>
+        </div>
+    }
+}
+
+
+
+
+
+@if (finishedTasksList != null)
+{
+    var color3 = "#333333";
+    var color4 = "#ffff00";
+    foreach (ProjectManagement2.Models.TaskModel item in finishedTasksList)
+    {
+        <div class="box4" style="border: 3px solid @color3; text-align:center;">
+            <div style="color:@color4; background-color:@color3; border-radius:30px; display:inline-block; position:relative; padding:4px; right:20px; top:-40px; font-size:14px; font-weight:bold; text-align:center;">
+                @item.status
+            </div>
+            <span style="color:@color3;" onclick="window.location.href='/task/update/@item.id';"><b>@item.title (@item.id)</b></span>
+
+
+            <div style="color:@color4; background-color:@color3; border-radius:30px; display:inline-block; position:relative; padding:4px; right:10px; bottom:-30px; font-size:14px; font-weight:bold; cursor:pointer;" onclick="if(confirm('Delete task? @item.title ') == true) { window.location.href='/task/delete/@item.id' };">
+                x @item.id
+            </div>
+        </div>
+    }
+}

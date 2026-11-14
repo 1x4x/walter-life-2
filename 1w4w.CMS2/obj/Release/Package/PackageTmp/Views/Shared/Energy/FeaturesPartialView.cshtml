@@ -1,0 +1,55 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+<section class="features-section pt-70 pb-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-features-item">
+                    <div class="features-icon">
+                        <i class="flaticon-doctor"></i>
+                    </div>
+                    <h3>Top Qualified Doctors</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-features-item">
+                    <div class="features-icon">
+                        <i class="flaticon-doctor-1"></i>
+                    </div>
+                    <h3>Emergency Support</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-features-item">
+                    <div class="features-icon">
+                        <i class="flaticon-quality-control"></i>
+                    </div>
+                    <h3>International Certification</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

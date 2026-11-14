@@ -1,0 +1,38 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+
+<div class="copyright-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <p>© 2023 @website.name - All Rights Reserved</p>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <ul>
+                    <li> <a href="terms-condition.html">Terms & Conditions</a></li>
+                    <li> <a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

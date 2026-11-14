@@ -1,0 +1,21 @@
+﻿@{
+    //string host = HttpContext.Current.Request.Url.Host.ToLower();
+    //Response.Write("host: " + host);
+    //Response.End();
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+
+    //Layout = "~/Views/Shared/_LayoutTest.cshtml";
+
+
+    // verify accesstoken to know if we have access or not
+    var accesstoken = Request.QueryString["at"];
+    if(string.IsNullOrEmpty(accesstoken)) {
+        Layout = "~/Views/Shared/_LayoutWelcome.cshtml";
+        //HttpContext.Current.Response.End();
+    }
+
+    if (accesstoken == "1") { Layout = "~/Views/Shared/_LayoutEnergy.cshtml"; }
+    if (accesstoken == "2") { Layout = "~/Views/Shared/_TemplatedLayout.cshtml"; }
+
+
+}

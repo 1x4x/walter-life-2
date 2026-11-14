@@ -1,0 +1,73 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+<section class="appointment-section bg-dark">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="appointment-img"></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="appointment-content">
+                    <div class="section-title">
+                        <h6 class="sub-title">Online Appointment</h6>
+                        <h2>Make An Appointment</h2>
+                    </div>
+                    <div class="appointment-form">
+                        <form>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="name" id="name" class="appointment-control" required placeholder="Your Name">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="appointment-control" required placeholder="Your Email">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="phone" id="phone" required class="appointment-control" placeholder="Your Phone">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="form-group">
+                                        <input type="text" name="datepicker" id="datepicker" class="appointment-control" placeholder="Schedule Date">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <div class="form-group">
+                                        <textarea name="message" class="appointment-control" id="message" cols="30" rows="6" required placeholder="Your Message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12">
+                                    <button type="submit" class="default-btn">Book Appointment <span></span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,14 @@
+DROP TABLE cateringorderrow;
+CREATE TABLE cateringorderrow (
+    id int NOT NULL AUTO_INCREMENT,
+    websiteid int,
+    orderid int,
+    productid int,
+    status varchar(255),
+    created varchar(255),
+    updated varchar(255),
+    amount int,
+    artnr varchar(255),
+    name varchar(255),
+    PRIMARY KEY (id)
+);

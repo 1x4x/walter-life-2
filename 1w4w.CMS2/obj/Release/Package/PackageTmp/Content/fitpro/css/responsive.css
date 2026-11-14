@@ -1,0 +1,152 @@
+@media all and (max-width: 1070px) {
+
+    .header-menu {
+        position: absolute;
+        top: 0;
+        left: -320px;
+        width: 320px;
+        height: 100vh;
+        z-index: 10000;
+        background-color: #0c1421;
+        overflow: auto;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 30px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .subscription {
+        display: none;
+    }
+
+    .menu li {
+        margin-left: 0px;
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    #openmenu,
+    #closemenu {
+        display: inline-block;
+    }
+
+    .top-header {
+        display: none;
+    }
+
+    .bottom-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    header {
+        min-height: 600px;
+    }
+}
+
+
+@media all and (max-width: 993px) {
+
+    .about-content {
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .aboutus-img {
+        display: none;
+    }
+
+    .wrapper-aboutus {
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+
+
+@media all and (max-width: 850px) {
+
+    .element-item {
+        width: calc(50% - 30px);
+    }
+
+    #gallery.flex-row a {
+        width: 50%;
+    }
+
+    .subsciption-img {
+        display: none;
+    }
+
+    .subsciption-content {
+        width: 100%;
+        padding: 50px 10px;
+    }
+
+    .contact-content {
+        width: 100%;
+        padding: 0px 10px 50px 10px;
+    }
+
+    .contact-map {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+
+@media all and (max-width: 600px) {
+
+    h1 {
+        font-size: 50px;
+    }
+
+    header {
+        min-height: 400px;
+    }
+
+    h2 {
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+
+}
+
+
+@media all and (max-width: 500px) {
+
+    .excellence>div {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .element-item {
+        width: calc(95% - 20px);
+    }
+
+    .wrapper-progress>div {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #gallery.flex-row a {
+        width: 100%;
+    }
+
+    .wrapper-input input {
+        width: 100%;
+    }
+}

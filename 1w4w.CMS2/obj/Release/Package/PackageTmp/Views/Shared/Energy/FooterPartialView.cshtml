@@ -1,0 +1,78 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+
+<section class="footer-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 footer-box-item">
+                <div class="footer-about footer-list">
+                    <a class="footer-logo" href="#">
+                        <!--<img src="@baseurl/assets/img/logo.png" class="white-logo" alt="logo">-->
+                        <img src="@baseurl/assets/img/logo4_360.png" class="white-logo" alt="logo">
+                        <!--<img src="@baseurl/assets/img/banner_top_3.jpg" class="black-logo" alt="logo">-->
+                    </a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua</p>
+                    <ul class="footer-social-icon">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <!--<li><a href="#"><i class="fab fa-linkedin"></i></a></li>-->
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-box-item">
+                <div class="footer-list">
+                    <h5 class="title">Adress</h5>
+                    <div class="footer-contact-info">
+                        <ul class="footer-contact-list">
+                            <li><i class="fa fa-location-dot"></i> @website.name</li>
+                            <li><i class="fa fa-location-dot"></i> @website.address @website.zipcode @website.city</li>
+                            <li><i class="fa fa-mobile-screen-button"></i> <a href="tel:@website.phone">@website.phone</a></li>
+                            <li><i class="fa fa-envelope"></i> <a href="mailto:@website.email">@website.email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-box-item">
+                <div class="footer-list">
+                    <h5 class="title">Öppettider</h5>
+                    <ul class="footer-opening-time-list">
+                        <li>Mån-Fre: <span>8:30-17:00</span></li>
+                        <li>Lör-Sön: <span>Stängt</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-box-item">
+                <div class="footer-list">
+                    <h5 class="title">Veckans lunchmeny direkt till din epost</h5>
+                    <div class="footer-info-newsletter">
+                        <form class="newsletter-form">
+                            <input type="email" class="input-newsletter" placeholder="Ange din epost" name="EMAIL" required="" autocomplete="off">
+                            <button class="default-btn" type="submit">Registrera dig <span></span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,249 @@
+﻿@model _1w4w.CMS.Models.TodoModel
+
+<style>
+    #CreateTodoDiv {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: fit-content;
+        z-index:50;
+        background-color: #222222;
+        padding:20px;
+        border-radius:10px;
+    }
+</style>
+<div id="CreateTodoDiv" name="CreateTodoDiv" style="display:none;">
+
+    @using (Ajax.BeginForm("createtodo", "todo", null, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "CreateTodoForm555" }, htmlAttributes: new { id = "form_CreateTodoForm555" }))
+    {
+        @*Html.AntiForgeryToken()*@
+
+    <div class="form-horizontal">
+        <h4>Add Todo</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+
+
+        <div class="form-group">
+            @*Html.LabelFor(model => model.todotype, htmlAttributes: new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                <select id="todotype" name="todotype" class="form-control col-md-2">
+                    @{
+                        // todotype
+                        List<SelectListItem> todotypelist = new List<SelectListItem>();
+
+
+
+                        var todotypeslist = _1w4w.CMS.Manager.ColorManager.GetListOfTodoTypes();
+                        foreach (string item in todotypeslist)
+                        {
+                            var todocolor = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item);
+                            //todotypelist.Add(new SelectListItem { Text = item, Value = item });
+                            @*
+                <div style="display: inline-block; margin-right: 20px; margin-bottom: 20px; text-transform: capitalize; font-size: 20px; "><span style="background-color:@todocolor; width:18px; height:18px; display:inline-block; border-radius:13px; padding-left:5px;"></span> @item</div>
+                            *@
+                            todotypelist.Add(new SelectListItem { Text = item, Value = item });
+                        }
+
+                        //todotypelist.Add(new SelectListItem { Text = "todo", Value = "todo" });
+                        //todotypelist.Add(new SelectListItem { Text = "meeting", Value = "meeting" });
+                        //todotypelist.Add(new SelectListItem { Text = "important", Value = "important" });
+                        //todotypelist.Add(new SelectListItem { Text = "training", Value = "training" });
+                        //todotypelist.Add(new SelectListItem { Text = "hygiene", Value = "hygiene" });
+                        //todotypelist.Add(new SelectListItem { Text = "book", Value = "book" });
+                        ViewBag.todotypelist = todotypelist;
+
+
+                        // status
+                        List<SelectListItem> statuslist = new List<SelectListItem>();
+                        statuslist.Add(new SelectListItem { Text = "incomplete", Value = "incomplete" });
+                        statuslist.Add(new SelectListItem { Text = "complete", Value = "complete" });
+                        ViewBag.status = statuslist; }
+
+                    @*Html.DropDownListFor(model => model.todotype, (IEnumerable<SelectListItem>)ViewBag.todotypelist, new { @class = "form-control" })*@
+                    @*Html.ValidationMessageFor(model => model.todotype, "", new { @class = "text-danger" })*@
+                    @{
+                        foreach (string item in todotypeslist)
+                        {
+                            var todocolor = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item);
+                            //todotypelist.Add(new SelectListItem { Text = item, Value = item });
+                            @*
+
+                            *@
+                            todotypelist.Add(new SelectListItem { Text = item, Value = item });
+                            <option value="@item" style="background-color: @todocolor; color:#ffffff;">@item</option>
+                        }
+
+
+                    }
+                    @*
+        <option value="todo" style="background-color: #555555; color:#ffffff;">todo</option>
+        <option value="meeting" style="background-color: #ffff00; color: #000000;">meeting</option>
+        <option value="important" style="background-color: #ff0000; color: #ffffff; ">important</option>
+        <option value="training" style="background-color: #165b5b; color: #ffffff; ">training</option>
+        <option value="hygiene" style="background-color: #5b165b; color: #ffffff; ">hygiene</option>
+        <option value="book" style="background-color: #ae00ff; color:#ffffff;">book</option>
+                    *@
+                </select>
+                
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.todotext, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.todotext, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.todotext, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.todoextratext, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.todoextratext, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.todoextratext, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <select id="status" name="status" class="form-control col-md-2">
+                <option value="incomplete" style="background-color: #ff0000; color:#ffffff;">incomplete</option>
+                <option value="complete" style="background-color: #008800; color:#ffffff;">complete</option>
+            </select>
+
+            @*
+        @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.status, new { htmlAttributes = new { @class = "form-control", @Value = "incomplete" } })
+            @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
+        </div>
+            *@
+        </div>
+
+
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.userid, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.userid, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.userid, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.sortorder, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.sortorder, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.sortorder, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.color, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.color, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.color, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.backgroundcolor, htmlAttributes: new { @class = "control-label col-md-2", @value = "incomplete" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.backgroundcolor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.backgroundcolor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.category, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.category, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.category, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.hidden, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.hidden, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.hidden, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.boardid, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.boardid, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.boardid, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*
+        <div class="form-group">
+            @Html.LabelFor(model => model.todotype, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.todotype, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.todotype, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        *@
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.todoonthesedaysinmonth, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.todoonthesedaysinmonth, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.todoonthesedaysinmonth, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.tododate, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tododate, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.tododate, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.todotime, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.todotime, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.todotime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.todocustombordercolor, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.todocustombordercolor, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.todocustombordercolor, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10" style="padding-top:10px;">
+                <input type="button" value="Create" class="btn btn-default" onclick="javascript:document.getElementById('form_CreateTodoForm555').submit();" style="border: 1px solid #808080; color: #008800;" />
+                <input type="button" value="Cancel" class="btn btn-default" onclick="javascript: document.getElementById('CreateTodoDiv').style.display='none';" style="border: 1px solid #808080; color: #ffff00; " />
+            </div>
+        </div>
+    </div>
+    }
+</div>
+
+
+
+
+<script>
+    document.getElementById('todotext').focus();
+</script>

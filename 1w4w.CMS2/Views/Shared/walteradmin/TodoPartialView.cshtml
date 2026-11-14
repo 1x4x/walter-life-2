@@ -1,0 +1,1059 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    string path = "/content/walteradmin";
+}
+@{
+    ViewBag.Title = "Home Page";
+    var todolist = Model.TodoList;
+    var todocategorylist = Model.TodoCategoryList;
+
+    //string baseurl = "/content/template/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(1);
+    int selectedtemplate = website.template;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = ProjectManagement2.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = template.baseurl;
+    //var model1 = Model;
+    //model1.
+
+
+    var listincompletecountmeeting = todolist
+        .Where(x => x.hidden == 0 
+            && x.todotype == "meeting" 
+            && x.status == "incomplete" 
+            && !string.IsNullOrWhiteSpace(x.tododate) 
+            && DateTime.TryParse(x.tododate, out DateTime parsedDate) 
+            && (parsedDate - DateTime.Now.Date).Days >= 0)
+        .Count();
+    var listincompletecounttraining = todolist.Where(x => x.hidden == 0 && x.todotype == "training" && x.status == "incomplete").Count();
+    var listincompletecounthygiene = todolist.Where(x => x.hidden == 0 && x.todotype == "hygiene" && x.status == "incomplete").Count();
+    var listincompletecountimportant = todolist.Where(x => x.hidden == 0 && x.todotype == "important" && x.status == "incomplete").Count();
+    var listincompletecountbook = todolist.Where(x => x.hidden == 0 && x.todotype == "book" && x.status == "incomplete").Count();
+    var listincompletecounttodo = todolist.Where(x => x.hidden == 0 && x.todotype == "todo" && x.status == "incomplete").Count();
+}
+<style>
+    table {
+        border-spacing: 10px;
+        border-collapse: separate;
+    }
+    td, th { /* table cells */
+        padding: 20px;
+    }
+</style>
+<div class="col" style="width: 100% !important; height:auto; font-size:36px; margin-bottom:30px;">
+    <style>
+        .todayheaderdiv {
+            width: 50px;
+            background-color: #222222;
+            border-radius: 10px;
+            color: #15ca20;
+            text-align: center;
+            display: inline-block;
+        }
+        .todaydiv {
+            /*width: 200px;*/
+            border: 2px solid #222222;
+            border-radius: 10px;
+            color: #15ca20;
+            text-align: center;
+            display: inline-block;
+            padding-left:20px;
+            padding-right:20px;
+        }
+    </style>
+    <div>
+        <div class="todayheaderdiv">
+            <i class="bx bx-bell"></i>
+        </div>
+        <div class="todaydiv">
+            Raka mig
+            <div class="dropdown ms-auto" style="display:inline-block;">
+                <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                    <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color: #15ca20 !important;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li style="display: inline-block; width: 40px; text-align: center;">
+                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/1';" style="color:#008800;"><i class="fa fa-check-square"></i></a>
+                    </li>
+                    <li style="display: inline-block; width: 40px; text-align: center;">
+                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/1';" style="color:#333333;"><i class="fa fa-square"></i></a>
+                    </li>
+                    <li style="display: inline-block; width: 40px; text-align: center;">
+                        <a class="dropdown-item" href="javascript:location.href='/todo/update/1';" style="color:#ffff00;"><i class="fa fa-edit"></i></a>
+                    </li>
+                    <li style="display: inline-block; width: 40px; text-align:center;">
+                        <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/1';" style="color:#ff0000;"><i class="fa fa-remove"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="todaydiv">
+            Klippa naglarna
+            <div class="dropdown ms-auto" style="display:inline-block;">
+                <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                    <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color: #15ca20 !important;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/1';" style="color:#008800;"><i class="fa-solid fa-check"></i></a>
+                        
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/1';" style="color:#333333;"><i class="fa-solid fa-check"></i></a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="javascript:location.href='/todo/update/1';" style="color:#ffff00;">Update</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/1';" style="color:#ff0000;">Delete</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="todaydiv">
+            <div style="display:inline-block;">
+                <p class="mb-0 text-secondary" style="color: #15ca20 !important">
+                    Tvätta kläder
+                </p>
+            </div>
+            <div class="dropdown ms-auto" style="display:inline-block;">
+                <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                    <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color: #15ca20 !important;"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/1';" style="color:#008800;">Set as complete</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/1';" style="color:#333333;">Set as incomplete</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="javascript:location.href='/todo/update/1';" style="color:#ffff00;">Update</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/1';" style="color:#ff0000;">Delete</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    
+</div>
+
+<div name="todobigdiv" id="todobigdiv" style="display:none;">
+    @foreach (var item in todolist.Where(x => x.hidden == 0 && x.todotype == "todobig" && x.status == "incomplete"))
+    {
+        var colorincomplete = "#5800ff";
+
+        var tododate = item.tododate ?? "";
+        var tododaysleft = 0;
+        var monthname = "";
+        var datestring = "";
+        if (!string.IsNullOrEmpty(tododate))
+        {
+            var todoonthesedaysinmonth = item.todoonthesedaysinmonth == "";
+            var tododate2 = Convert.ToDateTime(item.tododate);
+            var datenow = DateTime.Now;
+            //var tododaysleft = datenow.Subtract(Convert.ToDateTime(item.tododate));
+            //var tododaysleft = (datenow - Convert.ToDateTime(item.tododate)).TotalDays;
+
+            DateTime start = DateTime.Now;
+            DateTime end = Convert.ToDateTime(item.tododate);
+
+            //TimeSpan difference = end - start;
+            tododaysleft = (end.Date - start.Date).Days;
+            monthname = new DateTime(tododate2.Year, tododate2.Month, tododate2.Day).ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+
+
+            datestring = Convert.ToDateTime(item.tododate).Day + monthname;
+        }
+
+
+        var color = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item.todotype);
+
+        if (tododaysleft >= 0)
+        {
+            var todoextratext = "";
+            if (!string.IsNullOrEmpty(item.todoextratext))
+            {
+                todoextratext = "(" + item.todoextratext + ")";
+            }
+
+
+            <div class="col" style="width: 800px !important; height:auto; font-size:36px;">
+                <div class="card radius-10">
+                    <div class="card-body" style="border:3px solid @color; border-radius:10px;">
+                        <div class="d-flex align-items-center">
+                            <div>
+                                <p class="mb-0 text-secondary" style="color:@color !important">
+                                    @Html.Raw(item.todotext) <span class="text-success">@item.todoextratext</span>
+                                    @if (!string.IsNullOrEmpty(item.todoonthesedaysinmonth))
+                                    {
+                                        <span style="background-color:#000000;border:3px solid @color; color:#008800; z-index:10;top:-140px; position:absolute; padding:5px 10px; border-radius:30px; right:20px;"> @item.todoonthesedaysinmonth</span>
+                                    }
+                                </p>
+                                @if (!string.IsNullOrEmpty(tododate))
+                                {
+                                    <h4 class="my-1"><span style="color: #15ca20;">@datestring</span> @item.todotime</h4>
+                                    if (tododaysleft > 0)
+                                    {
+                                        <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> @tododaysleft days left!</p>
+                                    }
+                                    else if (tododaysleft == 0)
+                                    {
+                                        <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> The meeting is today!</p>
+                                    }
+                                }
+
+
+                            </div>
+                            <div class="dropdown ms-auto">
+                                <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                                    <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color:@color !important;"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    @if (item.status == "incomplete")
+                                    {
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/@item.id';" style="color:#008800;">Set as complete</a>
+                                        </li>
+                                    }
+                                    @if (item.status == "complete")
+                                    {
+                                        <li>
+                                            <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/@item.id';" style="color:#333333;">Set as incomplete</a>
+                                        </li>
+                                    }
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        @Html.Partial("~/Views/todo/updatetodo.cshtml", item);
+                                        <!--<a href=""><i class='bx bx-plus-circle'></i>Update todo</a>-->
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/@item.id';" style="color:#ff0000;">Delete</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        @*{
+                                <div class="d-flex align-items-center">
+                                    <div>
+                                        <!--<p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>-->
+                                        <h4 class="my-1"><span style="color: #15ca20;">3 juni</span> 13:30</h4>
+                                        <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> 5 dagar kvar!</p>
+                                        <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+                                    </div>
+                                    <div class="widgets-icons bg-light-success text-success ms-auto">
+                                        <i class='bx bx-category' style="cursor:pointer;"></i>
+                                    </div>
+                                </div>
+                            }*@
+
+                    </div>
+
+                </div>
+            </div>
+        }
+    }
+</div>
+@foreach (var item in todolist.Where(x => x.hidden == 0 && x.todotype == "meeting" && x.status == "incomplete"))
+{
+    var colorincomplete = "#5800ff";
+
+    var tododate = item.tododate;
+    var todoonthesedaysinmonth = item.todoonthesedaysinmonth;
+
+    var tododate2 = Convert.ToDateTime(item.tododate) ;
+    var datenow = DateTime.Now;
+    //var tododaysleft = datenow.Subtract(Convert.ToDateTime(item.tododate));
+    //var tododaysleft = (datenow - Convert.ToDateTime(item.tododate)).TotalDays;
+
+    DateTime start = DateTime.Now;
+    DateTime end = Convert.ToDateTime(item.tododate);
+
+    //TimeSpan difference = end - start;
+
+
+
+    var tododaysleft = (end.Date - start.Date).Days;
+    var monthname = new DateTime(tododate2.Year, tododate2.Month, tododate2.Day).ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+
+
+    var color = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item.todotype);
+
+    if (tododaysleft >= 0)
+    {
+        var todoextratext = "";
+        if (!string.IsNullOrEmpty(item.todoextratext))
+        {
+            todoextratext = "(" + item.todoextratext + ")";
+        }
+
+        <div class="col">
+            <div class="card radius-10">
+                <div class="card-body gradientbg" style="border:3px solid @color; border-radius:10px;">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-0 text-secondary">@item.todotext <span class="text-success">@item.todoextratext</span></p>
+                            @if (!string.IsNullOrEmpty(item.todoonthesedaysinmonth))
+                            {
+                                <span style="background-color:#000000;border:3px solid @color; color:#008800; z-index:10;top:-140px; position:absolute; padding:5px 10px; border-radius:30px; right:20px;"> @item.todoonthesedaysinmonth.Replace(" ", "").Replace("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31", "1-31")</span>
+                            }
+                            @if (!string.IsNullOrEmpty(tododate))
+                            {
+                                <h4 class="my-1"><span style="color: #15ca20;">@Convert.ToDateTime(item.tododate).Day @monthname</span> @item.todotime</h4>
+                                if (tododaysleft > 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> @tododaysleft days left!</p>
+                                }
+                                else if (tododaysleft == 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> The meeting is today!</p>
+                                }
+                            }
+
+
+                        </div>
+                        <div class="dropdown ms-auto">
+                            <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                                <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color:#ffff00 !important;"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (item.status == "incomplete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/@item.id';" style="color:#008800;">Set as complete</a>
+                                    </li>
+                                }
+                                @if (item.status == "complete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/@item.id';" style="color:#333333;">Set as incomplete</a>
+                                    </li>
+                                }
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/update/@item.id';" style="color:#ffff00;">Update</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/@item.id';" style="color:#ff0000;">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    @*{
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <!--<p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>-->
+                                    <h4 class="my-1"><span style="color: #15ca20;">3 juni</span> 13:30</h4>
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> 5 dagar kvar!</p>
+                                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+                                </div>
+                                <div class="widgets-icons bg-light-success text-success ms-auto">
+                                    <i class='bx bx-category' style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        }*@
+
+                </div>
+
+            </div>
+        </div>
+    }
+
+
+    @*
+
+        <div style="border:3px solid @colorincomplete; border-radius:10px; padding:5px; margin-bottom:6px; color:#dddddd; color:@colorincomplete;">
+            <div style="float:right; display:block; width:20px; height:10px; border-radius: 4px; color:@colorincomplete; background-color:@colorincomplete">
+
+                <!-- Small button groups (default and split) -->
+                <!--<div class="btn-group fa-pull-right" style="display:block !important;">-->
+                <div class="btn-group fa-pull-right">
+                    <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:transparent !important;">
+                        <i class="fa-solid fa-ellipsis-v" style="color:@colorincomplete;"></i>
+                    </button>
+                    <!--<div class="dropdown-menu" style="background-color:transparent !important;">-->
+                    <div class="dropdown-menu" style="background-color: @colorincomplete !important; color: @colorincomplete !important; background-image: url(arrow_right.svg) !important; border: 3px solid @colorincomplete !important;">
+                        <ul id="menu">
+                            <li style="border: 1px solid @colorincomplete !important;">
+                                <a href="/todo/setstatuscomplete/@item.id"><i class="fas fa-check-circle fa-fw" style="color:@colorincomplete"></i></a>
+                            </li>
+
+                            <!--
+            <li style="border: 1px solid @item.color !important;">
+                <a href="#"><i class="fa fa-pencil fa-fw" style="color:@colorincomplete"></i></a>
+            </li>
+            -->
+
+                            <li style="border: 1px solid @item.color !important;">
+                                <a href="/todo/deletetodo/@item.id"><i class="fa fa-x fa-fw" style="color:@colorincomplete"></i></a>
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div style="display:block; width:20px; height:10px; border-radius: 4px; background-color:@colorcomplete"></div>
+            @item.todotext
+        </div>
+    *@
+
+}
+@foreach (var item in todolist.Where(x => x.hidden == 0 && x.todotype == "important" && x.status == "incomplete"))
+{
+    var colorincomplete = "#5800ff";
+
+    var tododate = item.tododate ?? "";
+    var tododaysleft = 0;
+    var monthname = "";
+    var datestring = "";
+    if (!string.IsNullOrEmpty(tododate))
+    {
+        var todoonthesedaysinmonth = item.todoonthesedaysinmonth == "";
+        var tododate2 = Convert.ToDateTime(item.tododate);
+        var datenow = DateTime.Now;
+        //var tododaysleft = datenow.Subtract(Convert.ToDateTime(item.tododate));
+        //var tododaysleft = (datenow - Convert.ToDateTime(item.tododate)).TotalDays;
+
+        DateTime start = DateTime.Now;
+        DateTime end = Convert.ToDateTime(item.tododate);
+
+        //TimeSpan difference = end - start;
+        tododaysleft = (end.Date - start.Date).Days;
+        monthname = new DateTime(tododate2.Year, tododate2.Month, tododate2.Day).ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+
+
+        datestring = Convert.ToDateTime(item.tododate).Day + " " + monthname;
+    }
+
+
+    var color = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item.todotype);
+
+
+    if (tododaysleft >= 0)
+    {
+        var todoextratext = "";
+        if (!string.IsNullOrEmpty(item.todoextratext))
+        {
+            todoextratext = "(" + item.todoextratext + ")";
+        }
+
+        <div class="col">
+            <div class="card radius-10">
+                <div class="card-body" style="border:3px solid @color; border-radius:10px;">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-0 text-secondary">@item.todotext <span class="text-success">@item.todoextratext</span></p>
+                            @if (!string.IsNullOrEmpty(item.todoonthesedaysinmonth))
+                            {
+                                <span style="background-color:#000000 !important; border:3px solid @color; color:#008800; z-index:10;top:-140px; position:absolute; padding:5px 10px; border-radius:30px; right:20px;"> @item.todoonthesedaysinmonth.Replace(" ", "").Replace("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31", "1-31")</span>
+                            }
+                            @if (!string.IsNullOrEmpty(tododate))
+                            {
+                                <h4 class="my-1"><span style="color: #15ca20;">@datestring</span> @item.todotime</h4>
+                                if (tododaysleft > 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> @tododaysleft days left!</p>
+                                }
+                                else if (tododaysleft == 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> The meeting is today!</p>
+                                }
+                            }
+
+
+                        </div>
+                        <div class="dropdown ms-auto">
+                            <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                                <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color:#ff0000 !important;"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (item.status == "incomplete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/@item.id';" style="color:#008800;">Set as complete</a>
+                                    </li>
+                                }
+                                @if (item.status == "complete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/@item.id';" style="color:#333333;">Set as incomplete</a>
+                                    </li>
+                                }
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/update/@item.id';" style="color:#ffff00;">Update</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/@item.id';" style="color:#ff0000;">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    @*{
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <!--<p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>-->
+                                    <h4 class="my-1"><span style="color: #15ca20;">3 juni</span> 13:30</h4>
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> 5 dagar kvar!</p>
+                                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+                                </div>
+                                <div class="widgets-icons bg-light-success text-success ms-auto">
+                                    <i class='bx bx-category' style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        }*@
+
+                </div>
+
+            </div>
+        </div>
+    }
+}
+@foreach (var item in todolist.Where(x => x.hidden == 0 && x.todotype == "training" && x.status == "incomplete"))
+{
+    var colorincomplete = "#5800ff";
+
+    var tododate = item.tododate ?? "";
+    var tododaysleft = 0;
+    var monthname = "";
+    var datestring = "";
+    if (!string.IsNullOrEmpty(tododate))
+    {
+        var todoonthesedaysinmonth = item.todoonthesedaysinmonth == "";
+        var tododate2 = Convert.ToDateTime(item.tododate);
+        var datenow = DateTime.Now;
+        //var tododaysleft = datenow.Subtract(Convert.ToDateTime(item.tododate));
+        //var tododaysleft = (datenow - Convert.ToDateTime(item.tododate)).TotalDays;
+
+        DateTime start = DateTime.Now;
+        DateTime end = Convert.ToDateTime(item.tododate);
+
+        //TimeSpan difference = end - start;
+        tododaysleft = (end.Date - start.Date).Days;
+        monthname = new DateTime(tododate2.Year, tododate2.Month, tododate2.Day).ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+
+
+        datestring = Convert.ToDateTime(item.tododate).Day + monthname;
+    }
+
+
+    var color = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item.todotype);
+
+    if (tododaysleft >= 0)
+    {
+        var todoextratext = "";
+        if (!string.IsNullOrEmpty(item.todoextratext))
+        {
+            todoextratext = "(" + item.todoextratext + ")";
+        }
+
+        <div class="col">
+            <div class="card radius-10">
+                <div class="card-body" style="border:3px solid @color; border-radius:10px;">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-0 text-secondary">@item.todotext <span class="text-success">@todoextratext</span></p>
+                            @if (!string.IsNullOrEmpty(item.todoonthesedaysinmonth))
+                            {
+                                <span style="background-color:#000000;border:3px solid @color; color:#008800; z-index:10;top:-140px; position:absolute; padding:5px 10px; border-radius:30px; right:20px;"> @item.todoonthesedaysinmonth.Replace(" ", "").Replace("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31", "1-31")</span>
+                            }
+                            @if (!string.IsNullOrEmpty(tododate))
+                            {
+                                <h4 class="my-1"><span style="color: #15ca20;">@datestring</span> @item.todotime</h4>
+                                if (tododaysleft > 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> @tododaysleft days left!</p>
+                                }
+                                else if (tododaysleft == 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> The meeting is today!</p>
+                                }
+                            }
+
+
+                        </div>
+                        <div class="dropdown ms-auto">
+                            <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                                <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color: #165b5b !important;"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (item.status == "incomplete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/@item.id';" style="color:#008800;">Set as complete</a>
+                                    </li>
+                                }
+                                @if (item.status == "complete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/@item.id';" style="color:#333333;">Set as incomplete</a>
+                                    </li>
+                                }
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/update/@item.id';" style="color:#ffff00;">Update</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/@item.id';" style="color:#ff0000;">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    @*{
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <!--<p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>-->
+                                    <h4 class="my-1"><span style="color: #15ca20;">3 juni</span> 13:30</h4>
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> 5 dagar kvar!</p>
+                                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+                                </div>
+                                <div class="widgets-icons bg-light-success text-success ms-auto">
+                                    <i class='bx bx-category' style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        }*@
+
+                </div>
+
+            </div>
+        </div>
+    }
+}
+@foreach (var item in todolist.Where(x => x.hidden == 0 && x.todotype == "hygiene" && x.status == "incomplete"))
+{
+    var colorincomplete = "#5800ff";
+
+    var tododate = item.tododate ?? "";
+    var tododaysleft = 0;
+    var monthname = "";
+    var datestring = "";
+    if (!string.IsNullOrEmpty(tododate))
+    {
+        var todoonthesedaysinmonth = item.todoonthesedaysinmonth == "";
+        var tododate2 = Convert.ToDateTime(item.tododate);
+        var datenow = DateTime.Now;
+        //var tododaysleft = datenow.Subtract(Convert.ToDateTime(item.tododate));
+        //var tododaysleft = (datenow - Convert.ToDateTime(item.tododate)).TotalDays;
+
+        DateTime start = DateTime.Now;
+        DateTime end = Convert.ToDateTime(item.tododate);
+
+        //TimeSpan difference = end - start;
+        tododaysleft = (end.Date - start.Date).Days;
+        monthname = new DateTime(tododate2.Year, tododate2.Month, tododate2.Day).ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+
+
+        datestring = Convert.ToDateTime(item.tododate).Day + monthname;
+    }
+
+
+    var color = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item.todotype);
+
+    if (tododaysleft >= 0)
+    {
+        var todoextratext = "";
+        if (!string.IsNullOrEmpty(item.todoextratext))
+        {
+            todoextratext = "(" + item.todoextratext + ")";
+        }
+        <div class="col">
+            <div class="card radius-10">
+                <div class="card-body" style="border:3px solid @color; border-radius:10px;">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-0 text-secondary">@item.todotext <span class="text-success">@item.todoextratext</span></p>
+                            @if (!string.IsNullOrEmpty(item.todoonthesedaysinmonth))
+                            {
+                                <span style="background-color:#000000;border:3px solid @color; color:#008800; z-index:10;top:-140px; position:absolute; padding:5px 10px; border-radius:30px; right:20px;"> @item.todoonthesedaysinmonth.Replace(" ", "").Replace("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31", "1-31")</span>
+                            }
+                            @if (!string.IsNullOrEmpty(tododate))
+                            {
+                                <h4 class="my-1"><span style="color: #15ca20;">@datestring</span> @item.todotime</h4>
+                                if (tododaysleft > 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> @tododaysleft days left!</p>
+                                }
+                                else if (tododaysleft == 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> The meeting is today!</p>
+                                }
+                            }
+
+
+
+                        </div>
+                        <div class="dropdown ms-auto">
+                            <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                                <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color: #5b165b !important;"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (item.status == "incomplete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/@item.id';" style="color:#008800;">Set as complete</a>
+                                    </li>
+                                }
+                                @if (item.status == "complete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/@item.id';" style="color:#333333;">Set as incomplete</a>
+                                    </li>
+                                }
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/update/@item.id';" style="color:#ffff00;">Update</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/@item.id';" style="color:#ff0000;">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    @*{
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <!--<p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>-->
+                                    <h4 class="my-1"><span style="color: #15ca20;">3 juni</span> 13:30</h4>
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> 5 dagar kvar!</p>
+                                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+                                </div>
+                                <div class="widgets-icons bg-light-success text-success ms-auto">
+                                    <i class='bx bx-category' style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        }*@
+
+                </div>
+
+            </div>
+        </div>
+    }
+}
+@foreach (var item in todolist.Where(x => x.hidden == 0 && x.todotype == "book" && x.status == "incomplete"))
+{
+    var colorincomplete = "#5800ff";
+
+    var tododate = item.tododate ?? "";
+    var tododaysleft = 0;
+    var monthname = "";
+    var datestring = "";
+    if (!string.IsNullOrEmpty(tododate))
+    {
+        var todoonthesedaysinmonth = item.todoonthesedaysinmonth == "";
+        var tododate2 = Convert.ToDateTime(item.tododate);
+        var datenow = DateTime.Now;
+        //var tododaysleft = datenow.Subtract(Convert.ToDateTime(item.tododate));
+        //var tododaysleft = (datenow - Convert.ToDateTime(item.tododate)).TotalDays;
+
+        DateTime start = DateTime.Now;
+        DateTime end = Convert.ToDateTime(item.tododate);
+
+        //TimeSpan difference = end - start;
+        tododaysleft = (end.Date - start.Date).Days;
+        monthname = new DateTime(tododate2.Year, tododate2.Month, tododate2.Day).ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+
+
+        datestring = Convert.ToDateTime(item.tododate).Day + monthname;
+    }
+
+
+    var color = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item.todotype);
+
+    if (tododaysleft >= 0)
+    {
+        var todoextratext = "";
+        if (!string.IsNullOrEmpty(item.todoextratext))
+        {
+            todoextratext = "(" + item.todoextratext + ")";
+        }
+
+        <div class="col">
+            <div class="card radius-10">
+                <div class="card-body" style="border:3px solid @color; border-radius:10px;">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-0 text-secondary">@item.todotext <span class="text-success">@item.todoextratext</span></p>
+                            @if (!string.IsNullOrEmpty(item.todoonthesedaysinmonth))
+                            {
+                                <span style="background-color:#000000;border:3px solid @color; color:#008800; z-index:10;top:-140px; position:absolute; padding:5px 10px; border-radius:30px; right:20px;"> @item.todoonthesedaysinmonth.Replace(" ", "").Replace("1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31", "1-31")</span>
+                            }
+                            @if (!string.IsNullOrEmpty(tododate))
+                            {
+                                <h4 class="my-1"><span style="color: #15ca20;">@datestring</span> @item.todotime</h4>
+                                if (tododaysleft > 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> @tododaysleft days left!</p>
+                                }
+                                else if (tododaysleft == 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> The meeting is today!</p>
+                                }
+                            }
+
+
+                        </div>
+                        <div class="dropdown ms-auto">
+                            <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                                <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color: #ae00ff !important;"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (item.status == "incomplete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/@item.id';" style="color:#008800;">Set as complete</a>
+                                    </li>
+                                }
+                                @if (item.status == "complete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/@item.id';" style="color:#333333;">Set as incomplete</a>
+                                    </li>
+                                }
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/update/@item.id';" style="color:#ffff00;">Update</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/@item.id';" style="color:#ff0000;">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    @*{
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <!--<p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>-->
+                                    <h4 class="my-1"><span style="color: #15ca20;">3 juni</span> 13:30</h4>
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> 5 dagar kvar!</p>
+                                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+                                </div>
+                                <div class="widgets-icons bg-light-success text-success ms-auto">
+                                    <i class='bx bx-category' style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        }*@
+
+                </div>
+
+            </div>
+        </div>
+    }
+}
+@foreach (var item in todolist.Where(x => x.hidden == 0 && x.todotype == "todo" && x.status == "incomplete"))
+{
+    var colorincomplete = "#5800ff";
+
+    var tododate = item.tododate ?? "";
+    var tododaysleft = 0;
+    var monthname = "";
+    var datestring = "";
+    if (!string.IsNullOrEmpty(tododate))
+    {
+        var todoonthesedaysinmonth = item.todoonthesedaysinmonth == "";
+        var tododate2 = Convert.ToDateTime(item.tododate);
+        var datenow = DateTime.Now;
+        //var tododaysleft = datenow.Subtract(Convert.ToDateTime(item.tododate));
+        //var tododaysleft = (datenow - Convert.ToDateTime(item.tododate)).TotalDays;
+
+        DateTime start = DateTime.Now;
+        DateTime end = Convert.ToDateTime(item.tododate);
+
+        //TimeSpan difference = end - start;
+        tododaysleft = (end.Date - start.Date).Days;
+        monthname = new DateTime(tododate2.Year, tododate2.Month, tododate2.Day).ToString("MMM", System.Globalization.CultureInfo.InvariantCulture).ToLower();
+
+
+        datestring = Convert.ToDateTime(item.tododate).Day + monthname;
+    }
+
+
+    var color = _1w4w.CMS.Manager.ColorManager.GetTodoColor(item.todotype);
+
+    if (tododaysleft >= 0)
+    {
+        var todoextratext = "";
+        if (!string.IsNullOrEmpty(item.todoextratext))
+        {
+            todoextratext = "(" + item.todoextratext + ")";
+        }
+
+
+        <div class="col">
+            <div class="card radius-10">
+                <div class="card-body" style="border:3px solid @color; border-radius:10px;">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <p class="mb-0 text-secondary">
+                                @Html.Raw(item.todotext) <span class="text-success">@item.todoextratext</span>
+                                @if (!string.IsNullOrEmpty(item.todoonthesedaysinmonth))
+                                {
+                                    <span style="background-color:#000000;border:3px solid @color; color:#008800; z-index:10;top:-140px; position:absolute; padding:5px 10px; border-radius:30px; right:20px;"> @item.todoonthesedaysinmonth</span>
+                                }
+                            </p>
+                            @if (!string.IsNullOrEmpty(tododate))
+                            {
+                                <h4 class="my-1"><span style="color: #15ca20;">@datestring</span> @item.todotime</h4>
+                                if (tododaysleft > 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> @tododaysleft days left!</p>
+                                }
+                                else if (tododaysleft == 0)
+                                {
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> The meeting is today!</p>
+                                }
+                            }
+
+
+                        </div>
+                        <div class="dropdown ms-auto">
+                            <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                                <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color:#555555 !important;"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                @if (item.status == "incomplete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatuscomplete/@item.id';" style="color:#008800;">Set as complete</a>
+                                    </li>
+                                }
+                                @if (item.status == "complete")
+                                {
+                                    <li>
+                                        <a class="dropdown-item" href="javascript:location.href='/todo/setstatusincomplete/@item.id';" style="color:#333333;">Set as incomplete</a>
+                                    </li>
+                                }
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li>
+                                    @Html.Partial("~/Views/todo/updatetodo.cshtml", item);
+                                    <!--<a href=""><i class='bx bx-plus-circle'></i>Update todo</a>-->
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="javascript:location.href='/todo/deletetodo/@item.id';" style="color:#ff0000;">Delete</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    @*{
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <!--<p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>-->
+                                    <h4 class="my-1"><span style="color: #15ca20;">3 juni</span> 13:30</h4>
+                                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> 5 dagar kvar!</p>
+                                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+                                </div>
+                                <div class="widgets-icons bg-light-success text-success ms-auto">
+                                    <i class='bx bx-category' style="cursor:pointer;"></i>
+                                </div>
+                            </div>
+                        }*@
+
+                </div>
+
+            </div>
+        </div>
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@*
+    @foreach (var item in todolist.Where(x => x.hidden == 0 && x.todotype == "meeting" && x.status.ToString() == "complete"))
+    {
+        //var colorcomplete = "#5800ff";
+        var colorcomplete = "#3900a7";
+
+        <div style="border:3px solid @colorcomplete; border-radius:10px; padding:5px; margin-bottom:6px; color:#dddddd; color:@colorcomplete;">
+            <div style="float:right; display:block; width:20px; height:10px; border-radius: 4px; color:@colorcomplete; background-color:@colorcomplete">
+
+                <!-- Small button groups (default and split) -->
+                <!--<div class="btn-group fa-pull-right" style="display:block !important;">-->
+                <div class="btn-group fa-pull-right">
+                    <button class="btn btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color:transparent !important;">
+                        <i class="fa-solid fa-ellipsis-v" style="color:@colorcomplete;"></i>
+                    </button>
+                    <!--<div class="dropdown-menu" style="background-color:transparent !important;">-->
+                    <div class="dropdown-menu" style="background-color:#000000 !important; color:@colorcomplete !important; background-image: url(arrow_right.svg)!important; border: 3px solid @colorcomplete !important;">
+                        <ul id="menu">
+                            <li style="border: 1px solid @colorcomplete !important;">
+                                <a href="/todo/setstatusincomplete/@item.id"><i class="far fa-check-circle fa-fw" style="color:@colorcomplete"></i></a>
+                            </li>
+                            <!--
+                            <li style="border: 1px solid @colorcomplete !important;">
+                                <a href="#"><i class="fa fa-pencil fa-fw" style="color:@colorcomplete"></i></a>
+                            </li>
+                            -->
+                            <li style="border: 1px solid @colorcomplete !important;">
+                                <a href="/todo/deletetodo/@item.id"><i class="fa fa-x fa-fw" style="color:@colorcomplete"></i></a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+            </div>
+            <div style="display:block; width:20px; height:10px; border-radius: 4px; background-color:@colorcomplete"></div>
+            @item.todotext
+        </div>
+
+    }
+*@

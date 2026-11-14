@@ -1,0 +1,365 @@
+@model ProjectManagement2.Models.LayoutViewModel
+
+@{
+
+    Layout = null;
+
+    var baseurl = "/content/template/catefood";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>a</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="@Model.BaseUrl/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="@Model.BaseUrl/css/style.css">
+    <link rel="stylesheet" href="@Model.BaseUrl/css/responsive.css">
+</head>
+<body>
+
+
+    <!-- ====== Preloader ====== -->
+    <div id="preload">
+        <img src="@Model.BaseUrl/images/preload.png" alt="">
+    </div>
+    <!-- ======End Preloader ====== -->
+
+    <div class="wrapper" id="home">
+
+        <!-- ====== Header ====== -->
+        <header>
+            <div class="wrapper-header container flex">
+                <a id="logo" href="#home"><img src="@baseurl/images/logo3.png" alt=""></a>
+                <nav id="navigation" class="flex">
+                    <a id="closemenu" href="#"><i class="fa-solid fa-xmark"></i></a>
+                    <ul class="menu">
+                        <!--<li><a href="#home">Restaurang La Forchetta</a></li>-->
+                        <li><a href="#aboutus">Take Away</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#menu">Meny</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contacts">Kontakt</a></li>
+                    </ul>
+                    <!--/.menu-->
+                    <ul class="social-link flex">
+                        <li><a href="https://www.facebook.com/laForchettaSthlm"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fla_forchetta"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/LaForchetta_Sthlm"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCiD1uX0VU5tYoQZsM41HuhQ"><i class="fab fa-youtube"></i></a></li>
+                        <li>
+                            <a href="/website/index">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-gem" viewBox="0 0 16 16" style="color: #4cff00;">
+                                    <path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--/#navigation-->
+                <a id="openmenu" href="#"><i class="fa-solid fa-bars-staggered"></i></a>
+            </div>
+            <!--/.wrapper-header-->
+        </header>
+        <!-- ====== End Header ====== -->
+
+        <main>
+
+            <!-- ====== Header Content ====== -->
+            <!--  style="border-bottom:1px solid #333333;" -->
+            <div class="wrapper-header-content flex">
+                <div class="header-content container">
+                    <span class="suptitle">La Forchetta</span>
+                    <h1>Italiensk Pizzeria  <br> & Restaurang</h1>
+                    <a class="btn" href="tel:+4687120033" style="border-radius:10px; top:-10px; left:0; position:relative;">Ring 08-7120033</a>
+                    <div style="display:inline-block; padding-left:20px; margin-top:7px;">
+                        <span style="color:#ffffff; font-weight:bold !important;">Öppet</span> <span style="font-weight:bold;">Mån-Fre</span> 11.00-22.00, <span style="font-weight: bold;">Lör-Sön</span> 12.00-22.00<br />
+                        <span style="color:#ffffff; font-weight:bold !important;">Lunch</span> <span style="font-weight:bold;">Mån-Fre</span> 11.00-14.00
+                    </div>
+                </div>
+                <!--/.header-content-->
+            </div>
+            <!-- ====== End Header Content ====== -->
+            <!-- ====== Services ====== -->
+            <section id="services" class="ptb" style="position:relative; top:-130px; border-radius:20px;">
+                <div class="container align-center" style="display:none;">
+                    <span class="suptitle">Our service</span>
+                    <h2>Catering for Every Taste</h2>
+                </div>
+                <div class="wrapper-services container flex align-center">
+                    <div>
+                        <img src="@baseurl/images/services-1.png" alt="">
+                        <h3>Banquet Service</h3>
+                        <p>Organization and hosting of banquets</p>
+                    </div>
+                    <div>
+                        <img src="@baseurl/images/services-2.png" alt="">
+                        <h3>Off-site Catering</h3>
+                        <p>Catering services for events at various locations</p>
+                    </div>
+                    <div>
+                        <img src="@baseurl/images/services-3.png" alt="">
+                        <h3>Corporate Catering</h3>
+                        <p>Providing meals for company employees</p>
+                    </div>
+                    <div>
+                        <img src="@baseurl/images/services-4.png" alt="">
+                        <h3>Wedding Catering</h3>
+                        <p>Organization and catering for weddings</p>
+                    </div>
+                </div>
+                <!--/.wrapper-services-->
+            </section>
+            <!-- ====== End Services ====== -->
+            <!-- ====== About Us ====== -->
+            <section id="aboutus" class="ptb">
+                <div class="wrapper-aboutus container flex">
+                    <div class="aboutus-img">
+                        <img src="@baseurl/images/aboutus.png" alt="">
+                    </div>
+                    <!--/.aboutus-img-->
+                    <div class="aboutus-content">
+                        <span class="suptitle">Take Away</span>
+                        <h2>Beställ mat för avhämtning eller hemleverans från La Forchetta</h2>
+                        <p><a href="tel:+4687120033" style="color:#cccccc;">Ring 08-712 00 33</a> om du vill beställa mat för avhämtning. Se vår <a href="/pdf/Restaurang_La-Forchetta_Avhamtningsmeny_TakeAway_2024.pdf" target="_blank" style="color:#cccccc;">avhämtningsmeny</a></p>
+                        <p>Det går även bra att beställa hemleverans från La Forchetta via <a href="https://www.foodora.se/restaurant/emzd/la-forchetta" target="_blank" style="color:#cccccc;">Foodora</a></p>
+
+                    </div>
+                    <!--/.aboutus-content-->
+                </div>
+            </section>
+            <!-- ====== End About Us ====== -->
+            <!-- ====== Portfolio ====== -->
+            <section id="portfolio" class="ptb">
+                <div class="container align-center">
+                    <span class="suptitle">Portolio</span>
+                    <h2>Work examples</h2>
+                </div>
+                <div class="wrapper-portfolio container">
+                    <div class="owl-carousel owl-theme portfolio-carousel">
+                        <div class="item flex single-portfolio">
+                            <div class="portfolio-img">
+                                <img src="@baseurl/images/portfolio-1.jpg" alt="">
+                                <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><i class="fa-solid fa-circle-play"></i></a>
+                            </div>
+                            <!--/.portfolio-img-->
+                            <div class="portfolio-content">
+                                <h3>BANQUET SERVICE</h3>
+                                <p class="address"><i class="fa-solid fa-location-dot"></i>2900 Lapeer Rd, Port Hurons, MI 49070</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quod aut quo placeat esse ratione omnis ab unde velit, incidunt magni deleniti impedit eos sed optio voluptate illum quos? Esse.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam unde enim voluptatem non aperiam a, atque eaque iste possimus obcaecati ut reiciendis, tempore perspiciatis hic mollitia accusantium aspernatur esse.</p>
+                            </div>
+                            <!--/.portfolio-content-->
+                        </div>
+                        <!--/single-portfolio-->
+                        <div class="item flex single-portfolio">
+                            <div class="portfolio-img">
+                                <img src="@baseurl/images/portfolio-2.jpg" alt="">
+                                <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><i class="fa-solid fa-circle-play"></i></a>
+                            </div>
+                            <!--/.portfolio-img-->
+                            <div class="portfolio-content">
+                                <h3>OFF-SITE CATERING</h3>
+                                <p class="address"><i class="fa-solid fa-location-dot"></i>2900 Lapeer Rd, Port Hurons, MI 49070</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quod aut quo placeat esse ratione omnis ab unde velit, incidunt magni deleniti impedit eos sed optio voluptate illum quos? Esse.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam unde enim voluptatem non aperiam a, atque eaque iste possimus obcaecati ut reiciendis, tempore perspiciatis hic mollitia accusantium aspernatur esse.</p>
+                            </div>
+                            <!--/.portfolio-content-->
+                        </div>
+                        <!--/single-portfolio-->
+                        <div class="item flex single-portfolio">
+                            <div class="portfolio-img">
+                                <img src="@baseurl/images/portfolio-3.jpg" alt="">
+                                <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><i class="fa-solid fa-circle-play"></i></a>
+                            </div>
+                            <!--/.portfolio-img-->
+                            <div class="portfolio-content">
+                                <h3>CORPORATE CATERING</h3>
+                                <p class="address"><i class="fa-solid fa-location-dot"></i>2900 Lapeer Rd, Port Hurons, MI 49070</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quod aut quo placeat esse ratione omnis ab unde velit, incidunt magni deleniti impedit eos sed optio voluptate illum quos? Esse.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam unde enim voluptatem non aperiam a, atque eaque iste possimus obcaecati ut reiciendis, tempore perspiciatis hic mollitia accusantium aspernatur esse.</p>
+                            </div>
+                            <!--/.portfolio-content-->
+                        </div>
+                        <!--/single-portfolio-->
+                    </div>
+                    <!--/.portfolio-carousel-->
+                </div>
+                <!--/.wrapper-portfolio-->
+            </section>
+            <!-- ====== End Portfolio ====== -->
+            <!-- ====== Menu ====== -->
+            <section id="menu" class="ptb">
+                <div class="container align-center">
+                    <span class="suptitle">Meny</span>
+                    <h2>Italiensk mat för hela familjen</h2>
+                </div>
+                <div class="menu-list container flex">
+                    @{
+                        
+                        
+                    }
+                    <ul>
+                        @{
+                            int productcounter = 0;
+                            foreach (ProjectManagement2.Models.ProductCategoryModel pcm in Model.ProductCategories)
+                            {
+                                var tabId = "tab" + pcm.id;
+
+                                productcounter++;
+                                <li><a href="#" data-link-id="@tabId">@pcm.name</a></li>
+                            }
+                        }
+
+                    </ul>
+                </div>
+                <!--/.menu-list-->
+                <div class="menu-item container">
+
+                    @{
+                        int pcmcounter = 0;
+                        foreach (var pcm in Model.ProductCategories)
+                        {
+                            var pcmname = "tab" + pcm.id;
+
+                            <div class="item-list flex" data-tab="@pcmname">
+
+                                @foreach (var pm in Model.Products.Where(x => x.productcategoryid == pcm.id))
+                                {
+                                    <div class="item-product flex">
+                                        <div class="item-product-img">
+                                            <a class="image-popup-no-margins" href="@baseurl/images/product-big-1.jpg">
+                                                <img src="@baseurl/images/product-min-1.jpg" alt="">
+                                                <div class="icon-search flex">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </div>
+                                                <!--/.icon-search-->
+                                            </a>
+                                        </div>
+                                        <!--/.item-product-img-->
+                                        <div class="item-product-text">
+                                            <div class="menu-title flex">
+                                                <h3>@pm.name</h3>
+                                                <span>@pm.price:-</span>
+                                            </div>
+                                            <p>@pm.description</p>
+                                            <p class="menu-ingredients">@pm.description</p>
+                                        </div>
+                                        <!--/.item-product-text-->
+                                    </div>
+                                }
+                            </div>
+                            pcmcounter++;
+                        }
+                    }
+                </div>
+
+            </section>
+            <!-- ====== End Menu ====== -->
+            <!-- ====== Booking ====== -->
+            <section id="booking" class="ptb">
+                <div class="container align-center">
+                    <span class="suptitle">Välkommen att</span>
+                    <h2>Boka bord</h2>
+                </div>
+                <div class="wrapper-booking container">
+                    <form method="POST">
+                        <div class="wrapper-input flex" style="display:none;">
+                            <input type="text" name="name" placeholder="Namn">
+                            <input type="text" name="location" placeholder="Adress">
+                        </div>
+                        <!--/.wrapper-input-->
+                        <div class="wrapper-input flex" style="display:none;">
+                            <input type="text" name="phone" placeholder="Telefon">
+                            <input type="text" name="email" placeholder="Epost">
+                        </div>
+                        <!--/.wrapper-input-->
+                        <div class="wrapper-input flex" style="display:none;">
+                            <input type="text" name="date" placeholder="mm-dd-yy">
+                            <input type="text" name="time" placeholder="12:00">
+                        </div>
+                        <!--/.wrapper-input-->
+                        <div class="align-center">
+                            <button class="btn" id="sendbook" type="button" onclick="tel:+4687120033" style="cursor:pointer; border-radius:10px;">Ring 08-712 00 33</button>
+                        </div>
+                        <p class="res-booking"></p>
+                    </form>
+                </div>
+                <!--/.wrapper-booking-->
+            </section>
+            <!-- ====== End Booking ====== -->
+        </main>
+
+        <footer>
+
+            <!-- ====== Contacts ====== -->
+            <div id="contacts" class="ptb">
+                <div class="container">
+                    <span class="suptitle">Italiensk Restaurang</span>
+                    <h2>La Forchetta</h2>
+                </div>
+                <div class="container wrapper-contact flex">
+                    <div>
+                        <h3>Hitta hit</h3>
+                        <p style="font-weight:bold;">La Forchetta</p>
+                        <p>Pluggvägen 23 A, 135 46 Tyresö</p>
+                        <ul class="social-link flex">
+                            <li><a href="https://www.facebook.com/laForchettaSthlm"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fla_forchetta"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/LaForchetta_Sthlm"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCiD1uX0VU5tYoQZsM41HuhQ"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                        <!--/.social-link-->
+                    </div>
+                    <div>
+                        <h3>Öppettider</h3>
+                        <p>Mån - Fre 11.00 - 22.00</p>
+                        <p>Lör - Sön 12.00 - 22.00</p>
+                    </div>
+                    <div>
+                        <h3>Telefon</h3>
+                        <p><a href="tel:+46-87120033">+46 (8) 712-00 33</a></p>
+                    </div>
+                    <div>
+                        <h3>Epost</h3>
+                        <p><a href="info@laforchetta.se">info@laforchetta.se</a></p>
+                    </div>
+                </div>
+                <!--/.wrapper-contact-->
+            </div>
+            <!-- ====== End Contacts ====== -->
+
+            <div class="wrapper-map">
+                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.8840785320544!2d-82.49493468465671!3d42.980715479150156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88259e93ea837f03%3A0x9eaf24e841d574ed!2zNDIzOSBMYXBlZXIgUmQsIFBvcnQgSHVyb24sIE1JIDQ4MDYwLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1640107647193!5m2!1sru!2sua" style="border: 0; filter: grayscale(100%) invert(92%) contrast(83%);" allowfullscreen="" loading="lazy"></iframe>-->
+                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10090254.980084253!2d3.115634694604372!3d51.871159288234075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f7ec51b91e89d%3A0xeb40a7c006816cf4!2sLa%20Forchetta!5e0!3m2!1ssv!2sse!4v1722522582644!5m2!1ssv!2sse" width="600" height="450" style="border: 0; filter: grayscale(100%) invert(92%) contrast(83%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4080.8239752748564!2d18.221206212419524!3d59.242556074466286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f7ec51b91e89d%3A0xeb40a7c006816cf4!2sLa%20Forchetta!5e0!3m2!1ssv!2sse!4v1722523118610!5m2!1ssv!2sse" style="border: 0; filter: grayscale(100%) invert(92%) contrast(83%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <!--/.wrapper-map-->
+            <div class="copyright">
+                <p>&copy;2024 La Forchetta. All rights reserved</p>
+            </div>
+            <!--/.copyright-->
+        </footer>
+        <!-- ====== End Footer ====== -->
+    </div>
+    <!--/.wrapper-->
+    <!-- ====== Scroll Top ====== -->
+    <a id="scroll-top" class="btn" href="#"><i class="fa-solid fa-arrow-up-long"></i></a>
+
+
+    <!-- ====== jQuery ====== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--<script src="js/jquery-3.4.1.min.js"></script>-->
+    <!-- ====== Magnific Popup ====== -->
+    <script src="@baseurl/js/jquery.magnific-popup.min.js"></script>
+    <!-- ====== Owl Carousel ====== -->
+    <script src="@baseurl/js/owl.carousel.min.js"></script>
+    <!-- ====== Custom js ======  -->
+    <script src="@baseurl/js/script.js"></script>
+
+</body>
+</html>

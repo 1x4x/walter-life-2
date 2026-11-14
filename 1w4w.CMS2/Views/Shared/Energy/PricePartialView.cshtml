@@ -1,0 +1,118 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+<section class="price-area pt-70 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h6 class="sub-title">Medicare Package</h6>
+                    <h2>Pricing Plan</h2>
+                </div>
+            </div>
+            <!-- pricing item -->
+            <div class="col-lg-4 col-md-6 col-sm-12 price-item">
+                <div class="single-price-item">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Basic Package</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <div class="price-content">
+                            <span class="currency">$</span>
+                            <span class="price">500</span>
+                            <span class="discount">_NOW $400</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">Brain-Head</li>
+                            <li class="active">Report & Scan</li>
+                            <li class="active">Consultation Included</li>
+                            <li>Abdomen</li>
+                            <li>Heart (cardiac)</li>
+                            <li>Spine (whole)</li>
+                            <li>Pelvis</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#" class="default-btn">Select Plan <span></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- pricing item end -->
+            <!-- pricing item -->
+            <div class="col-lg-4 col-md-6 col-sm-12 price-item">
+                <div class="single-price-item active">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Gold Package</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <div class="price-content">
+                            <span class="currency">$</span>
+                            <span class="price">1,700</span>
+                            <span class="discount">_NOW $1,600</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">Brain-Head</li>
+                            <li class="active">Abdomen</li>
+                            <li class="active">Pelvis</li>
+                            <li class="active">Report & Scan</li>
+                            <li class="active">Heart (cardiac)</li>
+                            <li class="active">Consultation Included</li>
+                            <li>Spine (whole)</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#" class="default-btn">Select Plan <span></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- pricing item end -->
+            <!-- pricing item -->
+            <div class="col-lg-4 col-md-6 col-sm-12 price-item">
+                <div class="single-price-item">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Platinum Package</h3>
+                    </div>
+                    <div class="pricing-body">
+                        <div class="price-content">
+                            <span class="currency">From $</span>
+                            <span class="price">2000</span>
+                            <span class="discount">0%</span>
+                        </div>
+                        <ul class="list">
+                            <li class="active">Brain-Head</li>
+                            <li class="active">Abdomen</li>
+                            <li class="active">Pelvis</li>
+                            <li class="active">Spine (whole)</li>
+                            <li class="active">Heart (cardiac)</li>
+                            <li class="active">Consultation Included</li>
+                            <li class="active">Report & Scan</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#" class="default-btn">Select Plan <span></span></a>
+                    </div>
+                </div>
+            </div>
+            <!-- pricing item end -->
+        </div>
+    </div>
+</section>

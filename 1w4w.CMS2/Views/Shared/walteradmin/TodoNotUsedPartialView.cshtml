@@ -1,0 +1,300 @@
+﻿
+<div class="col">
+    <div class="card radius-10">
+        <div class="card-body" style="border:3px solid #ffff00; border-radius:10px;">
+            <div class="d-flex align-items-center">
+                <div>
+                    <!--<h6 class="mb-0">Recent Orders</h6>-->
+                    <p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>
+                </div>
+                <div class="dropdown ms-auto">
+                    <a class="dropdown-toggle dropdown-toggle-nocaret" href="#" data-bs-toggle="dropdown">
+                        <i class='bx bx-dots-horizontal-rounded font-22 text-option' style="color:#ffff00 !important;"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="javascript:location.href='/todo/complete';" style="color:#008800;">Complete</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="javascript:location.href='/todo/incomplete';" style="color:#333333;">Incomplete</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="javascript:location.href='/todo/delete';" style="color:#ff0000;">Delete</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+
+            <div class="d-flex align-items-center">
+                <div>
+                    <!--<p class="mb-0 text-secondary">AF Webmeeting <span class="text-success">(Psykolog Carina)</span></p>-->
+                    <h4 class="my-1"><span style="color: #15ca20;">3 juni</span> 13:30</h4>
+                    <p class="mb-0 font-18 text-danger"><i class="bx bx-error align-middle"></i> 5 dagar kvar!</p>
+                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+                </div>
+                <div class="widgets-icons bg-light-success text-success ms-auto">
+                    <i class='bx bx-category' style="cursor:pointer;"></i>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<div class="col">
+    <div class="card radius-10">
+        <div class="card-body" style="border: 3px solid #555555; border-radius: 10px;">
+            <div style="width:15px; height:15px; border-radius:50%; background-color:#15ca20; position:absolute; right:10px; top:10px;"></div>
+            <!--float:right; z-index:1;-->
+            <div class="d-flex align-items-center">
+
+                <div>
+                    <p class="mb-0 text-secondary">Weekly Pushups <span class="text-success">(week 21)</span></p>
+                    <h4 class="my-1"><span style="color: #15ca20;"><span id="pushupsoutputamount" name="pushupsoutputamount">20</span></span>/35</h4>
+                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+                </div>
+                <div class="widgets-icons bg-light-success text-success ms-auto">
+                    <i class='bx bx-category' onclick="javascript:toggle('pushupsresultheader'); toggle('pushupsresult');"></i>
+                </div>
+            </div>
+
+            <div style="max-width:100%; text-align:center !important;">
+                <div class="progress" onclick="javascript:toggle('pushupseditcontainer');">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                         style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="35"
+                         id="pushupsoutput" name="pushupsoutput"><span id="pushupsoutputpercent" name="pushupsoutputpercent">0%</span></div>
+                </div>
+            </div>
+            <div style="max-width:100%; text-align:center !important; display:none;"
+                 id="pushupseditcontainer" name="pushupseditcontainer">
+                <input type="range" class="form-range" id="pushupsinput" name="pushupsinput"
+                       min="0" max="35" step="5" oninput="javascript: setpercentpushups(this.value,35); savepushups(this.value);">
+            </div>
+            <div id="pushupsresultheader" name="pushupsresultheader" style="max-width: 100%; text-align: left !important; padding-top: 20px; padding-bottom: 5px; display:none;">
+                <div>
+                    <p class="mb-0 text-secondary">Result (<span class="text-success">11</span>/<span class="text-danger">11</span>)</p>
+                </div>
+            </div>
+            <div id="pushupsresult" name="pushupsresult" style="max-width: 100%; text-align: center !important; display: none;">
+                <div class="week1">1</div>
+                <div class="week1">2</div>
+                <div class="week1">3</div>
+                <div class="week1">4</div>
+                <div class="week1">5</div>
+                <div class="week1">6</div>
+                <div class="week1">7</div>
+                <div class="week1">8</div>
+                <div class="week1">9</div>
+                <div class="week1">10</div>
+                <div class="week1">11</div>
+                <div class="week1">12</div>
+                <div class="week1">13</div>
+                <div class="week1">14</div>
+                <div class="week1">15</div>
+                <div class="week1">16</div>
+                <div class="week1">17</div>
+                <div class="week1">18</div>
+                <div class="week1">19</div>
+                <div class="week1">20</div>
+                <div class="week1">21</div>
+                <div class="week1">22</div>
+                <div class="week1">23</div>
+                <div class="week1">24</div>
+                <div class="week1">25</div>
+                <div class="week1">26</div>
+                <div class="week1success">27</div>
+                <div class="week1failure">28</div>
+                <div class="week1">29</div>
+                <div class="week1">30</div>
+                <div class="week1">31</div>
+                <div class="week1">32</div>
+                <div class="week1">33</div>
+                <div class="week1">34</div>
+                <div class="week1">35</div>
+                <div class="week1">36</div>
+                <div class="week1">37</div>
+                <div class="week1">38</div>
+                <div class="week1">39</div>
+                <div class="week1">40</div>
+                <div class="week1">41</div>
+                <div class="week1">42</div>
+                <div class="week1">43</div>
+                <div class="week1">44</div>
+                <div class="week1">45</div>
+                <div class="week1">46</div>
+                <div class="week1">47</div>
+                <div class="week1">48</div>
+                <div class="week1">49</div>
+                <div class="week1">50</div>
+                <div class="week1">51</div>
+                <div class="week1">52</div>
+                <div class="week1">53</div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+<div class="col">
+    <div class="card radius-10">
+
+
+
+        <div class="card-body" style="border: 3px solid #555555; border-radius: 10px;">
+            <div style="width:15px; height:15px; border-radius:50%; background-color:#15ca20; position:absolute; right:10px; top:10px;"></div>
+            <!--float:right; z-index:1;-->
+            <div class="d-flex align-items-center">
+
+                <div>
+
+                    <p class="mb-0 text-secondary">Weekly Situps <span class="text-success">(week 21)</span></p>
+                    <h4 class="my-1"><span style="color: #15ca20;"><span id="situpsoutputamount" name="situpsoutputamount">20</span></span>/35</h4>
+                    <!--<p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>asdf</p>-->
+
+
+                </div>
+                <div class="widgets-icons bg-light-success text-success ms-auto">
+                    <i class='bx bx-category' onclick="javascript:toggle('situpsresultheader'); toggle('situpsresult');"></i>
+                </div>
+            </div>
+
+            <div style="max-width:100%; text-align:center !important;">
+                <div class="progress" onclick="javascript:toggle('situpseditcontainer');">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
+                         style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="35"
+                         id="situpsoutput" name="situpsoutput"><span id="situpsoutputpercent" name="situpsoutputpercent">0%</span></div>
+                </div>
+            </div>
+            <div style="max-width:100%; text-align:center !important; display:none;"
+                 id="situpseditcontainer" name="situpseditcontainer">
+                <input type="range" class="form-range" id="situpsinput" name="situpsinput"
+                       min="0" max="35" step="5" oninput="javascript: setpercentsitups(this.value,35); savesitups(this.value);">
+            </div>
+
+
+            <div id="situpsresultheader" name="situpsresultheader" style="max-width: 100%; text-align: left !important; padding-top: 20px; padding-bottom: 5px; display:none;">
+                <div>
+                    <p class="mb-0 text-secondary">Result (<span class="text-success">11</span>/<span class="text-danger">11</span>)</p>
+                </div>
+            </div>
+            <div id="situpsresult" name="situpsresult" style="max-width: 100%; text-align: center !important; display: none;">
+                <div class="week1">1</div>
+                <div class="week1">2</div>
+                <div class="week1">3</div>
+                <div class="week1">4</div>
+                <div class="week1">5</div>
+                <div class="week1">6</div>
+                <div class="week1">7</div>
+                <div class="week1">8</div>
+                <div class="week1">9</div>
+                <div class="week1">10</div>
+                <div class="week1">11</div>
+                <div class="week1">12</div>
+                <div class="week1">13</div>
+                <div class="week1">14</div>
+                <div class="week1">15</div>
+                <div class="week1">16</div>
+                <div class="week1">17</div>
+                <div class="week1">18</div>
+                <div class="week1">19</div>
+                <div class="week1">20</div>
+                <div class="week1">21</div>
+                <div class="week1">22</div>
+                <div class="week1">23</div>
+                <div class="week1">24</div>
+                <div class="week1">25</div>
+                <div class="week1">26</div>
+                <div class="week1success">27</div>
+                <div class="week1failure">28</div>
+                <div class="week1">29</div>
+                <div class="week1">30</div>
+                <div class="week1">31</div>
+                <div class="week1">32</div>
+                <div class="week1">33</div>
+                <div class="week1">34</div>
+                <div class="week1">35</div>
+                <div class="week1">36</div>
+                <div class="week1">37</div>
+                <div class="week1">38</div>
+                <div class="week1">39</div>
+                <div class="week1">40</div>
+                <div class="week1">41</div>
+                <div class="week1">42</div>
+                <div class="week1">43</div>
+                <div class="week1">44</div>
+                <div class="week1">45</div>
+                <div class="week1">46</div>
+                <div class="week1">47</div>
+                <div class="week1">48</div>
+                <div class="week1">49</div>
+                <div class="week1">50</div>
+                <div class="week1">51</div>
+                <div class="week1">52</div>
+                <div class="week1">53</div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
+<div class="col">
+    <div class="card radius-10">
+        <div class="card-body" style="border:3px solid #ff0000; border-radius:10px;">
+            <div class="d-flex align-items-center">
+                <div>
+                    <p class="mb-0 text-secondary">Pay Bills <span class="text-success">(22 may 2025)</span></p>
+                    <h4 class="my-1"><span class="text-success">8</span>/11</h4>
+                    <p class="mb-0 font-13 text-success"><i class="bx bxs-up-arrow align-middle"></i>26:th in the month (10 days left)</p>
+                </div>
+                <div class="widgets-icons bg-light-danger text-danger ms-auto">
+                    <i class="bx bxs-binoculars"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col">
+    <div class="card radius-10">
+        <div class="card-body" style="border:3px solid #ff0000; border-radius:10px;">
+            <div class="d-flex align-items-center">
+                <div>
+                    <p class="mb-0 text-secondary">Monthly Job Search <span class="text-success">(22 may 2025)</span></p>
+                    <h4 class="my-1"><span class="text-success">8</span>/20</h4>
+                    <p class="mb-0 font-13 text-success"><i class="bx bxs-down-arrow align-middle"></i>Last day is 7:th in the month (AF + FSK)</p>
+                </div>
+                <div class="widgets-icons bg-light-success text-success ms-auto">
+                    <i class="bx bx-category"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col">
+    <div class="card radius-10">
+        <div class="card-body" style="border:3px solid #5b165b; border-radius:10px;">
+            <div class="d-flex align-items-center">
+                <div>
+                    <p class="mb-0 text-secondary">Cut Nails <span class="text-success">(22 may 2025)</span></p>
+                    <h4 class="my-1"><span class="text-success">8</span>/20</h4>
+                    <p class="mb-0 font-13 text-success"><i class="bx bxs-down-arrow align-middle"></i> 7, 14, 21, 28</p>
+                </div>
+                <div class="widgets-icons bg-light-success text-success ms-auto">
+                    <i class="bx bx-category"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

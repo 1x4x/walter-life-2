@@ -1,0 +1,1723 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|c:\\users\\admin\\desktop\\1w4wcms\\1w4w.cms2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|c:\\users\\admin\\desktop\\1w4wcms\\1w4w.cms2\\views\\shared\\adminmenutoppartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\adminmenutoppartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\pokercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\pokercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\_layoutwelcome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\_layoutwelcome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\_layoutenergy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\_layoutenergy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\walteradmin\\todopartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\walteradmin\\todopartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\walteradmin\\assets\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\walteradmin\\assets\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\_templatedlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\_templatedlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\todo\\updatetodo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\todo\\updatetodo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\todo\\createtodo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\todo\\createtodo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\walteradmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\walteradmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\_layouttest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\_layouttest.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\layoutviewmodelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\layoutviewmodelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\layoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\layoutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\todomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\todomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\trading\\diary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\trading\\diary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\pagepartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\pagepartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\restaurant\\restaurantmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\restaurant\\restaurantmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\energy\\footerpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\energy\\footerpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\energy\\navbarpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\energy\\navbarpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\poker\\bots.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\poker\\bots.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\todomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\todomodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\home\\economy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\home\\economy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\economycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\economycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\walteradmin\\createeconomytransaction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\walteradmin\\createeconomytransaction.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\restaurant\\foodimagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\restaurant\\foodimagemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\restaurant\\foodcategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\restaurant\\foodcategorymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\restaurant\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\restaurant\\foodmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\colormodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\colormodemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\content\\medicare\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:content\\medicare\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\economymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\economymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\economyeventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\economyeventmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\userreadbookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\userreadbookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\pagepartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\pagepartmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\websitemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\websitemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\adminmenuleftpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\adminmenuleftpartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\home\\todolayout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\home\\todolayout2.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:global.asax.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\economytransactionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\economytransactionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\contentpartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\contentpartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\websitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\websitecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\uploadedimagecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\uploadedimagecategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\todayslunchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\todayslunchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\todayslunch2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\todayslunch2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\themecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\themecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\productcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\productcategorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\pagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\pagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\cateringordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\cateringordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\colormodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\colormodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\filecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\colormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\colormanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\1w4w_admin\\widgets.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\walteradmin\\icons-boxicons.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\walteradmin\\icons-boxicons.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\colormodemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\colormodemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\Controllers\\AccountController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\contentpartmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\contentpartmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\userreadbookmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\userreadbookmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\WalterTodo.sln||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\content\\walteradmin\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:content\\walteradmin\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\tradingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\tradingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\trainingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\trainingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\000.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:template\\walteradmin\\000.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\poker\\diary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\poker\\diary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:template\\walteradmin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\profit.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\parsemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\parsemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\templatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\templatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Downloads\\icon-in-button.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\bookmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\bookmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\chatgptmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\chatgptmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\energy\\editor2partialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\energy\\editor2partialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\energy\\editor1partialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\energy\\editor1partialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\home\\website.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\home\\website.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\manager\\pagepartmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:manager\\pagepartmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\home\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Downloads\\easyeditor-master (2)\\editor1\\multiple-easyeditor.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\content\\walteradmin\\assets\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:content\\walteradmin\\assets\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:template\\walteradmin\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\controllers\\navigationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:controllers\\navigationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\views\\shared\\energy\\hirepartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:views\\shared\\energy\\hirepartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\content\\ckeditor\\samples\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:content\\ckeditor\\samples\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96E3507F-19E6-47F1-8181-8B7329C83D0F}|..\\DatabaseCreater\\DatabaseCreater.csproj|c:\\users\\admin\\desktop\\1w4wcms\\databasecreater\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Temp\\walters.nu\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96E3507F-19E6-47F1-8181-8B7329C83D0F}|..\\DatabaseCreater\\DatabaseCreater.csproj|c:\\users\\admin\\desktop\\1w4wcms\\databasecreater\\manager\\databasemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\1w4w_admin\\assets\\js\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\models\\websitemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:models\\websitemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96E3507F-19E6-47F1-8181-8B7329C83D0F}|..\\DatabaseCreater\\DatabaseCreater.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\databasecreater\\models\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\ek_backup_001\\Web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{96E3507F-19E6-47F1-8181-8B7329C83D0F}|..\\DatabaseCreater\\DatabaseCreater.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\databasecreater\\manager\\usermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\content\\energy\\assets\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{E4D99D9C-2A87-499F-8756-C9C203C7C3F1}|1w4w.CMS.csproj|solutionrelative:content\\energy\\assets\\js\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 2185,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAYwMcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T04:14:06.311Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TodoPartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\TodoPartialView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\walteradmin\\TodoPartialView.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\TodoPartialView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\walteradmin\\TodoPartialView.cshtml",
+              "ViewState": "AgIAAJAAAAAAAAAAAAAmwJ8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-10T17:30:02.984Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-12T04:02:04.306Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "NavbarPartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\NavbarPartialView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Energy\\NavbarPartialView.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\NavbarPartialView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Energy\\NavbarPartialView.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-12T04:43:20.333Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_LayoutEnergy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_LayoutEnergy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutEnergy.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_LayoutEnergy.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutEnergy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-06T14:31:10.988Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Web.config",
+              "RelativeDocumentMoniker": "Web.config",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Web.config",
+              "RelativeToolTip": "Web.config",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwAsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-02-18T05:12:36.511Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ColorModeManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ColorModeManager.cs",
+              "RelativeDocumentMoniker": "Manager\\ColorModeManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ColorModeManager.cs",
+              "RelativeToolTip": "Manager\\ColorModeManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T00:35:42.61Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "DatabaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\DatabaseManager.cs",
+              "RelativeDocumentMoniker": "Manager\\DatabaseManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\DatabaseManager.cs",
+              "RelativeToolTip": "Manager\\DatabaseManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T23:12:39.127Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Web.config",
+              "RelativeDocumentMoniker": "Views\\Web.config",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Web.config",
+              "RelativeToolTip": "Views\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-01-11T23:08:42.51Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CreateEconomyTransaction.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\CreateEconomyTransaction.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\walteradmin\\CreateEconomyTransaction.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\CreateEconomyTransaction.cshtml",
+              "RelativeToolTip": "Views\\Shared\\walteradmin\\CreateEconomyTransaction.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-22T01:14:26.362Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "EconomyManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\EconomyManager.cs",
+              "RelativeDocumentMoniker": "Manager\\EconomyManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\EconomyManager.cs",
+              "RelativeToolTip": "Manager\\EconomyManager.cs",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAUwMkAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T01:34:18.591Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DB.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\DB.cs",
+              "RelativeDocumentMoniker": "Manager\\DB.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\DB.cs",
+              "RelativeToolTip": "Manager\\DB.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T23:14:22.558Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "EconomyTransactionModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\EconomyTransactionModel.cs",
+              "RelativeDocumentMoniker": "Models\\EconomyTransactionModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\EconomyTransactionModel.cs",
+              "RelativeToolTip": "Models\\EconomyTransactionModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA3wBAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T17:33:39.556Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "000.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\000.html",
+              "RelativeDocumentMoniker": "template\\walteradmin\\000.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\000.html",
+              "RelativeToolTip": "template\\walteradmin\\000.html",
+              "ViewState": "AgIAAIABAAAAAAAAAAAAAJEBAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-06T00:10:26.964Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "Diary.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Poker\\Diary.cshtml",
+              "RelativeDocumentMoniker": "Views\\Poker\\Diary.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Poker\\Diary.cshtml",
+              "RelativeToolTip": "Views\\Poker\\Diary.cshtml",
+              "ViewState": "AgIAALAGAAAAAAAAAAAswL4GAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-21T16:13:32.815Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "profit.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\profit.html",
+              "RelativeDocumentMoniker": "..\\..\\profit.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\profit.html",
+              "RelativeToolTip": "..\\..\\profit.html",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-18T09:09:41.679Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateTodo.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Todo\\CreateTodo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Todo\\CreateTodo.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Todo\\CreateTodo.cshtml",
+              "RelativeToolTip": "Views\\Todo\\CreateTodo.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T05:30:24.228Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UserReadBookController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\UserReadBookController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserReadBookController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\UserReadBookController.cs",
+              "RelativeToolTip": "Controllers\\UserReadBookController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T19:27:56.983Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "UserReadBookManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\UserReadBookManager.cs",
+              "RelativeDocumentMoniker": "Manager\\UserReadBookManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\UserReadBookManager.cs",
+              "RelativeToolTip": "Manager\\UserReadBookManager.cs",
+              "ViewState": "AgIAACIBAAAAAAAAAMBcwCcBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T20:53:35.91Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "ParseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ParseManager.cs",
+              "RelativeDocumentMoniker": "Manager\\ParseManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ParseManager.cs",
+              "RelativeToolTip": "Manager\\ParseManager.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAA3wDEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T18:52:46.865Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "BookModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\BookModel.cs",
+              "RelativeDocumentMoniker": "Models\\BookModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\BookModel.cs",
+              "RelativeToolTip": "Models\\BookModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T00:32:57.289Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "ChatGPTManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ChatGPTManager.cs",
+              "RelativeDocumentMoniker": "Manager\\ChatGPTManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ChatGPTManager.cs",
+              "RelativeToolTip": "Manager\\ChatGPTManager.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAMwBIAAABtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T18:29:12.027Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T07:56:57.049Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PokerController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\PokerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PokerController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\PokerController.cs",
+              "RelativeToolTip": "Controllers\\PokerController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T16:24:28.899Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ColorManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ColorManager.cs",
+              "RelativeDocumentMoniker": "Manager\\ColorManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ColorManager.cs",
+              "RelativeToolTip": "Manager\\ColorManager.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwN0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T21:22:26.607Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "LayoutViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\LayoutViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\LayoutViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\LayoutViewModel.cs",
+              "RelativeToolTip": "Models\\LayoutViewModel.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAmwBUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.469Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_TemplatedLayout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_TemplatedLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_TemplatedLayout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_TemplatedLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_TemplatedLayout.cshtml",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAAAIEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T19:11:02.672Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "Signup.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\Signup.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Signup.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\Signup.cshtml",
+              "RelativeToolTip": "Views\\Home\\Signup.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-19T20:11:37.122Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\walteradmin\\assets\\css\\app.css",
+              "RelativeDocumentMoniker": "Content\\walteradmin\\assets\\css\\app.css",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\walteradmin\\assets\\css\\app.css",
+              "RelativeToolTip": "Content\\walteradmin\\assets\\css\\app.css",
+              "ViewState": "AgIAAJsQAAAAAAAAAAAkwKkQAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-30T01:21:51.118Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "FileController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\FileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FileController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\FileController.cs",
+              "RelativeToolTip": "Controllers\\FileController.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAiwOUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T20:58:47.392Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\ckeditor\\samples\\index.html",
+              "RelativeDocumentMoniker": "Content\\ckeditor\\samples\\index.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\ckeditor\\samples\\index.html",
+              "RelativeToolTip": "Content\\ckeditor\\samples\\index.html",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAD4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-12T22:00:38.69Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "PagePartManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\PagePartManager.cs",
+              "RelativeDocumentMoniker": "Manager\\PagePartManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\PagePartManager.cs",
+              "RelativeToolTip": "Manager\\PagePartManager.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAIBZwIUAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T02:15:58.685Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "multiple-easyeditor.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\easyeditor-master (2)\\editor1\\multiple-easyeditor.html",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\easyeditor-master (2)\\editor1\\multiple-easyeditor.html",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\easyeditor-master (2)\\editor1\\multiple-easyeditor.html",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\easyeditor-master (2)\\editor1\\multiple-easyeditor.html",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAwE8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-21T00:26:38.258Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "icon-in-button.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\icon-in-button.html",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\icon-in-button.html",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\icon-in-button.html",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\icon-in-button.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-02-16T22:33:26.136Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "Editor1PartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\Editor1PartialView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Energy\\Editor1PartialView.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\Editor1PartialView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Energy\\Editor1PartialView.cshtml",
+              "ViewState": "AgIAAJsCAAAAAAAAAAAAwKoCAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-02T04:08:56.879Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "Editor2PartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\Editor2PartialView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Energy\\Editor2PartialView.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\Editor2PartialView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Energy\\Editor2PartialView.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAAwLIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-17T00:14:09.484Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\assets\\js\\app.js",
+              "RelativeDocumentMoniker": "Views\\Shared\\walteradmin\\assets\\js\\app.js",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\assets\\js\\app.js",
+              "RelativeToolTip": "Views\\Shared\\walteradmin\\assets\\js\\app.js",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAEgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-10-19T05:09:47.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-23T21:08:45.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TodoModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\TodoModel.cs",
+              "RelativeDocumentMoniker": "Models\\TodoModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\TodoModel.cs",
+              "RelativeToolTip": "Models\\TodoModel.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAA9wA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-22T20:55:06.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UpdateTodo.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Todo\\UpdateTodo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Todo\\UpdateTodo.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Todo\\UpdateTodo.cshtml",
+              "RelativeToolTip": "Views\\Todo\\UpdateTodo.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAowEwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-08T18:47:34.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "TodoLayout2.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\TodoLayout2.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\TodoLayout2.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\TodoLayout2.cshtml",
+              "RelativeToolTip": "Views\\Home\\TodoLayout2.cshtml",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAAEIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-04T00:36:14.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Global.asax.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Global.asax.cs",
+              "RelativeDocumentMoniker": "Global.asax.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Global.asax.cs",
+              "RelativeToolTip": "Global.asax.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-12T03:59:12.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "TodaysLunch2Controller.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\TodaysLunch2Controller.cs",
+              "RelativeDocumentMoniker": "Controllers\\TodaysLunch2Controller.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\TodaysLunch2Controller.cs",
+              "RelativeToolTip": "Controllers\\TodaysLunch2Controller.cs",
+              "ViewState": "AgIAAHACAAAAAAAAAAAAAHoCAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T05:00:20.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TaskController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "Controllers\\TaskController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAwwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T05:00:04.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "PageController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\PageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PageController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\PageController.cs",
+              "RelativeToolTip": "Controllers\\PageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-25T04:58:25.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ContentPartController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ContentPartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContentPartController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ContentPartController.cs",
+              "RelativeToolTip": "Controllers\\ContentPartController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAIBJwFIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T22:04:37.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "UploadedImageCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\UploadedImageCategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UploadedImageCategoryController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\UploadedImageCategoryController.cs",
+              "RelativeToolTip": "Controllers\\UploadedImageCategoryController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T22:04:37.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PagePartController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\PagePartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PagePartController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\PagePartController.cs",
+              "RelativeToolTip": "Controllers\\PagePartController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAqwEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T22:04:37.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "widgets.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4w_admin\\widgets.html",
+              "RelativeDocumentMoniker": "..\\..\\1w4w_admin\\widgets.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4w_admin\\widgets.html",
+              "RelativeToolTip": "..\\..\\1w4w_admin\\widgets.html",
+              "ViewState": "AgIAAKIHAAAAAAAAAAAAwKsHAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-11T18:56:48.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TodoController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\TodoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TodoController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\TodoController.cs",
+              "RelativeToolTip": "Controllers\\TodoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T23:56:22.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "ContentPartManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ContentPartManager.cs",
+              "RelativeDocumentMoniker": "Manager\\ContentPartManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\ContentPartManager.cs",
+              "RelativeToolTip": "Manager\\ContentPartManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-04T23:35:03.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T17:03:51.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "WalterTodo.sln",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\WalterTodo.sln",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\WalterTodo.sln",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\WalterTodo.sln",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\WalterTodo_noEF_fullCRUD_ADONET_StartBoard_v7\\WalterTodo.sln",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002855|",
+              "WhenOpened": "2025-10-23T17:03:51.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\ek_backup_001\\Web.config",
+              "RelativeDocumentMoniker": "..\\..\\ek_backup_001\\Web.config",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\ek_backup_001\\Web.config",
+              "RelativeToolTip": "..\\..\\ek_backup_001\\Web.config",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-01-23T18:15:12.004Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "index.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4w_admin\\assets\\js\\index.js",
+              "RelativeDocumentMoniker": "..\\..\\1w4w_admin\\assets\\js\\index.js",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4w_admin\\assets\\js\\index.js",
+              "RelativeToolTip": "..\\..\\1w4w_admin\\assets\\js\\index.js",
+              "ViewState": "AgIAAFEBAAAAAAAAAIBZwFwBAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-18T19:11:12.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Temp\\walters.nu\\index.html",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Temp\\walters.nu\\index.html",
+              "ToolTip": "C:\\Temp\\walters.nu\\index.html",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Temp\\walters.nu\\index.html",
+              "ViewState": "AgIAAPsGAAAAAAAAAAAiwAgHAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-04-22T20:27:46.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "TradingManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\TradingManager.cs",
+              "RelativeDocumentMoniker": "Manager\\TradingManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\TradingManager.cs",
+              "RelativeToolTip": "Manager\\TradingManager.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAkwCAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T03:31:02.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "TrainingManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\TrainingManager.cs",
+              "RelativeDocumentMoniker": "Manager\\TrainingManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\TrainingManager.cs",
+              "RelativeToolTip": "Manager\\TrainingManager.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwBIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T03:20:05.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "EconomyController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\EconomyController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EconomyController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\EconomyController.cs",
+              "RelativeToolTip": "Controllers\\EconomyController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T12:05:21.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "Website.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\Website.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Website.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\Website.cshtml",
+              "RelativeToolTip": "Views\\Home\\Website.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-05T00:07:05.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\medicare\\index.cshtml",
+              "RelativeDocumentMoniker": "Content\\medicare\\index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\medicare\\index.cshtml",
+              "RelativeToolTip": "Content\\medicare\\index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-19T00:17:09.696Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FooterPartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\FooterPartialView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Energy\\FooterPartialView.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\FooterPartialView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Energy\\FooterPartialView.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAiwB0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-06T14:56:25.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "WebsiteManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\WebsiteManager.cs",
+              "RelativeDocumentMoniker": "Manager\\WebsiteManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\WebsiteManager.cs",
+              "RelativeToolTip": "Manager\\WebsiteManager.cs",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAQwHAAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T19:52:29.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "WebsiteController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\WebsiteController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WebsiteController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\WebsiteController.cs",
+              "RelativeToolTip": "Controllers\\WebsiteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T12:06:12.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Bots.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Poker\\Bots.cshtml",
+              "RelativeDocumentMoniker": "Views\\Poker\\Bots.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Poker\\Bots.cshtml",
+              "RelativeToolTip": "Views\\Poker\\Bots.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-21T16:13:49.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "TodaysLunchController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\TodaysLunchController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TodaysLunchController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\TodaysLunchController.cs",
+              "RelativeToolTip": "Controllers\\TodaysLunchController.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:19.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "NavigationController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\NavigationController.cs",
+              "RelativeDocumentMoniker": "Controllers\\NavigationController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\NavigationController.cs",
+              "RelativeToolTip": "Controllers\\NavigationController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAwCoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.48Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\index.html",
+              "RelativeDocumentMoniker": "template\\walteradmin\\index.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\index.html",
+              "RelativeToolTip": "template\\walteradmin\\index.html",
+              "ViewState": "AgIAACkJAAAAAAAAAAAmwEkJAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-22T19:08:32.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "template\\walteradmin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\template\\walteradmin\\Index.cshtml",
+              "RelativeToolTip": "template\\walteradmin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-22T19:16:04.851Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Controllers\\ProductController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADEAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.478Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "icons-boxicons.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\icons-boxicons.html",
+              "RelativeDocumentMoniker": "Views\\Shared\\walteradmin\\icons-boxicons.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\icons-boxicons.html",
+              "RelativeToolTip": "Views\\Shared\\walteradmin\\icons-boxicons.html",
+              "ViewState": "AgIAALgYAAAAAAAAAAAowL8YAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-08-13T00:54:41.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ProjectController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ProjectController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ProjectController.cs",
+              "RelativeToolTip": "Controllers\\ProjectController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAIBJwEcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T04:41:21.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ProductCategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ProductCategoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductCategoryController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ProductCategoryController.cs",
+              "RelativeToolTip": "Controllers\\ProductCategoryController.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAABcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T04:42:21.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "DatabaseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\DatabaseCreater\\Manager\\DatabaseManager.cs",
+              "RelativeDocumentMoniker": "..\\DatabaseCreater\\Manager\\DatabaseManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\DatabaseCreater\\Manager\\DatabaseManager.cs",
+              "RelativeToolTip": "..\\DatabaseCreater\\Manager\\DatabaseManager.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAADwvxIAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "HirePartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\HirePartialView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Energy\\HirePartialView.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\Energy\\HirePartialView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Energy\\HirePartialView.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-12T04:43:20.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ColorModeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ColorModeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ColorModeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ColorModeController.cs",
+              "RelativeToolTip": "Controllers\\ColorModeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ThemeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ThemeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ThemeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\ThemeController.cs",
+              "RelativeToolTip": "Controllers\\ThemeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "CateringOrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\CateringOrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CateringOrderController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\CateringOrderController.cs",
+              "RelativeToolTip": "Controllers\\CateringOrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "Controllers\\OrderController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAIBJwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ColorModeModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\ColorModeModel.cs",
+              "RelativeDocumentMoniker": "Models\\ColorModeModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\ColorModeModel.cs",
+              "RelativeToolTip": "Models\\ColorModeModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.468Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\DatabaseCreater\\Program.cs",
+              "RelativeDocumentMoniker": "..\\DatabaseCreater\\Program.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\DatabaseCreater\\Program.cs",
+              "RelativeToolTip": "..\\DatabaseCreater\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "UserManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\DatabaseCreater\\Manager\\UserManager.cs",
+              "RelativeDocumentMoniker": "..\\DatabaseCreater\\Manager\\UserManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\DatabaseCreater\\Manager\\UserManager.cs",
+              "RelativeToolTip": "..\\DatabaseCreater\\Manager\\UserManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\DatabaseCreater\\Models\\UserModel.cs",
+              "RelativeDocumentMoniker": "..\\DatabaseCreater\\Models\\UserModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\DatabaseCreater\\Models\\UserModel.cs",
+              "RelativeToolTip": "..\\DatabaseCreater\\Models\\UserModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\energy\\assets\\js\\main.js",
+              "RelativeDocumentMoniker": "Content\\energy\\assets\\js\\main.js",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\energy\\assets\\js\\main.js",
+              "RelativeToolTip": "Content\\energy\\assets\\js\\main.js",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAawEEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-01-12T04:43:20.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "TemplateModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\TemplateModel.cs",
+              "RelativeDocumentMoniker": "Models\\TemplateModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\TemplateModel.cs",
+              "RelativeToolTip": "Models\\TemplateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "WebsiteModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\WebsiteModel.cs",
+              "RelativeDocumentMoniker": "Models\\WebsiteModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\WebsiteModel.cs",
+              "RelativeToolTip": "Models\\WebsiteModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T04:43:20.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "PagePartModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\PagePartModel.cs",
+              "RelativeDocumentMoniker": "Models\\PagePartModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\PagePartModel.cs",
+              "RelativeToolTip": "Models\\PagePartModel.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAwB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T00:09:45.046Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1576,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TodoManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\TodoManager.cs",
+              "RelativeDocumentMoniker": "Manager\\TodoManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\TodoManager.cs",
+              "RelativeToolTip": "Manager\\TodoManager.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAA9wCsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T00:42:42.75Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LayoutViewModelManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\LayoutViewModelManager.cs",
+              "RelativeDocumentMoniker": "Manager\\LayoutViewModelManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\LayoutViewModelManager.cs",
+              "RelativeToolTip": "Manager\\LayoutViewModelManager.cs",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T21:02:10.884Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Economy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\Economy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Economy.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Home\\Economy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Economy.cshtml",
+              "ViewState": "AgIAADYFAAAAAAAAAAArwD8FAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-13T01:00:15.337Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminMenuTopPartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\AdminMenuTopPartialView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\AdminMenuTopPartialView.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\AdminMenuTopPartialView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\AdminMenuTopPartialView.cshtml",
+              "ViewState": "AgIAABACAAAAAAAAAAAkwCUCAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-10T16:29:49.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LayoutWelcome.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_LayoutWelcome.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutWelcome.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_LayoutWelcome.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutWelcome.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-21T04:11:12.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_LayoutTest.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_LayoutTest.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutTest.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\_LayoutTest.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutTest.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-10-15T13:07:14.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\walteradmin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\walteradmin\\Index.cshtml",
+              "RelativeToolTip": "Views\\Shared\\walteradmin\\Index.cshtml",
+              "ViewState": "AgIAACgGAAAAAAAAAAAnwDEGAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-21T19:18:19.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Diary.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Trading\\Diary.cshtml",
+              "RelativeDocumentMoniker": "Views\\Trading\\Diary.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Trading\\Diary.cshtml",
+              "RelativeToolTip": "Views\\Trading\\Diary.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAmwEUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-26T21:20:30.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "FoodCategoryManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\Restaurant\\FoodCategoryManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Restaurant\\FoodCategoryManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\Restaurant\\FoodCategoryManager.cs",
+              "RelativeToolTip": "Manager\\Restaurant\\FoodCategoryManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T20:15:10.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "FoodImageManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\Restaurant\\FoodImageManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Restaurant\\FoodImageManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\Restaurant\\FoodImageManager.cs",
+              "RelativeToolTip": "Manager\\Restaurant\\FoodImageManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T20:14:38.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "FoodManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\Restaurant\\FoodManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Restaurant\\FoodManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\Restaurant\\FoodManager.cs",
+              "RelativeToolTip": "Manager\\Restaurant\\FoodManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T20:14:21.448Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "RestaurantManager.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\Restaurant\\RestaurantManager.cs",
+              "RelativeDocumentMoniker": "Manager\\Restaurant\\RestaurantManager.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Manager\\Restaurant\\RestaurantManager.cs",
+              "RelativeToolTip": "Manager\\Restaurant\\RestaurantManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T20:14:00.966Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "AdminMenuLeftPartialView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\AdminMenuLeftPartialView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\AdminMenuLeftPartialView.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Views\\Shared\\AdminMenuLeftPartialView.cshtml",
+              "RelativeToolTip": "Views\\Shared\\AdminMenuLeftPartialView.cshtml",
+              "ViewState": "AgIAAJYBAAAAAAAAAAAQwKMBAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-13T02:35:34.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABoAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T06:33:27.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "apex-custom.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\walteradmin\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js",
+              "RelativeDocumentMoniker": "Content\\walteradmin\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Content\\walteradmin\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js",
+              "RelativeToolTip": "Content\\walteradmin\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAC0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-29T01:05:48.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "EconomyEventModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\EconomyEventModel.cs",
+              "RelativeDocumentMoniker": "Models\\EconomyEventModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\1w4wCMS\\1w4w.CMS2\\Models\\EconomyEventModel.cs",
+              "RelativeToolTip": "Models\\EconomyEventModel.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAgwAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:52:56.318Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+﻿
+@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+
+<section class="about-area section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="about-content">
+                    <h6 class="sub-title">Welcome To Medical & Health Care</h6>
+                    <h2>We're here when you need us - for every <span class="color-text">Care in the World</span></h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nostrud consectetur adipiscing elit.</p>
+                    <ul class="feature-list">
+                        <li><i class="ri-check-double-line"></i> Specialist Doctors At Affordable Prices</li>
+                        <li><i class="ri-check-double-line"></i> Modern Facilities In A Relaxed Environment</li>
+                        <li><i class="ri-check-double-line"></i> Professional And Highly Skilled Staff</li>
+                    </ul>
+                    <a href="#" class="default-btn">Schedule Appointment <span></span></a>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="about-image">
+                    <img src="@baseurl/assets/img/about-1.jpg" alt="">
+                    <div class="years-design">
+                        <h2>20</h2>
+                        <h5>Years Of Experience</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

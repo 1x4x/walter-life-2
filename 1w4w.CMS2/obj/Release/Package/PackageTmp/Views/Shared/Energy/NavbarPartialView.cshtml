@@ -1,0 +1,170 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+
+    // light or darkmode for this website
+    var mode = _1w4w.CMS.Manager.ColorModeManager.GetMode(website.id);
+    //_1w4w.CMS.Models.UserModel usermodel = (_1w4w.CMS.Models.UserModel)HttpContext.Current.Session["User"] as _1w4w.CMS.Models.UserModel;
+
+
+    var usermodel = Model.usermodel as _1w4w.CMS.Models.UserModel;
+    var accesslevel = "";
+    if (usermodel != null)
+    {
+        accesslevel = usermodel.accesslevel ?? "";
+    }
+
+    //var accesslevel = usermodel.accesslevel ?? "";
+}
+
+<div class="header-navber-area">
+    <div class="nav-top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-12">
+                    <div class="nav-contact-info">
+                        <p><i class="fa fa-location-dot"></i> @website.address</p>
+                        <p><i class="fa-regular fa-envelope"></i> <a href="mailto:@website.email">@website.email</a></p>
+                        <p><i class="fa fa-mobile-screen-button"></i> <a href="tel:@website.phone">@website.phone</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <ul class="top-social">
+                        <li><a href="@website.sociallinkfacebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="@website.sociallinktwitter"><i class="fab fa-twitter"></i></a></li>
+                        <!--<li><a href="#"><i class="fab fa-linkedin"></i></a></li>-->
+                        <li><a href="@website.sociallinkyoutube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar-area">
+        <div class="medicare-responsive-nav">
+            <div class="container">
+                <div class="medicare-responsive-menu">
+                    <div class="logo">
+                        <a href="/home/index">
+                            <!--
+    <img src="assets/img/logo-black.png" class="white-logo" alt="logo">
+    <img src="assets/img/logo-black.png" class="black-logo" alt="logo">
+    -->
+                                <img src="@baseurl/assets/img/logo4_180.png" class="white-logo" alt="logo">
+                                <img src="@baseurl/assets/img/logo4_180.png" class="black-logo" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="medicare-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="/home/index">
+                        <!--
+    <img src="@baseurl/assets/img/logo-black.png" class="white-logo" alt="logo">
+    <img src="@baseurl/assets/img/logo-black.png" class="black-logo" alt="logo">
+    -->
+                        <img src="@baseurl/assets/img/logo4_180.png" class="white-logo" alt="logo">
+                        <img src="@baseurl/assets/img/logo4_180.png" class="black-logo" alt="logo">
+                    </a>
+                    <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            @{var list = _1w4w.CMS.Manager.PageManager.GetPageList();}
+                            @foreach (var page in Model.PageModels.Where(x => x.parentid == 0))
+                            {
+                                if (_1w4w.CMS.Manager.PageManager.ParentHasChildren(page.id, list) == true)
+                                {
+                                    <li class="nav-item">
+                                        <a href="/home/index/@page.id" class="nav-link">@page.name <i class="fas fa-chevron-down"></i></a>
+                                        <ul class="dropdown-menu">
+                                            @foreach (var page2 in Model.PageModels.Where(x => x.parentid == page.id))
+                                            {
+                                                <li class="nav-item">
+                                                    <a href="/home/index/@page2.id" class="nav-link">@page2.name</a>
+                                                </li>
+                                            }
+
+                                        </ul>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="nav-item">
+                                        <a href="/home/index/@page.id" class="nav-link">@page.name</a>
+                                    </li>
+                                }
+                            }
+
+                            @if (accesslevel == "superadmin")
+                            {
+                                <li class="nav-item">
+                                    @{
+                                        if (mode == "Dark")
+                                        {
+                                            <a href="javascript:window.location.href='/colormode/setlightmode/@Model.Website.id';"><span class="fa-solid fa-circle-half-stroke fa-3x fa-fw" data-count="0" style="font-size:28px;" id="darkmodediv" name="darkmodediv"></span></a>
+                                        }
+                                        else
+                                        {
+                                            <a href="javascript:window.location.href='/colormode/setdarkmode/@Model.Website.id';"><span class="fa-solid fa-circle-half-stroke fa-3x fa-fw" data-count="0" style="font-size:28px;" id="darkmodediv" name="darkmodediv"></span></a>
+                                        }
+                                    }
+                                </li>
+                            }
+
+                            @if (accesslevel == "admin")
+                            {
+                                <li class="nav-item">
+                                    <a href="javascript:toggle('admindiv');"><span class="fa fa-cog fa-spin fa-3x fa-fw" data-count="0" style="font-size:28px;" id="adminicondiv" name="adminiicondiv"></span></a>
+                                </li>
+                            }
+
+                            <li class="nav-item">
+                                <!--<i class="fa fa-envelope fa-3x fa-border icon-grey badge"></i>-->
+                                <div id="ex4">
+                                    <a href="javascript:toggle('basketdiv'); basket();"><span class="p1 fa fa-basket-shopping fa-1x has-badge" data-count="0" style="font-size:28px;" id="basketcountdiv" name="basketcountdiv"></span></a>
+                                </div>
+                                <!--<a href="#"><i class="fa fa-basket-shopping" style="font-size:24px !important;"></i></a>-->
+                            </li>
+                        </ul>
+                        <div class="other-option notification">
+                            
+                            <a class="default-btn" href="#catering">Beställ Catering <span></span></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function basket()
+    {
+        
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#basketdiv"
+
+        //window.location.href = '#catering';
+    }
+
+    function jump(h) {
+        var top = document.getElementById(h).offsetTop; //Getting Y of target element
+        window.scrollTo(0, top);                        //Go there directly or some transition
+    }
+</script>

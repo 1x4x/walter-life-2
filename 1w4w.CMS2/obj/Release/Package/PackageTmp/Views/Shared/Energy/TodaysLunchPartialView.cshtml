@@ -1,0 +1,515 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+
+
+    // lets make sure we have a pageid to work with
+    string pageid = (string)Url.RequestContext.RouteData.Values["id"];
+    //var pageid = Request.QueryString["pageid"];
+    //if (pageid == null && (pageid.ToString() == "0"))
+    // startpage
+    if (pageid == null) { pageid = "1"; }
+    if (pageid == "undefined") { pageid = "1"; }
+    if (string.IsNullOrEmpty(pageid)) { pageid = "1"; }
+    _1w4w.CMS.Models.PageModel pagemodel = Model.PageModels.Where(x => x.id == Convert.ToInt32(pageid)).SingleOrDefault();
+
+
+    var usermodel = Model.usermodel as _1w4w.CMS.Models.UserModel;
+    var accesslevel = "";
+    if (usermodel != null)
+    {
+        accesslevel = usermodel.accesslevel ?? "";
+    }
+}
+
+
+
+<style>
+    #todayslunchpart1 {
+        /*font-size: 48px;
+        color: mediumvioletred;
+        font-weight: bold;*/
+    }
+
+    #edit1, #edit2 {
+        max-width: 100% !important;
+    }
+</style>
+
+<style>
+    input[type="file"] {
+        /*display: none;*/
+    }
+
+    .custom-file-upload {
+        display: inline-block;
+        /*padding: 3px 6px;*/
+        cursor: pointer;
+        border-radius: 10px;
+        color: #eeeeee !important;
+        /*border: 1px solid #145d75 !important;*/
+        background-color: #1dc2cf !important;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        transition: 0.4s;
+    }
+
+        .custom-file-upload:hover {
+            color: #dddddd !important;
+            background-color: #11828b !important;
+        }
+</style>
+
+<style>
+    .uploadedimage, .uploadedfile {
+        height: 100px;
+        width: auto;
+        border-radius: 10px;
+        border: 7px solid #1dc2cf;
+        outline: 2px solid #ffffff;
+        cursor: pointer;
+    }
+
+        .uploadedimage:hover, .uploadedfile:hover {
+            border: 7px solid #11828b;
+            outline: 2px solid #1dc2cf;
+        }
+
+    /* Container holding the image and the text */
+    .textstyle1 {
+        color: #1dc2cf;
+        font-size: 24px;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        font-weight: bold;
+    }
+
+    .textstyle2 {
+        color: #ffffff;
+        font-size: 14px;
+        background-color: #333333;
+        border: 2px solid #1dc2cf;
+        border-radius: 10px;
+        padding: 3px;
+        padding: 0 15px;
+    }
+
+    .wwcontainer {
+        display: inline-block;
+        position: relative;
+        text-align: center;
+        margin: 20px;
+    }
+
+    /* Bottom left text */
+    .wwbottom-left {
+        position: relative;
+        bottom: 8px;
+        left: 16px;
+    }
+
+    /* Top left text */
+    .wwtop-left {
+        position: relative;
+        top: 8px;
+        left: 16px;
+    }
+
+    /* Top right text */
+    .wwtop-right {
+        position: relative;
+        top: 8px;
+        right: 16px;
+    }
+
+    /* Bottom right text */
+    .wwbottom-right {
+        position: relative;
+        bottom: 8px;
+        right: 16px;
+    }
+
+    /* Centered text */
+    .wwcentered {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="container">
+    <div class="row" style="padding:0px; margin:20px;">
+        
+    </div>
+</div>
+-->
+<form action="/todayslunch/updatepart1" method="post" id="todayslunchform1" name="todayslunchform1">
+    <section class="price-area pt-70 pb-100">
+        
+        <div style="position: relative; z-index: 11;">
+            @if (accesslevel == "admin")
+            {
+                <!--style="text-align:center; background-color:#b197fc !important;"-->
+                <!--<div style="right:0; right:0; background-color: #606060; text-align: center; display: inline-block; color: #000000; border-radius: 50%; padding: 4px; margin: auto; position:absolute; z-index:10;"></div>-->
+                <!--<a href="javascript:window.location.href='/colormode/setdarkmode/@Model.Website.id';">aaa</a>-->
+                <div style="position: absolute; top: 0; right: 10px; padding: 8px;">
+                    <a href="javascript:toggle('todayslunchpart1'); toggle('todayslunchpart1admin'); toggle('updatepagelinkdiv');"><span class="fas fa-cog fa-1x fa-pulse settings1" data-count="0" id="pagesettingslink" name="pagesettingslink" style="color:#808080;"></span></a>
+                </div>
+
+                <div style="position: absolute; top: 50px; right: 10px; padding: 8px; display: none;" id="updatepagelinkdiv" name="updatepagelinkdiv">
+                    <a href="javascript:document.getElementById('todayslunchform1').submit();"><span class="fas fa-check fa-1x settings1" data-count="0" id="updatepagelink" name="updatepagelink" style="color:#00ff21;"></span></a>
+                </div>
+            }
+        </div>
+        <div id="todayslunchpart1" name="todayslunchpart1">
+
+
+            <div class="container">
+                <div class="row">
+                    <!--<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">-->
+                    <div class="col">
+                        @Html.Raw(WebUtility.HtmlDecode(pagemodel?.text1 ?? ""))
+                    </div>
+                    <!--<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="vertical-align:top;">-->
+                    <div class="col">
+                        @Html.Raw(WebUtility.HtmlDecode(pagemodel?.text2 ?? ""))
+                        <!--<img src="/content/energy/assets/img/1/16.png" class="img-fluid" alt="Responsive image" id="avater_main">-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="todayslunchpart1admin" name="todayslunchpart1admin" style="display:none;">
+
+
+            <div class="container">
+                <div class="row">
+                    <div class="col" style="text-align: center; background-color: #333333; border-radius: 10px; border: 2px solid #3e3e3e; color:#ffffff; padding:4px;">
+
+
+                        <!--<div style="color: #ffffff; background-color: #333333; color: #ffffff; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; text-align: center; cursor: pointer; line-height: 40px; " onclick="javascript: window.location.href = '/page/create';">-->
+                        <!--
+                        <div style="display: inline-block; color: #ffffff; background-color: #333333; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; text-align: center; cursor: pointer; line-height: 70px; ">
+                            <a href="javascript:window.location.href='/page/createnew';">
+                                <i class="fa-solid fa-circle-plus fa-2x"></i>
+                            </a>
+                        </div>
+                        <div style="display: inline-block; color: #ffffff; background-color: #333333; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; text-align: center; cursor: pointer; line-height: 40px; ">
+                            <a href="javascript:if(confirm('Are you sure you want to delete this page?')) window.location.href='/page/delete/@pageid';">
+                                <i class="fa-solid fa-circle-minus fa-2x"></i>
+                            </a>
+                        </div>
+                        <div style="display: inline-block; color: #ffffff; background-color: #333333; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; text-align: center; cursor: pointer; line-height: 40px; ">
+                            <a href="#">
+                                <i class="fa-solid fa-file-plus fa-2x"></i>
+                            </a>
+                        </div>
+                        -->
+                        
+
+                        <label for="name" style="color: #808080; display: inline-block; margin-left: 20px;">Name</label> <input type="text" id="name" name="name" value="@pagemodel.name" class="walterinput2" style="display: inline-block; width: 200px;" />
+                        <label for="href" style="color: #808080; display: inline-block; margin-left: 20px;">Href</label> <input type="text" id="href" name="href" value="@pagemodel.href" class="walterinput2" style="display: inline-block; width: 200px;" />
+                        <label for="id" style="color: #808080; display: inline-block; margin-left: 20px;">Id</label> <input type="text" id="id" name="id" value="@pageid" class="walterinput2" style="display: inline-block; width: 60px;" />
+                        <label for="parentid" style="color: #808080; display: inline-block; margin-left: 20px;">ParentId</label> <input type="text" id="parentid" name="parentid" value="@pagemodel.parentid" class="walterinput2" style="display: inline-block; width: 60px;" />
+
+                        <br />
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 offset-1" style="vertical-align: top;">
+
+
+                        <div name="iconBox1" id="iconBox1" style="left: 32px; top: 47px; width: 658px; height: 340px; overflow: auto; padding:7px; position: absolute; 
+z-index:100; background-color: #333333; border: 1px solid #1dc2cf; visibility: visible; border-radius: 10px;">
+                            <table width="100%" cellpadding="0" cellspacing="0" border="0" id="Table19">
+                                <tbody>
+                                    <tr>
+                                        <td style="padding:10px; padding-left:15px; color:#1dc2cf; font-weight:bold; font-size:24px;">
+                                            UPLOADED IMAGES
+                                        </td>
+                                        <td style="text-align:right;">
+                                            <span onclick="javascript: document.getElementById('iconBox1').style.visibility = 'hidden';" class="closeimagebox1"><i class="fa fa-close" style="font-size:24px; margin-right:10px;"></i></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:10px; padding-left:15px; color:#1dc2cf; font-weight:bold; font-size:24px;">
+<!--
+    <a href="#" class="imagecategorylinkactive">Uncategorisized</a>
+-->
+                                            <div id="myBtnContainer">
+                                                @{
+                                                    if (Model.UploadedImageCategoryModels != null)
+                                                    {
+                                                        foreach (var uploadedImageCategoryModel in Model.UploadedImageCategoryModels)
+                                                        {
+                                                            <a href="javascript:approach1Fn('@uploadedImageCategoryModel.name.ToLower()');" class="imagecategorylink">@uploadedImageCategoryModel.name</a>
+                                                            @*<span onclick="javascript:location.href = '/uploadedimagecategory/delete/@uploadedImageCategoryModel.id';" class="closeimagebox1"><i class="fa fa-minus-circle" style="font-size:12px; margin-right:10px; color:#db5252;"></i></span>*@
+                                                            <span onclick="javascript: if(confirm('Are you sure you want to delete this uploadedimagecategory?')) window.location.href='/uploadedimagecategory/delete/@uploadedImageCategoryModel.id';" class="closeimagebox1"><i class="fa fa-minus-circle" style="font-size:12px; margin-right:10px; color:#db5252;"></i></span>
+                                                            //javascript:if(confirm('Are you sure you want to delete this page?')) window.location.href= '/uploadedimagecategory/delete/@uploadedImageCategoryModel.id';
+                                                        }
+                                                    }
+                                                }
+                                                <a href="/uploadedimagecategory/create" class="imagecategorylink"><i class="fa fa-plus-circle" style="font-size:12px; margin-right:10px; color:#00ff21;"></i></a>
+                                            </div>
+                                            
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding:10px;">
+
+                                            <div class="uploadedimagecontainer" id="uploadedimagecontainer" name="uploadedimagecontainer">
+                                                @if (Model.UploadedImageModels != null)
+                                                            {
+                                                                //foreach (var item2 in Model.UploadedImageModels.Where(x => x.websiteid == 1))
+                                                                foreach (var item2 in Model.UploadedImageModels)
+                                                                {
+                                                                    var divname = "uploadedimage" + item2.id;
+                                                                    var copytoclipboardlink = "copytoclipboardlink" + item2.id;
+                                                                    var imagepath = "/content/upload/image/" + item2.name;
+
+                                                        <!--                                                        <div class="wwcontainer">
+                <img src="~/Content/upload/image/item2.name" class="uploadedimage popup-img" onclick="createImageTagInClipboard('/content/upload/image/@item2.name'); document.getElementById('imageform1').style.display='none'; document.getElementById('fileform1').style.display='none';" />
+                <div class="wwcentered textstyle1"><b>item2.id</b><br /></div>
+            </div>
+            -->
+                                                        
+                                                <div id="@divname" name="cateringdiv" class="filterdiv @item2.uploadedimagecategory" style="display:none;">
+                                                    <span onclick="javascript: selectImage('@imagepath');"><img src="/content/upload/image/@item2.name" border="0" class="uploadedimage2"></span><br />
+
+
+
+
+                                                    <!--<span onclick="insertImage('linkContent1','/content/upload/image/@item2.name');"><img src="/content/upload/image/@item2.name" border="0" class="uploadedimage2"></span><br />-->
+                                                    <!--<span onclick="javascript:insertselectedimagepath('/content/upload/image/@item2.name');"><img src="/content/upload/image/@item2.name" border="0" class="uploadedimage2"></span><br />-->
+                                                    <!--
+    <div style="width:5px; height:5px; background-color:#1dc2cf; border-radius:10px; display:inline-block;"></div>
+    <div style="width:5px; height:5px; background-color:#1dc2cf; border-radius:10px; display:inline-block;"></div>
+    -->
+                                                </div>
+                                                    }
+                                                }
+                                                <!--
+                                                <div id="cateringdiv" name="cateringdiv" class="filterdiv catering" style="display:none;">
+                                                    <span onclick="insertImage('linkContent1','/content/upload/image/avocado-turkey-wrap-ups.png');"><img src="/content/upload/image/avocado-turkey-wrap-ups.png" border="0" class="uploadedimage2"></span><br />
+                                                    <div style="width:5px; height:5px; background-color:#1dc2cf; border-radius:10px; display:inline-block;"></div>
+                                                    <div style="width:5px; height:5px; background-color:#1dc2cf; border-radius:10px; display:inline-block;"></div>
+                                                </div>
+                                                <div id="loggordiv" name="loggordiv" class="filterdiv loggor" style="display:none;">
+                                                    <span onclick="insertImage('linkContent1','/content/upload/image/a-glass-of-carrot-juice.png');"><img src="/content/upload/image/a-glass-of-carrot-juice.png" border="0" class="uploadedimage2"></span><br />
+                                                    <div style="width:3px; height:3px; background-color:#1dc2cf; border-radius:10px; display:inline-block;"></div>
+                                                </div>
+                                                <div id="loggordiv" name="loggordiv" class="filterdiv loggor" style="display:none;">
+                                                    <span onclick="insertImage('linkContent1','/content/upload/image/avocado-water-drops.png');"><img src="/content/upload/image/avocado-water-drops.png" border="0" class="uploadedimage2"></span><br />
+                                                    <div style="width:3px; height:3px; background-color:#1dc2cf; border-radius:10px; display:inline-block;"></div>
+                                                </div>
+                                                -->
+                                            </div>
+
+
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!--<i class="fa-solid fa-list"></i>-->
+                        <!--
+    <div style="display:inline-block; color: #ffffff; background-color: #333333; color: #ffffff; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; text-align: center; cursor: pointer; line-height: 40px;">
+        <a href="javascript:insertbox('#edit1');"><i class="fa-solid fa-list fa-1x"></i></a>
+    </div>
+    -->
+                        <!--
+    <a href="#"><img src="~/Content/energy/assets/image4.png" id="image1" name="image1" style="width:40px; height:40px;" /></a>
+    <a href="#"><img src="~/Content/energy/assets/file7.png" id="file1" name="file1" style="width:40px; height:40px;" /></a>
+    -->
+                        <!--
+        <a href="#"><img src="~/Content/energy/assets/food1.png" id="food1" name="food1" style="width:40px; height:40px;" /></a>
+    -->
+
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="vertical-align:top;">
+
+
+                        <!-- style="padding:20px;"-->
+                        <div>
+                            <!--
+                            <div style="display:inline-block; color: #ffffff; background-color: #333333; color: #ffffff; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; text-align: center; cursor: pointer; line-height: 40px;">
+                                <a href="javascript:insertbox('#edit2');"><i class="fa-solid fa-list fa-1x"></i></a>
+                            </div>
+                            -->
+
+
+                            <!--
+                            <div style="display:inline-block; color: #ffffff; background-color: #333333; color: #ffffff; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; text-align: center; cursor: pointer; line-height: 40px;">
+                                <a href="javascript:javascript: toggle('imageform1'); toggle('fileform1'); toggle('imageuploadtab'); toggle('fileuploadtab');"><i class="fa-solid fa-image fa-1x"></i></a>
+                            </div>
+                            <div style="display:inline-block; color: #ffffff; background-color: #333333; color: #ffffff; font-weight: bold; border-radius: 50%; width: 40px; height: 40px; text-align: center; cursor: pointer; line-height: 40px;">
+                                <a href="javascript:javascript: toggle('imageform1'); toggle('fileform1'); toggle('imageuploadtab'); toggle('fileuploadtab');"><i class="fa-solid fa-image fa-1x"></i></a>
+                            </div>
+
+                            -->
+                            <!--
+                        <div id="imageuploadtab" class="walterbutton" style="width: 200px; border-radius: 10px; cursor: pointer; display: none;"
+                             onclick="javascript: toggle('imageform1'); toggle('fileform1'); toggle('imageuploadtab'); toggle('fileuploadtab');">
+                            <span>Images</span>
+                        </div>
+                        <div id="fileuploadtab" class="walterbutton" style="width: 200px; border-radius: 10px; cursor: pointer;"
+                             onclick="javascript:toggle('imageform1'); toggle('fileform1'); toggle('imageuploadtab'); toggle('fileuploadtab');">
+                            <span>Files</span>
+                        </div>
+                        -->
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <div class="row" style="padding-top:10px;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    @*Html.Partial("~/Views/Shared/Energy/Editor1PartialView.cshtml")*@
+                    @Html.Partial("~/Views/Shared/Energy/Editor1PartialView.cshtml")
+
+
+
+
+
+                    <!--<textarea id="text1" name="text1" style="display: none;">@pagemodel.text1</textarea>-->
+                    <textarea id="text1" name="text1" style="display: block;">@pagemodel.text1</textarea>
+                    <textarea id="text2" name="text2" style="display: block;">@pagemodel.text2</textarea>
+                    <textarea id="text3" name="text3" style="display: block;">@pagemodel.text3</textarea>
+                    <textarea id="text4" name="text4" style="display: block;">@pagemodel.text4</textarea>
+                    <textarea id="text5" name="text5" style="display: block;">@pagemodel.text5</textarea>
+                    <textarea id="text6" name="text6" style="display: block;">@pagemodel.text6</textarea>
+                    <textarea id="text7" name="text7" style="display: block;">@pagemodel.text7</textarea>
+                    <textarea id="text8" name="text8" style="display: block;">@pagemodel.text8</textarea>
+                    <textarea id="text9" name="text9" style="display: block;">@pagemodel.text9</textarea>
+                    <textarea id="text10" name="text10" style="display: block;">@pagemodel.text10</textarea>
+                    <!--<input type="submit" id="todayslunchform1updatebutton" name="todayslunchform1updatebutton" value="Update" />-->
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 offset-1" style="vertical-align:top;">
+                        <!--<div class="col-md-8" style="margin-top: 30px;">-->
+                        <!-- outline: 3px solid #00ffff;-->
+                        <section>
+                            <div class="row">
+                                <div id='edit1'>
+                                    @Html.Raw(WebUtility.HtmlDecode(pagemodel.text1))
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="vertical-align:top;">
+                        <!--<div class="col-md-4 col-md-offset-2" style="margin-top: 30px;">-->
+                        <section>
+                            <div id='edit2'>
+                                @Html.Raw(WebUtility.HtmlDecode(pagemodel.text2))
+                            </div>
+                        </section>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    section {
+        width: 100% !important;
+        margin: auto;
+        text-align: left;
+        /*border:1px solid #ffff00;*/
+    }
+
+    .fr-wrapper {
+        /*
+        color: #ffffff !important;
+        background-color: #222222 !important;
+        */
+    }
+
+    .test12345 {
+        font-size: 48px;
+        color: #ffffff;
+        font-weight: bold;
+        background-color: #1dc2cf;
+    }
+
+
+    .wwheading1 {
+        font-size:48px;
+    }
+    .wwheading2 {
+        font-size: 24px;
+    }
+    .wwheading3 {
+        font-size: 16px;
+    }
+</style>
+
+
+
+
+

@@ -1,0 +1,641 @@
+﻿<!-- START ./layout/layout.phtml -->
+
+
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="sv">
+<head>
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <meta name="referrer" content="unsafe-url">
+
+
+    <link rel="shortcut icon" href="/imcms/lots/lerum/favicon.ico?_=-17348104">
+
+
+
+    <link rel="stylesheet" href="/css/vufind/decompiled.css?_=1598536070" media="all">
+    <link rel="stylesheet" href="/css/vufind/print.css?_=1598536070" media="print">
+    <link rel="stylesheet" href="/css/vufind/bootstrap-slider.min.css?_=1598536070" media="screen">
+
+    <link rel="stylesheet" href="/css/bootstrap-3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-fix-after-3.4.1.css?_=-17348104">
+    <link rel="stylesheet" href="/css/bootstrap-4.5.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/datatables-1.10.23/datatables.min.css">
+    <link rel="stylesheet" href="/javascript/jquery-ui-1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="/css/fonts/fontawesome-free-5.15.2-web/css/all.min.css">
+    <link rel="stylesheet" href="/javascript/slick/slick.min.css">
+    <link rel="stylesheet" href="/javascript/slick/slick-theme.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker-1.9.0/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/css/fancybox-3/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/css/styles_v2.css.jsp?_=-17348104">
+
+    <script src="/javascript/modernizr-2.8.3.min.js"></script>
+    <script src="/javascript/jquery/jquery-3.5.1.min.js"></script>
+    <script src="/css/bootstrap-4.5.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/css/bootstrap-datepicker-1.9.0/bootstrap-datepicker.min.js"></script>
+    <script src="/css/bootstrap-datepicker-1.9.0/bootstrap-datepicker.sv.min.js" charset="UTF-8"></script>
+    <script src="/css/datatables-1.10.23/datatables.min.js"></script>
+    <script src="/css/datatables-1.10.23/Buttons-1.6.5/js/dataTables.buttons.min.js"></script>
+    <script src="/css/datatables-1.10.23/Buttons-1.6.5/js/buttons.print.min.js"></script>
+    <script src="/javascript/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="/javascript/slick/slick.js"></script>
+    <script>
+        if (typeof $.fn.slick === 'undefined') {
+            console.log("Start: slick is undefined");
+        }
+    </script>
+    <script src="/javascript/detectmobilebrowser.js"></script>
+    <script src="/javascript/viewport-min-width.js"></script>
+    <script src="/javascript/jquery/jquery.fittext.js"></script>
+    <script src="/css/fancybox-3/jquery.fancybox.min.js"></script>
+
+
+    <script nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY=">
+        var userIsLoggedIn = true;
+    </script>
+    <script src="/vufind/themes/lots/js/vendor/validator.min.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/lib/form-attr-polyfill.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/lib/autocomplete.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/common.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/lightbox.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/vendor/hunt.min.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/check_item_statuses.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/check_save_statuses.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/facets.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/vendor/bootstrap-slider.min.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/requests.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/account_ajax.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/record.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+    <script src="/vufind/themes/lots/js/combined-search.js?_=-17348104" nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY="></script>
+
+
+
+
+
+    <script nonce="EWzLD897jl0tbHznTu7cmgPPQUafjrPQuwjiz52g6cY=">
+        try {
+            if (typeof VuFind !== 'undefined') {
+                VuFind.path = '/vufind';
+                VuFind.defaultSearchBackend = 'Solr';
+                VuFind.addTranslations({ "add_tag_success": "Taggarna sparades", "bulk_email_success": "Posterna har skickats", "bulk_noitems_advice": "Inga poster \u00e4r valda. Kryssa i rutan bredvid posten f\u00f6r att v\u00e4lja den.", "bulk_save_success": "Posterna sparades.", "close": "St\u00e4ng", "collection_empty": "Inget att visa", "error_occurred": "Det har uppst\u00e5tt ett fel", "go_to_list": "Visa listan", "hold_available": "Kan avh\u00e4mtas", "libphonenumber_invalid": "Telefonnummer ogiltigt", "libphonenumber_invalidcountry": "Ogiltig landkod", "libphonenumber_invalidregion": "Ogiltig regionskod:", "libphonenumber_notanumber": "Indatan verkar inte vara ett telefonnummer", "libphonenumber_toolong": "Indatan f\u00f6r l\u00e5ng f\u00f6r att vara ett telefonnummer", "libphonenumber_tooshort": "Indatan f\u00f6r kort f\u00f6r att vara ett telefonnummer", "libphonenumber_tooshortidd": "Telefonnumer f\u00f6r kort efter landkoden", "loading": "Laddar", "more": "mer", "number_thousands_separator": " ", "sms_success": "Meddelandet har skickats.", "Phone number invalid": "Telefonnummer ogiltigt", "Invalid country calling code": "Ogiltig landkod", "Invalid region code": "Ogiltig regionskod:", "The string supplied did not seem to be a phone number": "Indatan verkar inte vara ett telefonnummer", "The string supplied is too long to be a phone number": "Indatan f\u00f6r l\u00e5ng f\u00f6r att vara ett telefonnummer", "The string supplied is too short to be a phone number": "Indatan f\u00f6r kort f\u00f6r att vara ett telefonnummer", "Phone number too short after IDD": "Telefonnumer f\u00f6r kort efter landkoden", "account_checkouts_due": "L\u00e5n som f\u00f6rfaller snart", "account_checkouts_overdue": "F\u00f6rsenade l\u00e5n", "account_has_alerts": "Kolla ditt konto", "account_normal_checkouts": "L\u00e5n som f\u00f6rfaller senare", "account_requests_available": "Kan avh\u00e4mtas", "account_requests_in_transit": "P\u00e5 v\u00e4g" });
+            }
+        } catch (e) { }
+    </script>
+
+    <script>
+        let site = {
+            metaId: 0,
+            permalink: document.location,
+            isEng: false,
+            editMode: false
+        };
+    </script>
+
+    <script src="/javascript/scripts_v2.js.jsp?_=-17348104" id="mainStylesheet"></script>
+    <script src="/imcms/lots/lerum/client.js.jsp?_=-17348104"></script>
+    <script src="/javascript/tableToCards.js"></script>
+
+
+    <link rel="stylesheet" href="/css/style-imcms-vufind-override_v2.css?_=-17348104">
+
+    <link rel="stylesheet" href="/imcms/lots/lerum/client.css.jsp?_=-17348104">
+</head>
+<body class="template-dir-search template-name-results ">
+
+
+    <div id="pageWrapper">
+
+
+
+
+
+
+        <header id="header" class="hidden-print">
+            <div id="headerTopPart" class="container-fluid container-site">
+                <div class="row">
+                    <div id="headerLeft" class="col-9 d-flex align-items-center">
+                        <h1 class="sr-only">
+                            Lerum
+                        </h1>
+                        <div id="logo">
+                            <a href="/" aria-label="Till startsidan" onclick="easterEggGoRoot(event); return false">
+                                <img src="/imcms/lots/lerum/logo-lerum.png?_=98762" alt="Välkommen till Lerum.">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div id="headerRight" class="col-3 h-100 d-flex flex-column justify-content-center align-items-end">
+                        <div class="d-lg-none w-100 max-w100">
+                            <a id="menuBtn" class="menu-btn align-self-center hamburger-menu disabled" role="button" aria-controls="mobileMenu" aria-expanded="false">
+                                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="50" cy="50" r="30" />
+                                    <path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35" />
+                                    <path class="line--2" d="M0 50h70" />
+                                    <path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65" />
+                                </svg>
+                            </a>
+                        </div>
+                        <ul id="headerMenuT" class="header-menu align-self-end">
+                            <li class="item-login">
+                                <div id="loginLinkHtml">
+                                    <span class="d-none d-lg-inline">Mina sidor:&nbsp;</span>
+                                    <a href="/vufind/MyResearch/UserLogin" class="my-lib-link-0"><span>Logga in</span></a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <section id="headPlateWrapper">
+                <div class="container-fluid container-site mt0i">
+                    <nav id="mobileMenu" class="d-lg-none" data-label="Meny"></nav>
+                    <div id="searchPlate" role="search">
+                        <form id="searchForm" class="searchForm" method="get" action="/vufind/Search/Results" name="searchForm" autocomplete="off">
+                            <div class="d-flex flex-outer">
+                                <div class="flex-fill">
+                                    <label id="searchForm_lookfor_label" for="searchForm_lookfor" class="main-search-form-label">
+                                        Sökvillkor
+                                    </label>
+                                    <input id="searchForm_lookfor" type="text" name="lookfor"
+                                           placeholder="S&ouml;k i bibliotekskatalogen (titel, f&ouml;rfattare, &auml;mne)..."
+                                           class="form-control form-control-search searchForm_lookfor search-query autocomplete searcher:Solr ac-auto-submit"
+                                           value="" aria-labelledby="searchForm_lookfor_label">
+                                </div>
+                                <div class="search-form-right">
+                                    <label id="searchFieldSelectBtn_label" for="searchFieldSelectBtn" class="main-search-form-label">
+                                        Sökalternativ
+                                    </label>
+                                    <div class="d-flex">
+                                        <div class="select-types">
+                                            <div class="btn-group">
+                                                <input type="hidden" id="searchType" name="type" value="">
+                                                <button id="searchFieldSelectBtn" type="button" class="form-control text-black dropdown-toggle w170"
+                                                        aria-labelledby="searchFieldSelectBtn_label" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Sökalternativ...
+                                                </button>
+                                                <div id="searchFieldSelect" class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#" data-value="AllFields">Alla fält</a>
+                                                    <a class="dropdown-item" href="#" data-value="Title">Titel</a>
+                                                    <a class="dropdown-item" href="#" data-value="Author">Upphovsman</a>
+                                                    <a class="dropdown-item" href="#" data-value="Subject">Ämne</a>
+                                                    <a class="dropdown-item" href="#" data-value="CallNumber">Signum</a>
+                                                    <a class="dropdown-item" href="#" data-value="ISN">ISBN/ISSN</a>
+                                                    <a class="dropdown-item" href="#" data-value="tag"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn-searchBtn btn btn-primary btn-search" aria-label="Gör sökningen">
+                                            <span class="sr-only">Sök</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="limit" value="20">
+                            <input type="hidden" name="lng" id="lngField" value="sv">
+                        </form>
+                    </div>
+
+                    <nav id="topMenu" class="d-none d-lg-block">
+                        <div class="d-flex justify-content-between align-content-end">
+                            <ul class="top-menu-ul">
+                                <li id="topMenuItem_c4" data-menu="1001_1000" class="first">
+                                    <a href="/1001">
+                                        <span>Hem</span>
+                                    </a>
+                                </li>
+                                <li id="topMenuItem_c6" data-menu="1009_1000">
+                                    <a href="/nyheter">
+                                        <span>Nyheter</span>
+                                    </a>
+                                </li>
+                                <li id="topMenuItem_c7" data-menu="1001_1007">
+                                    <span>Använda biblioteket</span>
+                                </li>
+                                <li id="topMenuItem_c8" data-menu="1001_1008">
+                                    <span>E-biblioteket</span>
+                                </li>
+                                <li id="topMenuItem_c9" data-menu="1001_1009">
+                                    <span>Barn och unga</span>
+                                </li>
+                                <li id="topMenuItem_c10" data-menu="1076_1000">
+                                    <a href="/lerumkalender" target="_blank" title="Länk till annan webbplats. Öppnas i nytt fönster." class="externalLink">
+                                        <span>Kalender</span>
+                                    </a>
+                                </li>
+                                <li id="topMenuItem_c3" data-menu="1001_1003">
+                                    <span>Bibliotek och öppettider</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+
+                </div>
+            </section>
+        </header>
+
+
+
+
+
+        <!--body class="template-dir-search template-name-results ">
+            <!- -?php // Set up the search box -- there are three possible cases:
+              // 1. No search box was set; we should default to the normal box
+              // 2. It was set to false; we should display nothing
+              // 3. It is set to a custom string; we should display the provided version
+              // Set up default search box if no data was provided from the template;
+              // this covers case 1.  Cases 2 and 3 are then covered by logic below.
+              if (!isset($this->layout()->searchbox)) {
+                $this->layout()->searchbox = $this->render('search/searchbox.phtml');
+              }
+            ? -->
+        <!-- ?=$this->context($this)->renderInContext("search/searchbox_lots.phtml", ['ignoreHiddenFilterMemory' => true])?-->
+
+        <nav class="breadcrumbs" aria-label="Synlig sökväg">
+            <div class="container">
+                <ul class="breadcrumb hidden-print">
+                    <li class="active">Sökresultat - 9789189091511</li>
+                </ul>
+            </div>
+        </nav>
+        <div role="main" class="main">
+            <div id="content" class="container">
+
+                <div class="mainbody left">
+                    <script type="text&#x2F;javascript" nonce="ZEWC8hpGWW&#x2B;zuY&#x2B;YFFgnXm9j8V140GD99s4zo&#x2B;4srb4&#x3D;">
+                            //<!--
+                            VuFind.truncate.initTruncate('.top-facets-contents');
+                        collapseTopFacets();
+                            //-->
+                    </script>                    <div class="search-header hidden-print">
+                        <div class="search-stats">
+
+                            Visas <strong>1 - 1</strong> av <strong>1</strong> resultat för sökning '<strong>9789189091511</strong>'<span class="search-query-time">, Sökningstid : 0,02s</span>
+                            <a class="search-filter-toggle visible-xs" href="#search-sidebar" data-toggle="offcanvas" title="Expandera&#x20;sidpanelen">
+                                Förfina resultatet
+                            </a>
+                        </div>
+
+                        <div class="search-controls">
+                            <form class="search-sort" action="/vufind/Search/Results" method="get" name="sort">
+                                <input type="hidden" name="lookfor" value="9789189091511" /><input type="hidden" name="type" value="AllFields" />    <label for="sort_options_1">Sortera</label>
+                                <select id="sort_options_1" name="sort" class="jumpMenu form-control">
+                                    <option value="relevance" selected="selected">Relevans</option>
+                                    <option value="year">Tid (nyaste först)</option>
+                                    <option value="year&#x20;asc">Tid (äldsta först)</option>
+                                    <option value="callnumber-sort">Signum</option>
+                                    <option value="author">Författare</option>
+                                    <option value="title">Titel</option>
+                                </select>
+                                <noscript><input type="submit" class="btn btn-default" value="Justera" /></noscript>
+                            </form>
+                            <div class="view-buttons hidden-xs">
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="search-cart-form" method="post" name="bulkActionForm" action="/vufind/Cart/SearchResultsBulk" data-lightbox data-lightbox-onsubmit="bulkFormHandler">
+                    </form>
+                    <ol class="record-list" start="1">
+                        <li id="result0" class="result ajaxItem">
+                            <div class="record-number">
+                                1
+                            </div>
+                            <input type="hidden" value="4817" class="hiddenId" />
+                            <input type="hidden" value="Solr" class="hiddenSource" />
+                            <div class="media">
+                                <div class="media-left large">
+                                    <a href="&#x2F;vufind&#x2F;Record&#x2F;4817" class="record-cover-link">
+                                        <img src="&#x2F;vufind&#x2F;Cover&#x2F;Show&#x3F;author&#x3D;Attwood&#x25;2C&#x2B;Tony&amp;callnumber&#x3D;&amp;size&#x3D;large&amp;title&#x3D;Den&#x2B;kompletta&#x2B;guiden&#x2B;till&#x2B;Aspergers&#x2B;syndrom&amp;recordid&#x3D;4817&amp;source&#x3D;Solr&amp;isbn&#x3D;9189091515" data-linkpreview="true" class="recordcover" alt="Bookcover Den&#x20;kompletta&#x20;guiden&#x20;till&#x20;Aspergers&#x20;syndrom" />
+                                    </a>
+                                </div>
+                                <div class="media-body">
+                                    <div class="result-body">
+                                        <div>
+                                            <a href="/vufind/Record/4817" class="title getFull" data-view="full">
+                                                Den kompletta guiden till Aspergers syndrom
+                                            </a>
+                                        </div>
+
+                                        <div>
+                                            av                          <a href="  /vufind/Author/Home?author=Attwood%2C+Tony">Attwood, Tony</a>                                                      <br />            <strong> Publicerad:</strong> 2008
+
+
+
+
+                                        </div>
+
+
+                                        <div class="result-formats">
+                                            <span class="format bok">Bok</span>
+
+                                            <span class="status ajax-availability hidden">
+                                                <span class="label label-default">Laddar...</span>
+                                            </span>
+                                        </div>
+
+                                        <div class="result-previews">
+                                        </div>
+                                    </div>
+                                    <div class="result-links hidden-print">
+
+
+                                        <!-- Reservera på Titelnivå 1-->
+
+                                        <a href="/vufind/Record/4817/Save" data-light-box class="save-record" data-id="4817">
+                                            <i class="result-link-icon fa fa-fw fa-star" aria-hidden="true"></i>
+                                            <span class="result-link-label">Lägg till i lista</span>
+                                        </a><br />
+
+                                        <div class="savedLists">
+                                            <strong>Sparad:</strong>
+                                        </div>
+
+
+                                        <span class="Z3988" title="url_ver&#x3D;Z39.88-2004&amp;ctx_ver&#x3D;Z39.88-2004&amp;ctx_enc&#x3D;info&#x25;3Aofi&#x25;2Fenc&#x25;3AUTF-8&amp;rfr_id&#x3D;info&#x25;3Asid&#x25;2Fvufind.svn.sourceforge.net&#x25;3Agenerator&amp;rft.title&#x3D;Den&#x2B;kompletta&#x2B;guiden&#x2B;till&#x2B;Aspergers&#x2B;syndrom&amp;rft.date&#x3D;2008&amp;rft_val_fmt&#x3D;info&#x25;3Aofi&#x25;2Ffmt&#x25;3Akev&#x25;3Amtx&#x25;3Adc&amp;rft.creator&#x3D;Attwood&#x25;2C&#x2B;Tony&amp;rft.pub&#x3D;Cura&amp;rft.format&#x3D;BOK&amp;rft.language&#x3D;Swedish"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </li>
+                    </ol>          <ul class="pagination" aria-label="Paginering">
+                    </ul>
+                    <div class="searchtools hidden-print">
+                        <strong>Sökverktyg:</strong>
+                        <a href="?lookfor=9789189091511&amp;type=AllFields&amp;view=rss"><i class="fa fa-bell" aria-hidden="true"></i> RSS-flöde</a>
+                        &mdash;
+                        <a href="/vufind/Search/Email" class="mailSearch" data-lightbox id="mailSearch1130871">
+                            <i class="fa fa-envelope" aria-hidden="true"></i> Skicka sökningen per e-post
+                        </a>
+                        &mdash;
+                        <a href="/vufind/MyResearch/SaveSearch?save=1130871"><i class="fa fa-save" aria-hidden="true"></i> Spara sökningen</a>
+                    </div>
+                </div>
+
+                <div class="sidebar right hidden-print" id="search-sidebar">
+                    <button class="close-offcanvas btn btn-link" data-toggle="offcanvas">Bakåt</button>
+                    <h2>Begränsa sökningen</h2>
+                    <div class="facet-group" id="side-panel-building">
+                        <a class="btn btn-primary btn-block btn-sm mt-2 text-left" data-toggle="collapse" href="#side-collapse-building">
+                            Bibliotek
+                        </a>
+                        <div id="side-collapse-building" class="collapse in">
+
+                            <div class="truncate-facets" data-truncate="{&quot;rows&quot;:6,&quot;btn-class&quot;:&quot;facet&quot;,&quot;more-label&quot;:&quot;mer ...&quot;,&quot;less-label&quot;:&quot;f\u00e4rre ...&quot;,&quot;wrapper-class&quot;:false,&quot;wrapper-tagname&quot;:&quot;div&quot;}">
+                                <!-- START ./Recommend/SideFacets/single-facet.phtml -->
+                                <a href="?lookfor=9789189091511&amp;type=AllFields&amp;filter%5B%5D=building%3A%22LERUM%22" class="facet js-facet-item facetAND" data-title="Lerums&#x20;bibliotek" data-count="1" data-lightbox-ignore>
+
+                                    <span class="text">
+                                        <span class="facet-value">Lerums bibliotek</span>
+                                    </span>
+
+                                    <span class="badge">
+                                        1
+                                    </span>
+
+
+                                </a><!-- STOP ./Recommend/SideFacets/single-facet.phtml -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facet-group" id="side-panel-category_facet">
+                        <a class="btn btn-primary btn-block btn-sm mt-2 text-left" data-toggle="collapse" href="#side-collapse-category_facet">
+                            Medietyp
+                        </a>
+                        <div id="side-collapse-category_facet" class="collapse in">
+
+                            <div class="truncate-facets" data-truncate="{&quot;rows&quot;:6,&quot;btn-class&quot;:&quot;facet&quot;,&quot;more-label&quot;:&quot;mer ...&quot;,&quot;less-label&quot;:&quot;f\u00e4rre ...&quot;,&quot;wrapper-class&quot;:false,&quot;wrapper-tagname&quot;:&quot;div&quot;}">
+                                <!-- START ./Recommend/SideFacets/single-facet.phtml -->
+                                <a href="?lookfor=9789189091511&amp;type=AllFields&amp;filter%5B%5D=category_facet%3A%22BOK%22" class="facet js-facet-item facetAND" data-title="Bok" data-count="1" data-lightbox-ignore>
+
+                                    <span class="text">
+                                        <span class="facet-value">Bok</span>
+                                    </span>
+
+                                    <span class="badge">
+                                        1
+                                    </span>
+
+
+                                </a><!-- STOP ./Recommend/SideFacets/single-facet.phtml -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facet-group" id="side-panel-author_facet">
+                        <a class="btn btn-primary btn-block btn-sm mt-2 text-left" data-toggle="collapse" href="#side-collapse-author_facet">
+                            Författare
+                        </a>
+                        <div id="side-collapse-author_facet" class="collapse in">
+
+                            <div class="truncate-facets" data-truncate="{&quot;rows&quot;:6,&quot;btn-class&quot;:&quot;facet&quot;,&quot;more-label&quot;:&quot;mer ...&quot;,&quot;less-label&quot;:&quot;f\u00e4rre ...&quot;,&quot;wrapper-class&quot;:false,&quot;wrapper-tagname&quot;:&quot;div&quot;}">
+                                <!-- START ./Recommend/SideFacets/single-facet.phtml -->
+                                <a href="?lookfor=9789189091511&amp;type=AllFields&amp;filter%5B%5D=author_facet%3A%22Attwood%2C+Tony%22" class="facet js-facet-item facetAND" data-title="Attwood,&#x20;Tony" data-count="1" data-lightbox-ignore>
+
+                                    <span class="text">
+                                        <span class="facet-value">Attwood, Tony</span>
+                                    </span>
+
+                                    <span class="badge">
+                                        1
+                                    </span>
+
+
+                                </a><!-- STOP ./Recommend/SideFacets/single-facet.phtml -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facet-group" id="side-panel-language">
+                        <a class="btn btn-primary btn-block btn-sm mt-2 text-left" data-toggle="collapse" href="#side-collapse-language">
+                            Språk
+                        </a>
+                        <div id="side-collapse-language" class="collapse in">
+
+                            <div class="truncate-facets" data-truncate="{&quot;rows&quot;:6,&quot;btn-class&quot;:&quot;facet&quot;,&quot;more-label&quot;:&quot;mer ...&quot;,&quot;less-label&quot;:&quot;f\u00e4rre ...&quot;,&quot;wrapper-class&quot;:false,&quot;wrapper-tagname&quot;:&quot;div&quot;}">
+                                <!-- START ./Recommend/SideFacets/single-facet.phtml -->
+                                <a href="?lookfor=9789189091511&amp;type=AllFields&amp;filter%5B%5D=language%3A%22Swedish%22" class="facet js-facet-item facetAND" data-title="Svenska" data-count="1" data-lightbox-ignore>
+
+                                    <span class="text">
+                                        <span class="facet-value">Svenska</span>
+                                    </span>
+
+                                    <span class="badge">
+                                        1
+                                    </span>
+
+
+                                </a><!-- STOP ./Recommend/SideFacets/single-facet.phtml -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="facet-group" id="side-panel-publishDate">
+                        <a class="btn btn-primary btn-block btn-sm mt-2 text-left" data-toggle="collapse" href="#side-collapse-publishDate">
+                            Utgivningsår
+                        </a>
+                        <div id="side-collapse-publishDate" class="collapse in">
+                            <div class="facet">
+                                <form class="facet-range-form" name="publishDateFilter" id="publishDateFilter">
+                                    <input type="hidden" name="lookfor" value="9789189091511" /><input type="hidden" name="type" value="AllFields" />    <input type="hidden" name="daterange[]" value="publishDate" />
+                                    <div class="date-fields">
+                                        <div class="date-from">
+                                            <label for="publishDatefrom">
+                                                Från och med:
+                                            </label>
+                                            <input type="text" class="form-control" name="publishDatefrom" id="publishDatefrom" value="" maxlength="4" />
+                                        </div>
+                                        <div class="date-to">
+                                            <label for="publishDateto">
+                                                Till:
+                                            </label>
+                                            <input type="text" class="form-control" name="publishDateto" id="publishDateto" value="" maxlength="4" />
+                                        </div>
+                                    </div>
+                                    <div class="slider-container"><input type="text" class="hidden" id="publishDatedateSlider" /></div>
+                                    <input class="btn btn-default" type="submit" value="Justera" />
+                                </form>
+                            </div>
+                            <script type="text&#x2F;javascript" nonce="ZEWC8hpGWW&#x2B;zuY&#x2B;YFFgnXm9j8V140GD99s4zo&#x2B;4srb4&#x3D;">
+                                    //<!--
+                                    $(document).ready(function() {
+                                  var fillTexts = function() {
+                                    var v = publishDatedateSlider.getValue();
+                                    $('#publishDatefrom').val(v[0]);
+                                    $('#publishDateto').val(v[1]);
+                                  };
+                                  var publishDatedateSlider = $('#publishDatedateSlider')
+                                    .slider({"min":1400,"max":2026,"handle":"square","tooltip":"hide","value":[1400,2026]})
+                                    .on('change', fillTexts)
+                                    .data('slider');
+                                });
+
+                                $('#publishDatefrom, #publishDateto').change(function () {
+                                  var fromValue = Number($('#publishDatefrom').val());
+                                  var toValue = Number($('#publishDateto').val());
+                                  $('#publishDatedateSlider').slider(
+                                    'setValue',
+                                    [
+                                      isNaN(fromValue) || fromValue <= 0 ? 1400 : fromValue,
+                                      isNaN(toValue) || toValue <= 0 ? 2026 : toValue
+                                    ],
+                                    true
+                                  );
+                                });
+                                    //-->
+                            </script>
+                        </div>
+                    </div>
+                    <script type="text&#x2F;javascript" nonce="ZEWC8hpGWW&#x2B;zuY&#x2B;YFFgnXm9j8V140GD99s4zo&#x2B;4srb4&#x3D;">
+                        //<!--
+                        registerSideFacetTruncation();
+                        //-->
+                    </script>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer id="footer">
+            <div class="container-fluid container-site">
+                <div class="row">
+                    <div class="col-12 col-md-5 footer-col footer-col-1">
+                        <div id="footerColLogo">
+                            <img src="/imcms/lots/lerum/logo.png?_=98762" alt="Logo för Lerum">
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-12 col-md-4 footer-col footer-col-2">
+                        <h2>Kontaktuppgifter</h2>
+                        <div class="col-text"><p>Lerums bibliotek<br />Alings&aring;sv&auml;gen 9<br />443 35 Lerum<br />Telefon: <a href="tel:+46302521475">0302 &ndash; 52 14 75</a><br />E-post: <a href="mailto:biblioteket@lerum.se">biblioteket@lerum.se</a> </p></div>
+
+                    </div>
+
+                    <div class="col-12 col-md-3 footer-col footer-col-3">
+                        <h2>
+                            Viktig information
+                        </h2>
+
+                        <ul class="no-dot">
+                            <li><a href="/1010" target="_self">Tillgänglighetsredogörelse</a></li>
+                            <li><a href="/1011" target="_self">Om personuppgifter</a></li>
+                            <li><a href="/om-cookies" target="_self">Om Cookies</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const seed = Date.now();
+            const params = new URLSearchParams();
+            params.append('metaId', 1001);
+            params.append('_', seed);
+            fetch('/jsp/accept-cookies/check-cookies?' + params.toString())
+                .then(response => response.json())
+                .then(json => {
+                    const $script = document.createElement('script');
+                    $script.id = 'cookieCheckScript';
+                    $script.textContent = json.script;
+                    document.body.appendChild($script);
+                    if (json.checkCookies) {
+                        showAcceptCookies();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching data:', error);
+                });
+        });
+    </script>
+
+    <!-- MODAL IN CASE WE NEED ONE -->
+    <div id="modal" class="modal fade hidden-print" tabindex="-1" role="dialog"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="modal-body">
+                    Laddar...
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas-overlay" data-toggle="offcanvas"></div>
+</body>
+
+</html>
+<!-- STOP ./layout/layout.phtml -->

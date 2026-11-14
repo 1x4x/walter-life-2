@@ -1,0 +1,141 @@
+﻿@{
+    //string path = HttpContext.Current.Server.MapPath("~/template/consy/index.cshtml");
+    //string content = System.IO.File.ReadAllText(path);
+    //Html.Raw(HttpUtility.HtmlDecode(content));
+}
+
+@*Html.Partial("~/template/consy/index.cshtml");*@
+@*Html.Partial("~/content/consy/index.cshtml");*@
+@*Html.Partial("~/views/shared/consy/index.cshtml");*@
+@*Html.Partial("~/views/shared/fitpro/index.cshtml");*@
+@*Html.Partial("~/views/shared/walteradmin/index.cshtml");*@
+
+
+@*Html.Partial("~/views/shared/walteradmin/index.cshtml");*@
+
+
+
+
+@RenderBody()
+
+
+
+
+
+@*<!--<img src="~/template/Consy/images/index.html" />-->*@
+@*
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <div>
+        <a href="#" name="/template/consy/index.html" class="nav">Page 1</a>
+        <a href="#" name="/template/fitpro/index.html" class="nav">Page 2</a>
+    </div>
+
+    <div id="container">
+        <p>Placeholder text</p>
+    </div>
+
+    <script>
+        var url1 = 'http://localhost:52149/template/consy/index.html';
+        var url2 = 'http://localhost:52149/template/fitpro/index.html';
+
+        fetch(url2)
+            .then(response => {
+                // When the page is loaded convert it to text
+                return response.text()
+            })
+            .then(html => {
+                // Initialize the DOM parser
+                const parser = new DOMParser()
+
+                // Parse the text
+                const doc = parser.parseFromString(html, "text/html")
+
+                // You can now even select part of that html as you would in the regular DOM
+                // Example:
+                // const docArticle = doc.querySelector('article').innerHTML
+
+                console.log(doc)
+                document.getElementById("html").insertAdjacentHTML("afterend", doc);
+            })
+            .catch(error => {
+                console.error('Failed to fetch page: ', error)
+            })
+    </script>
+*@
+
+
+
+
+
+@*
+    <script>
+        //async function getData() {
+        //    const url = "http://localhost:52149/template/consy/index.html";
+        //    try {
+        //        const response = await fetch(url);
+        //        if (!response.ok) {
+        //            throw new Error(`Response status: ${response.status}`);
+        //        }
+
+        //        const json = await response.body;
+        //        console.log(json);
+        //    } catch (error) {
+        //        console.error(error.message);
+        //    }
+        //}
+
+        //getData();
+    </script>
+
+
+
+    <script>
+        //document.addEventListener("DOMContentLoaded", (event) => {
+
+
+
+        //    var xhttp = new XMLHttpRequest();
+        //    xhttp.onreadystatechange = function () {
+        //        if (this.readyState == 4 && this.status == 200) {
+        //            //xhttp.responseText will have all the HTML content
+        //        }
+        //    };
+        //    xhttp.open("GET", "http://localhost:52149/template/consy/index.html", true);
+        //    var aaa = xhttp.send();
+        //    console.log(aaa);
+        //    document.getElementById('container').outerHTML = aaa;
+
+
+
+        //});
+    </script>
+
+
+
+    <script>
+        //const url = "test.html";
+
+        //fetch(url)
+        //    .then((response) => response.text())
+        //    .then((text) => new DOMParser().parseFromString(text, "text/html"))
+        //    .then((dom) => dom.getElementById("test"))
+        //    .then((test) => {
+        //        console.log(test);
+        //        //Do something with test.
+        //    });
+
+
+
+
+        //$(function () {
+        //    $('.nav').click(function (e) {
+        //        e.preventDefault();
+        //        //var url = $(this).attr("name") + '.html';
+        //        var url = $(this).attr("name");
+        //        $("#container").load(url);
+        //        console.log(url);
+        //    });
+        //});
+    </script>
+*@
+

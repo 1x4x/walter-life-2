@@ -1,0 +1,1 @@
+loopia requires a special version of the mysql dll to be used. for safety i save that version in this folder. its also together with the other dlls in the bin folder

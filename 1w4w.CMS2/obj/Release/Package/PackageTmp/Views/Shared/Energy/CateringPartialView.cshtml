@@ -1,0 +1,90 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    //string baseurl = "/content/energy";
+    //_1w4w.CMS.Models.WebsiteModel website = new _1w4w.CMS.Manager.WebsiteManager().GetWebsiteById(3);
+    _1w4w.CMS.Models.WebsiteModel website = Model.Website;
+    var domain = Model.Website.domain;
+    //int selectedtemplate = website.template;
+    int selectedtemplate = 3;
+    _1w4w.CMS.Models.TemplateModel template;
+
+    string host = Request.Url.Host.ToLower();
+    //if (host.Contains("energikällan"))
+    //{
+    //template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(3);
+    template = _1w4w.CMS.Manager.TemplateManager.GetTemplate(selectedtemplate);
+    //template = website.template.;
+    //}
+    string baseurl = "/content/energy";
+    //string baseurl = "/template/medicare/";
+    //string baseurl = template.baseurl;
+}
+
+
+
+<!-- Start Blog Section -->
+<section class="blog-section pt-100 pb-70" id="catering" name="catering">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h6 class="sub-title">Energikällan</h6>
+                    <h2>Catering</h2>
+                </div>
+            </div>
+
+            @{var list = _1w4w.CMS.Manager.CateringManager.GetCateringList();}
+            @foreach (var catering in list.Where(x => x.websiteid == website.id))
+            {
+                var amount2 = "amount" + catering.id;
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-single-item" style="cursor:pointer;">
+
+                        <div class="blog-image">
+                            <!--<a href="single-blog.html"></a>-->
+                            <img src="~/Content/upload/image/@catering.imageurl" alt="image">
+                            <!--<img src="@baseurl/assets/img/blog/blog-3.jpg" alt="image">-->
+                        </div>
+
+                        <div class="blog-description">
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="color: #1dc2cf; font-weight:bold;">
+                                        <i class="fa-solid fa-tags"></i> @catering.artnr
+                                    </td>
+                                    <td style="text-align:right;">
+
+                                        Antal&nbsp;
+                                        <input type="number" name="@amount2" id="@amount2" class="walterbutton" placeholder="" value="1" min="0" step="1" pattern="^[0-9]" style="border-radius: 0px; background-color: #ffffff; border: 2px solid #1dc2cf; color: #1dc2cf; border-bottom-left-radius: 8px; border-top-left-radius: 8px; text-align: center; width:70px;" onkeyup="if (this.value < 0) this.value = 1; if (isNumeric == '') this.value = 1;" onblur="if (this.value < 0) this.value = 1; if (isNumeric == '') this.value = 1;" /><a href="javascript:addtobasket(@catering.id, document.getElementById('@amount2').value, @catering.artnr, '@catering.name');" class="walterbutton">+<span></span></a>
+                                         
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                            <div class="blog-content">
+                                <h3>
+                                    <!--<a href="single-blog.html"></a>-->
+                                    @catering.name
+                                </h3>
+                                <div class="blog-btn" style="text-align:right;cursor:pointer;">
+
+                                    <!--<a href="single-blog.html" class="walterbutton">-<span></span></a>-->
+                                    <!--<a href="single-blog.html" class="walterbutton">+<span></span></a>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+<!--
+            <div class="col-lg-4 col-md-6">
+            </div>
+-->
+
+
+        </div>
+    </div>
+</section>
+<!-- End Blog Section -->

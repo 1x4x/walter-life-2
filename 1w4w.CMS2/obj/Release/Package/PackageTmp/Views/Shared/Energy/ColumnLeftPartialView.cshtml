@@ -1,0 +1,629 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    string websiteid = System.Web.Configuration.WebConfigurationManager.AppSettings["websiteid"];
+    string baseurl = "/content/energy";
+    //var pageid = Request.QueryString["pageid"];
+    string pageid = (string)Url.RequestContext.RouteData.Values["id"];
+    if (string.IsNullOrEmpty(pageid))
+    {
+        pageid = "1"; // starpage
+    }
+
+
+    var usermodel = Model.usermodel as _1w4w.CMS.Models.UserModel;
+    var accesslevel = "";
+    if (usermodel != null)
+    {
+        accesslevel = usermodel.accesslevel ?? "";
+    }
+    if (pageid == null) { pageid = "1"; }
+    if (pageid == "undefined") { pageid = "1"; }
+    if (string.IsNullOrEmpty(pageid)) { pageid = "1"; }
+    _1w4w.CMS.Models.PageModel pagemodel = Model.PageModels.Where(x => x.id == Convert.ToInt32(pageid)).SingleOrDefault();
+    List<_1w4w.CMS.Models.PagePartModel> pagepartmodel = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid)).ToList();
+    var list1 = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid) && x.placementid == 1);
+    var list2 = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid) && x.placementid == 2);
+    var count1 = list1.Count();
+    var count2 = list2.Count();
+
+    //todayslunch
+    var todaysLunchModelsList = Model.TodaysLunchModels;
+
+
+
+    // calculate weeks
+    int weeksinyear = _1w4w.CMS.Manager.DateManager.GetWeeksInYear(DateTime.Now.Year);
+    int week = _1w4w.CMS.Manager.DateManager.GetIso8601WeekOfYearNow();
+    int nextweek = (week + 1);
+    int nextnextweek = (week + 2);
+    
+    var nextweekexist = todaysLunchModelsList.Where(x => x.week == nextweek.ToString()).Any();
+    var nextnextweekexist = todaysLunchModelsList.Where(x => x.week == nextnextweek.ToString()).Any();
+
+
+}
+
+
+
+
+<div style="color:#000000; text-align:center;">
+
+
+
+
+    @{
+        int placement2counter = 0;
+        foreach (var item in list1)
+        {
+            placement2counter++;
+
+
+            if (item.parttype == "text")
+            {
+                @Html.Raw(WebUtility.HtmlDecode(item.pageparttext ?? ""))
+            }
+            if (item.parttype == "html")
+            {
+                <div style="margin-bottom: 20px;">
+                    @Html.Raw(WebUtility.HtmlDecode(item.pageparttext ?? ""))
+                </div>
+            }
+            if (item.parttype == "image")
+            {
+                var imgsettingsform = "imgsettingsform" + item.id;
+                var imgsettingsdiv = "imgsettingsdiv" + item.id;
+                var imgsettingstab = "imgsettingstab" + item.id;
+                var imgsettingscontentdiv1 = "imgsettingscontentdivAAA" + item.id;
+                var imgsettingscontentdiv2 = "imgsettingscontentdivBBB" + item.id;
+                var imgsettingscontentdiv3 = "imgsettingscontentdivCCC" + item.id;
+                var imgsettingsfileinput = "imgsettingsfileinput" + item.id;
+                var imgsettingsfileinfospan = "imgsettingsfileinfospan" + item.id;
+                var imgsettingsimageid = "imgsettingsimageid" + item.id;
+                var imgsettingsimagevalue = "imgsettingsimagevalue" + item.id;
+                var imagetextdiv = "imagetextdiv" + item.id;
+
+
+                // if we have an imagetext we want no margin-top
+                //var marginbottom = "";
+                //if (item.imagetext == "")
+                //{
+                //    marginbottom = "margin-bottom: 10px;";
+
+                //}
+                //else
+                //{
+                //    marginbottom = "margin-bottom: 6px;";
+                //}
+
+
+                <div style="position: relative; display: block; text-align: center !important; width: 100%; border-radius: 10px !important; margin-top:10px;">
+                    <div id="@imgsettingsdiv" name="@imgsettingsdiv" style="border: 2px solid #000000; color: #00ffff; background-color: #000000aa; display: none; position: absolute; top: 0; left: 0px; padding: 8px; border-radius: 10px; width: 100%; text-align: left !important; border-radius: 10px !important; ">
+                        <!-- margin: auto;-->
+                        <!--imgsettingsdiv-->
+                        <!--overflow-x: hidden-->
+
+                        <div class="imgsettingstab">
+                            <a onclick="javascript:document.getElementById('@imgsettingscontentdiv3').style.display='block'; document.getElementById('@imgsettingscontentdiv1').style.display='none'; document.getElementById('@imgsettingscontentdiv2').style.display='none';"><i class="fa fa-wrench imgsettingslinkicon"></i></a><!-- document.getElementById('@imgsettingscontentdiv1').style.overflowX='auto';-->
+                        </div>
+                        <div class="imgsettingstab">
+                            <a onclick="javascript:document.getElementById('@imgsettingscontentdiv1').style.display='block'; document.getElementById('@imgsettingscontentdiv2').style.display='none'; document.getElementById('@imgsettingscontentdiv3').style.display='none';"><i class="fa fa-image imgsettingslinkicon"></i></a><!-- document.getElementById('@imgsettingscontentdiv2').style.overflowX='auto';-->
+                        </div>
+                        <div class="imgsettingstab">
+                            <a onclick="javascript:document.getElementById('@imgsettingscontentdiv2').style.display='block'; document.getElementById('@imgsettingscontentdiv1').style.display='none'; document.getElementById('@imgsettingscontentdiv3').style.display='none';"><i class="fa fa-upload imgsettingslinkicon"></i></a><!-- document.getElementById('@imgsettingscontentdiv1').style.overflowX='auto';-->
+                        </div>
+
+
+
+
+
+
+
+
+                        <div id="@imgsettingscontentdiv2" name="@imgsettingscontentdiv2" class="scroller" style="position: relative !important; background-color: #000000aa !important; border: 2px solid #333333; padding: 10px; border-radius: 10px; margin-top: 10px; height: 300px !important; border-radius: 10px !important; z-index: 30; display: none;">
+
+
+
+
+                            
+
+
+                            <div style="font-size: 16px; text-align:center; margin-bottom:10px;"><!--<i class="fa-solid fa-image uploadicon1" style="margin:auto !important;"></i> -->Upload image</div>
+                            <form action="/file/mupploadimage" method="post" enctype="multipart/form-data" id="@imgsettingsform" name="@imgsettingsform" style="width:100% !important;" multiple="true">
+                                <input type="hidden" name="pageid" id="pageid" value="@item.pageid" />
+                                <input type="hidden" name="placementid" id="placementid" value="@item.placementid" />
+                                <input type="hidden" name="websiteid" id="websiteid" value="@item.websiteid" />
+                                <input type="hidden" name="uploadedimagecategory" id="uploadedimagecategory" value="uncategorized" />
+                                <input type="hidden" name="id" id="id" value="@item.id" />
+
+                                <div style="width: 100%; text-align: center; margin-top: 20px;">
+                                    <div><input type="file" name="file" id="@imgsettingsfileinput" class="imagesettingsuploadfileinput3" style="border:3px solid #00ffff; border-radius:10px; background-color:transparent; color:#00ffff; width:100px;"></div>
+                                    <div style="display:none;">
+                                        <!--inline-block-->
+                                        <!--
+                <i class="fa-solid fa-image uploadicon1" style="margin:auto !important;"></i>
+                -->
+                                        <!--
+                <br />
+                <span class="file-name"></span>
+                -->
+                                    </div>
+
+
+
+                                    <button value="Upload" class="imagesettingsuploadbutton2" onclick="javascript:form['@imgsettingsform'].submit();" style="margin-top:20px;">
+                                        <!-- style="display:block !important; margin:auto; background-color:#333333; border: 5px solid transparent !important; outline:3px dashed #00ffff !important;"-->
+                                        <i class="fa-solid fa-upload uploadicon2"></i>
+                                    </button>
+                                </div>
+                            </form>
+
+
+
+
+
+                            @* https://dev.to/ibn_abubakre/styling-file-inputs-like-a-boss-mhm *@
+                            <script>
+                                const file = document.querySelector('#@imgsettingsfileinput');
+                                file.addEventListener('change', (e) => {
+                                    // Get the selected file
+                                    const [file] = e.target.files;
+                                    // Get the file name and size
+                                    const { name: fileName, size } = file;
+                                    // Convert size in bytes to kilo bytes
+                                    const fileSize = (size / 1000).toFixed(2);
+                                    // Set the text content
+                                    const fileNameAndSize = `${fileName} - ${fileSize}KB`;
+                                    document.querySelector('.file-name').textContent = fileNameAndSize;
+                                });
+                            </script>
+
+
+
+
+                        </div>
+
+                        <div id="@imgsettingscontentdiv1" name="@imgsettingscontentdiv1" class="scroller" style="position: relative !important; background-color:#000000aa !important; border: 2px solid #333333; padding: 10px; border-radius: 10px; margin-top: 10px; width: 100% !important; height: 300px !important; border-radius: 10px !important; z-index: 30; overflow-x:hidden; display:none;">
+
+                            <div style="background-color:#ff0000;">
+                                <h1>@pageid</h1>
+                            </div>
+
+
+
+
+                            <div style="font-size: 16px; text-align:center; margin-bottom:10px;">Select image</div>
+                            @if (Model.UploadedImageModels != null)
+                            {
+                                //foreach (var item2 in Model.UploadedImageModels.Where(x => x.websiteid == 1))
+                                foreach (var item2 in Model.UploadedImageModels)
+                                {
+                                    var divname = "uploadedimageCCCC" + item2.id;
+                                    var copytoclipboardlink = "copytoclipboardlink" + item2.id;
+                                    var imagepath = "/content/upload/image/" + item2.name;
+
+                                    <div id="@divname" name="cateringdivCCC" class="filterdiv @item2.uploadedimagecategory" style="display: inline-block; width: 44% !important; padding:5px;">
+                                        <span onclick="javascript: document.getElementById('imagepath1').value = '@imagepath'; document.getElementById('imagepath').value = '@imagepath'; window.location.assign('/file/updateimagepath/?pagepartid=@item.id-&uploadedimageid=@item2.id');"><img src="/content/upload/image/@item2.name" border="0" class="uploadedimage2" style="z-index:29 !important;"></span><br />
+                                    </div>
+                                }
+                            }
+                        </div>
+
+
+                        <div id="@imgsettingscontentdiv3" name="@imgsettingscontentdiv3" class="scroller" style="position: relative !important; background-color: #000000aa !important; border: 2px solid #333333; padding: 10px; border-radius: 10px; margin-top:10px; height: 300px !important; border-radius: 10px !important; z-index: 30;">
+
+
+                            <!--<b>Settings</b><br />-->
+
+                            <b>bgcolor</b><br />
+                            @if (item.colors != null)
+                            {
+                                var colors = item.colors.Split(',');
+                                var bordercolor = "";
+                                var colorcounter = 1;
+                                foreach (var color in colors)
+                                {
+                                    var currentcolorid = "presetcolor" + item.id + "x" + colorcounter;
+                                    if (colorcounter == 0)
+                                    {
+                                        bordercolor = "#004949";
+                                    }
+                                    else
+                                    {
+                                        bordercolor = "#000000";
+                                    }
+                                    <div name="@currentcolorid" id="@currentcolorid" class="presetcolor1" style="background-color:@color !important;" onclick="javascript: selectthiscolor('@currentcolorid', @colorcounter, @item.id, '@imagetextdiv', '@color');"></div>
+
+                                    <!-- style="background-color: @color !important; border: 3px solid @bordercolor;"-->
+                                    colorcounter++;
+                                }
+
+                                <div style="width:20px; height:20px; background-color:#000000 !important; border: 3px solid @bordercolor; border-radius:10px; display:inline-block; cursor:pointer; background-image:url(/Content/upload/image/colorwheel-removebg-preview.png) !important;"></div>
+                            }
+
+                            <div style="width:100% !important;">
+                                <div style="display: inline-block; max-width: 50% !important;">
+                                    <label for="@imgsettingsimageid" style="color:#00ffff; font-weight:bold; margin-bottom:4px;">imagetext</label>
+                                </div>
+                                <div style="display: inline-block; float: right !important; max-width: 49% !important;">
+                                    <a href="#"><i class="fa-solid fa-align-left"></i></a>
+                                    <a href="#"><i class="fa-solid fa-align-center" style="color: #00ffff !important;"></i></a>
+                                    <a href="#"><i class="fa-solid fa-align-right"></i></a>
+                                </div>
+                            </div>
+
+
+
+                            <input type="text" name="@imgsettingsimageid" id="@imgsettingsimageid" value="@item.imagetext" style="border:1px solid #333333; border-radius:10px; color:#00ffff; background-color:#000000; padding:5px 10px; max-width:100%;" />
+
+
+
+
+
+                        </div>
+
+                    </div>
+                    <img src="@item.imagepath" style="border-radius: 10px !important; @item.pagepartstyle" /><br />
+                    <div style="position: absolute; top: 0; right: 70px; padding: 8px;">
+                        <a href="javascript:moveup('@item.id');"><i class="fa fa-arrow-up uploadedimagesettingslink5"></i></a>
+                    </div>
+                    <div style="position: absolute; top: 0; right: 50px; padding: 8px;">
+                        <a href="javascript:movedown('@item.id');"><i class="fa fa-arrow-down uploadedimagesettingslink5"></i></a>
+                    </div>
+
+                    <div style="position: absolute; top: 0; right: 30px; padding: 8px;">
+                        <a href="javascript:toggle('@imgsettingsdiv');"><i class="fa fa-cog uploadedimagesettingslink5"></i></a>
+                    </div>
+                    <div style="position: absolute; top: 0; right: 10px; padding: 8px;">
+                        <a href="/pagepart/delete/@item.id-@pageid"><i class="fa fa-x uploadedimagedeletelink5"></i></a>
+                    </div>
+
+                </div>
+
+
+
+                // if we have an imagetext we want no margin-top
+                var marginbottom = "";
+                if (item.imagetext == "")
+                {
+                    marginbottom = "margin-bottom: 10px;";
+
+                }
+                else
+                {
+                    marginbottom = "margin-bottom: 6px;";
+                }
+
+
+                if (!string.IsNullOrEmpty(item.imagetext))
+                {
+                    <div id="@imagetextdiv" name="@imagetextdiv" style="background-color: #000000; color: #ffffff; @marginbottom border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; line-height:30px; padding:10px;">
+                        @item.imagetext <br />
+                    </div>
+                }
+
+                @*<input type="text" id="selectedcolor" name="selectedcolor" style="border:3px solid #ff0000;" value="" />*@
+            }
+            if (item.parttype == "todayslunch")
+            {
+
+                <style>
+                    .active {
+                        background-color: #00ffff;
+                        color: #000000;
+                    }
+                    .inactive {
+                        background-color: #005a5a;
+                        color: #ffffff;
+                    }
+                    #weekdaysSelector {
+                        padding-bottom:15px;
+                    }
+                    #weekdaysSelector li {
+                        display: inline-block;
+                        padding: 10px 15px;
+                        border-radius: 50%;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+                    #foodies li:nth-child(even) {
+                        background: #61c439cc;
+                        border-radius: 5px;
+                        padding: 10px;
+                        font-size: 24px;
+                    }
+                    #foodies li:nth-child(odd) {
+                        background: #a8de91cc;
+                        border-radius: 5px;
+                        padding: 10px;
+                        font-size: 24px;
+                    }
+                </style>
+
+                 
+                
+                <select id="weekselector" onChange="changeWeek(this)">
+                    <option value="@week">@week</option>
+                    @if (nextweekexist) { <option value="@nextweek">@nextweek</option> }
+                    @if (nextnextweekexist) { <option value="@nextnextweek">@nextnextweek</option> }
+                </select>
+
+
+                <h1 id="selectedWeekHeader"></h1>
+
+                <ul id="weekdaysSelector">
+                    <li data-weekday="0" onclick="changeWeekDay(0)">M</li>
+                    <li data-weekday="1" onclick="changeWeekDay(1)">T</li>
+                    <li data-weekday="2" onclick="changeWeekDay(2)">O</li>
+                    <li data-weekday="3" onclick="changeWeekDay(3)">T</li>
+                    <li data-weekday="4" onclick="changeWeekDay(4)">F</li>
+                </ul>
+
+                <ul id="foodies">
+
+                    @foreach (var item3 in todaysLunchModelsList)
+                    {
+                        if (!string.IsNullOrEmpty(item3.monday1)) { <li data-weekday="0" data-week="@item3.week">@item3.monday1</li> }
+                        if (!string.IsNullOrEmpty(item3.monday2)) { <li data-weekday="0" data-week="@item3.week">@item3.monday2</li> }
+                        if (!string.IsNullOrEmpty(item3.monday3)) { <li data-weekday="0" data-week="@item3.week">@item3.monday3</li> }
+                        if (!string.IsNullOrEmpty(item3.monday4)) { <li data-weekday="0" data-week="@item3.week">@item3.monday4</li> }
+                        if (!string.IsNullOrEmpty(item3.monday5)) { <li data-weekday="0" data-week="@item3.week">@item3.monday5</li> }
+                        if (!string.IsNullOrEmpty(item3.monday6)) { <li data-weekday="0" data-week="@item3.week">@item3.monday6</li> }
+                        if (!string.IsNullOrEmpty(item3.monday7)) { <li data-weekday="0" data-week="@item3.week">@item3.monday7</li> }
+                        if (!string.IsNullOrEmpty(item3.monday8)) { <li data-weekday="0" data-week="@item3.week">@item3.monday8</li> }
+                        if (!string.IsNullOrEmpty(item3.monday9)) { <li data-weekday="0" data-week="@item3.week">@item3.monday9</li> }
+                        if (!string.IsNullOrEmpty(item3.monday10)) { <li data-weekday="0" data-week="@item3.week">@item3.monday10</li> }
+
+                        if (!string.IsNullOrEmpty(item3.tuesday1)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday1</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday2)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday2</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday3)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday3</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday4)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday4</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday5)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday5</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday6)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday6</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday7)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday7</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday8)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday8</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday9)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday9</li> }
+                        if (!string.IsNullOrEmpty(item3.tuesday10)) { <li data-weekday="1" data-week="@item3.week">@item3.tuesday10</li> }
+
+                        if (!string.IsNullOrEmpty(item3.wednesday1)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday1</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday2)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday2</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday3)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday3</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday4)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday4</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday5)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday5</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday6)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday6</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday7)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday7</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday8)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday8</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday9)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday9</li> }
+                        if (!string.IsNullOrEmpty(item3.wednesday10)) { <li data-weekday="2" data-week="@item3.week">@item3.wednesday10</li> }
+
+                        if (!string.IsNullOrEmpty(item3.thursday1)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday1</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday2)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday2</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday3)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday3</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday4)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday4</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday5)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday5</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday6)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday6</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday7)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday7</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday8)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday8</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday9)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday9</li> }
+                        if (!string.IsNullOrEmpty(item3.thursday10)) { <li data-weekday="3" data-week="@item3.week">@item3.thursday10</li> }
+
+                        if (!string.IsNullOrEmpty(item3.friday1)) { <li data-weekday="4" data-week="@item3.week">@item3.friday1</li> }
+                        if (!string.IsNullOrEmpty(item3.friday2)) { <li data-weekday="4" data-week="@item3.week">@item3.friday2</li> }
+                        if (!string.IsNullOrEmpty(item3.friday3)) { <li data-weekday="4" data-week="@item3.week">@item3.friday3</li> }
+                        if (!string.IsNullOrEmpty(item3.friday4)) { <li data-weekday="4" data-week="@item3.week">@item3.friday4</li> }
+                        if (!string.IsNullOrEmpty(item3.friday5)) { <li data-weekday="4" data-week="@item3.week">@item3.friday5</li> }
+                        if (!string.IsNullOrEmpty(item3.friday6)) { <li data-weekday="4" data-week="@item3.week">@item3.friday6</li> }
+                        if (!string.IsNullOrEmpty(item3.friday7)) { <li data-weekday="4" data-week="@item3.week">@item3.friday7</li> }
+                        if (!string.IsNullOrEmpty(item3.friday8)) { <li data-weekday="4" data-week="@item3.week">@item3.friday8</li> }
+                        if (!string.IsNullOrEmpty(item3.friday9)) { <li data-weekday="4" data-week="@item3.week">@item3.friday9</li> }
+                        if (!string.IsNullOrEmpty(item3.friday10)) { <li data-weekday="4" data-week="@item3.week">@item3.friday10</li> }
+
+                        if (!string.IsNullOrEmpty(item3.saturday1)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday1</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday2)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday2</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday3)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday3</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday4)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday4</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday5)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday5</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday6)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday6</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday7)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday7</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday8)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday8</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday9)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday9</li> }
+                        if (!string.IsNullOrEmpty(item3.saturday10)) { <li data-weekday="5" data-week="@item3.week">@item3.saturday10</li> }
+
+                        if (!string.IsNullOrEmpty(item3.sunday1)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday1</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday2)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday2</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday3)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday3</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday4)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday4</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday5)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday5</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday6)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday6</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday7)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday7</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday8)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday8</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday9)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday9</li> }
+                        if (!string.IsNullOrEmpty(item3.sunday10)) { <li data-weekday="6" data-week="@item3.week">@item3.sunday10</li> }
+
+                        @*
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday1</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday2</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday3</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday4</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday5</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday6</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday7</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday8</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday9</li>
+                        <li data-weekday="2" data-week="@item3.week">@item3.wednesday10</li>
+
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday1</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday2</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday3</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday4</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday5</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday6</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday7</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday8</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday9</li>
+                        <li data-weekday="3" data-week="@item3.week">@item3.thursday10</li>
+
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday1</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday2</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday3</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday4</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday5</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday6</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday7</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday8</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday9</li>
+                        <li data-weekday="4" data-week="@item3.week">@item3.friday10</li>
+
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday1</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday2</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday3</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday4</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday5</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday6</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday7</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday8</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday9</li>
+                        <li data-weekday="5" data-week="@item3.week">@item3.saturday10</li>
+
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday1</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday2</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday3</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday4</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday5</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday6</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday7</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday8</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday9</li>
+                        <li data-weekday="6" data-week="@item3.week">@item3.sunday10</li>
+                        *@
+                    }
+
+
+
+
+                    @*
+
+                    <li data-weekday="0" data-week="16">Bostongurka fyllda lunchkorv med potatismos</li>
+                    <li data-weekday="0" data-week="16">Wallenbergare med potatismos, gräddsås och lingon</li>
+                    <li data-weekday="0" data-week="16">Raggmunk med stekt fläsk och lingon</li>
+
+                    <li data-weekday="1" data-week="16">Food #16.11</li>
+                    <li data-weekday="1" data-week="16">Food #16.22</li>
+                    <li data-weekday="1" data-week="16">Food #16.32</li>
+
+
+                    <li data-weekday="2" data-week="16">Food #16.111</li>
+                    <li data-weekday="2" data-week="16">Food #16.222</li>
+                    <li data-weekday="2" data-week="16">Food #16.333</li>
+
+                    <li data-weekday="3" data-week="16">Food #16.1111</li>
+                    <li data-weekday="3" data-week="16">Food #16.2222</li>
+                    <li data-weekday="3" data-week="16">Food #16.3333</li>
+
+                    <li data-weekday="4" data-week="16">Food #16.11111</li>
+                    <li data-weekday="4" data-week="16">Food #16.22222</li>
+                    <li data-weekday="4" data-week="16">Food #16.33333</li>
+
+
+                    <li data-weekday="0" data-week="17">Food #17.1</li>
+                    <li data-weekday="0" data-week="17">Food #17.2</li>
+                    <li data-weekday="0" data-week="17">Food #17.3</li>
+
+                    <li data-weekday="1" data-week="17">Food #17.1d</li>
+                    <li data-weekday="1" data-week="17">Food #17.2d</li>
+                    <li data-weekday="1" data-week="17">Food #17.3d</li>
+
+                    <li data-weekday="2" data-week="17">Food #17.1ffff</li>
+                    <li data-weekday="2" data-week="17">Food #17.2fff</li>
+                    <li data-weekday="2" data-week="17">Food #17.3fff</li>
+
+                    <li data-weekday="3" data-week="17">Food #17.1aaa</li>
+                    <li data-weekday="3" data-week="17">Food #17.2aaaa</li>
+                    <li data-weekday="3" data-week="17">Food #17.aaa</li>
+
+                    <li data-weekday="4" data-week="17">Food #17.1xvcxvc</li>
+                    <li data-weekday="4" data-week="17">Food #17.2xzdsd</li>
+                    <li data-weekday="4" data-week="17">Food #17.3sdf</li>
+
+
+                    <li data-weekday="0" data-week="18">Food #18.1</li>
+                    <li data-weekday="0" data-week="18">Food #18.2</li>
+                    <li data-weekday="0" data-week="18">Food #18.3</li>
+
+                    <li data-weekday="1" data-week="18">Food #18.1asdd</li>
+                    <li data-weekday="1" data-week="18">Food #18.2asd</li>
+                    <li data-weekday="1" data-week="18">Food #18.3asd</li>
+
+                    <li data-weekday="2" data-week="18">Food #18.1asd</li>
+                    <li data-weekday="2" data-week="18">Food #18.2asd</li>
+                    <li data-weekday="2" data-week="18">Food #18.3asd</li>
+
+                    <li data-weekday="3" data-week="18">Food #18.1asd</li>
+                    <li data-weekday="3" data-week="18">Food #18.2asd</li>
+                    <li data-weekday="3" data-week="18">Food #18.3asd</li>
+
+                    <li data-weekday="4" data-week="18">Food #18.1asd</li>
+                    <li data-weekday="4" data-week="18">Food #18.2asd</li>
+                    <li data-weekday="4" data-week="18">Food #18.3asd</li>
+                    *@
+                </ul>
+
+
+                <script>
+                    var selectedWeek = document.getElementById("weekselector");
+
+                    function showSelectedFoodies(week, weekday) {
+                        var elementsToShow = document.getElementById("foodies");
+                        var allFoodies = elementsToShow.getElementsByTagName("li");
+                        for (var i = 0; i < allFoodies.length; i++) {
+                            allFoodies[i].style.display = "none";
+                        }
+
+                        for (var i = 0; i < allFoodies.length; i++) {
+                            if (allFoodies[i].getAttribute("data-week") === week &&
+                                allFoodies[i].getAttribute("data-weekday") === weekday.toString()) {
+                                allFoodies[i].style.display = "block";
+                            }
+                        }
+                    }
+
+                    const weekdays = ["monday", "tuesday", "wednesday", "thursday", "friday"];
+
+                    function changeWeekDay(weekday) {
+                        showSelectedFoodies(selectedWeek.value, weekday);
+                        // Remove active class from all weekday elements
+
+                        var elementsToShow = document.getElementById("weekdaysSelector");
+                        var allWeekdays = elementsToShow.getElementsByTagName("li");
+
+                        for (let i = 0; i < allWeekdays.length; i++) {
+                            if (allWeekdays[i].getAttribute("data-weekday") === weekday.toString()) {
+                                allWeekdays[i].classList.add("active");
+                                allWeekdays[i].classList.remove("inactive");
+                            } else {
+                                allWeekdays[i].classList.remove("active");
+                                allWeekdays[i].classList.add("inactive");
+                            }
+                        }
+                    }
+
+                    function changeWeek(selectWeek) {
+                        changeWeekDay(0);
+                        document.getElementById("selectedWeekHeader").textContent = "Vecka " + selectWeek.value;
+                    }
+
+                    changeWeek(selectedWeek);
+                </script>
+
+
+
+                @Html.Raw(WebUtility.HtmlDecode(item.pageparttext ?? ""))
+            }
+        }
+    }
+
+
+
+    @*
+        <div style="color:#ff0000;">@Html.Raw(WebUtility.HtmlDecode(pagemodel?.text2 ?? ""))</div>
+    *@
+</div>

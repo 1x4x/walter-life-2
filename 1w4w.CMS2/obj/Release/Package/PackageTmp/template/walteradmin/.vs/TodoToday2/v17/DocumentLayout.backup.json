@@ -1,0 +1,130 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\TodoToday2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\TodoToday2\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\TodoToday2\\manager\\todo.asp||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:manager\\todo.asp||{C76D83F8-A489-11D0-8195-00A0C91BBEE3}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\TodoToday2\\chart-economy.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:chart-economy.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\TodoToday2\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\TodoToday2\\assets\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\js\\app.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Desktop\\TodoToday2\\charts-apex-chart.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:charts-apex-chart.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1377,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "todo.asp",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\TodoToday2\\manager\\todo.asp",
+              "RelativeDocumentMoniker": "manager\\todo.asp",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\TodoToday2\\manager\\todo.asp",
+              "RelativeToolTip": "manager\\todo.asp",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-06-17T00:56:38.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "apex-custom.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\TodoToday2\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js",
+              "RelativeDocumentMoniker": "assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\TodoToday2\\assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js",
+              "RelativeToolTip": "assets\\plugins\\apexcharts-bundle\\js\\apex-custom.js",
+              "ViewState": "AgIAAFsCAAAAAAAAAAAgwG4CAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-12T00:20:00.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "app.js",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\TodoToday2\\assets\\js\\app.js",
+              "RelativeDocumentMoniker": "assets\\js\\app.js",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\TodoToday2\\assets\\js\\app.js",
+              "RelativeToolTip": "assets\\js\\app.js",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAF4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-12T00:16:55.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "chart-economy.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\TodoToday2\\chart-economy.html",
+              "RelativeDocumentMoniker": "chart-economy.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\TodoToday2\\chart-economy.html",
+              "RelativeToolTip": "chart-economy.html",
+              "ViewState": "AgIAAMEBAAAAAAAAAAApwNUBAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-11T23:58:13.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "charts-apex-chart.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\TodoToday2\\charts-apex-chart.html",
+              "RelativeDocumentMoniker": "charts-apex-chart.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\TodoToday2\\charts-apex-chart.html",
+              "RelativeToolTip": "charts-apex-chart.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-06-11T23:53:31.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\TodoToday2\\index.html",
+              "RelativeDocumentMoniker": "index.html",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\TodoToday2\\index.html",
+              "RelativeToolTip": "index.html",
+              "ViewState": "AgIAAFAAAAAAAAAAAAApwGQAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-28T00:05:28.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

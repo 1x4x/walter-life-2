@@ -1,0 +1,16 @@
+DROP TABLE cateringorder;
+CREATE TABLE cateringorder (
+    id int NOT NULL AUTO_INCREMENT,
+    websiteid int,
+    status varchar(255),
+    created varchar(255),
+    updated varchar(255),
+    fullname varchar(255),
+    address varchar(255),
+    zipcode varchar(255),
+    orgnr varchar(255),
+    phone varchar(255),
+    email varchar(255),
+    city varchar(255),
+    PRIMARY KEY (id)
+);

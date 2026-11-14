@@ -1,0 +1,549 @@
+@model ProjectManagement2.Models.LayoutViewModel
+@{
+    string baseurl = "/content/template/catefood";
+
+
+
+    var layoutViewModel = (ProjectManagement2.Models.LayoutViewModel)Model as ProjectManagement2.Models.LayoutViewModel;
+    //string baseurl = @Model.templateModel.baseurl;
+    //string url = @Request.Url.AbsoluteUri;
+    //string websitemodel = @Model.website.title;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@layoutViewModel.website.title</title>
+    <meta name="description" content="@Model.website.description">
+    <meta name="keywords" content="@Model.website.keywords">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="@baseurl/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="@baseurl/css/style.css">
+    <link rel="stylesheet" href="@baseurl/css/style2.css">
+    <link rel="stylesheet" href="@baseurl/css/responsive.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+
+    <!-- ====== Preloader ====== -->
+    <div id="preload">
+        <img src="@baseurl/images/preload.png" alt="">
+    </div>
+    <!-- ======End Preloader ====== -->
+
+    <div class="wrapper" id="home">
+
+        <!-- ====== Header ====== -->
+        <header>
+            <div class="wrapper-header container flex">
+                <!--<a id="logo" href="#home"><img src="@baseurl/images/logo3.png" alt=""></a>-->
+                <a id="logo" href="#home"><img src="@baseurl/images/@Model.website.logo1" alt=""></a>
+                <nav id="navigation" class="flex">
+                    <a id="closemenu" href="#"><i class="fa-solid fa-xmark"></i></a>
+                    <ul class="menu">
+                        <!--<li><a href="#home">Restaurang La Forchetta</a></li>-->
+                        <!--
+                        <li><a href="#aboutus">Take Away</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#menu">Meny</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contacts">Kontakt</a></li>
+                        -->
+
+@{
+    int nmcounter = 0;
+    foreach (ProjectManagement2.Models.NavigationModel nm in Model.navigationModels)
+    {
+        <li><a href="@nm.href">@nm.name</a></li>
+        nmcounter++;
+    }
+}
+
+                    </ul>
+                    <!--/.menu-->
+                    <ul class="social-link flex">
+                        <li><a href="https://www.facebook.com/laForchettaSthlm"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fla_forchetta"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/LaForchetta_Sthlm"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCiD1uX0VU5tYoQZsM41HuhQ"><i class="fab fa-youtube"></i></a></li>
+                        <li>
+                            <a href="/website/index">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                              <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z" style="color:#ff0000;" />
+                              <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                            </svg>
+                                <!--
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-gem" viewBox="0 0 16 16" style="color: #25b938;">
+                                    <path d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6zm11.386 3.785-1.806-2.41-.776 2.413zm-3.633.004.961-2.989H4.186l.963 2.995zM5.47 5.495 8 13.366l2.532-7.876zm-1.371-.999-.78-2.422-1.818 2.425zM1.499 5.5l5.113 6.817-2.192-6.82zm7.889 6.817 5.123-6.83-2.928.002z" />
+                                </svg>
+                                -->
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!--/#navigation-->
+                <a id="openmenu" href="#"><i class="fa-solid fa-bars-staggered"></i></a>
+            </div>
+            <!--/.wrapper-header-->
+        </header>
+        <!-- ====== End Header ====== -->
+
+        <main>
+            
+            
+            <div id="box11" draggable="true" style="display:none;">
+                <!-- margin:auto 0; -->
+                <div style="text-align:right;"><a href="#" style="color:#cccccc;" onclick="javascript:boxclose('box11');">X</a></div>
+
+
+                <style>
+                    .aaaa {
+                        color:#962525;
+                        cursor:pointer;
+                    }
+                    .aaaa:hover {
+                        color:#ff0000;
+                    }
+
+
+
+                    [draggable=true] {
+                        cursor: move;
+                    }
+                    th, td {
+                        padding: 7px;
+                    }
+                    .button11 {
+                        border:1px solid #808080;
+                        background-color:#222222;
+                        border-radius:10px;
+                        color:#ffffff;
+                        padding:5px;
+                        padding-left:10px;
+                        padding-right:10px;
+                    }
+                    .button11:hover {
+                        border:1px dashed #808080;
+                    }
+                    #box11 {
+                        top:200px; 
+                        left:30px;
+                        margin:auto !important; 
+                        background-color: #222222aa; 
+                        position: absolute !important; 
+                        /*width:90%;*/
+                        height:auto; 
+                        margin:10px;
+                        padding:20px;
+                        border-radius:10px;
+                        z-index:1000 !important;
+                        border:1px solid #808080;
+                        background:url(/content/template/catefood/images/bg/360_F_200686968_KS9NVTJgvjMQs2FniVHyIJaAIcg5p7D0.jpg);
+                        /*background: repeating-linear-gradient(135deg, #222222 0, #222222 10%, #111111 0, #111111 50%);
+                        background-size: 6em 6em;
+                        opacity: 0.8;*/
+                    }
+                    #box11:hover {
+                        border:1px dashed #808080;
+                    }
+                    /*Right triangle, placed bottom right side slightly in*/
+                    .tri-right.border.btm-right-in:before {
+	                    content: ' ';
+	                    position: absolute;
+	                    width: 0;
+	                    height: 0;
+                      left: auto;
+	                    right: 30px;
+	                    bottom: -40px;
+	                    border: 20px solid;
+	                    border-color: #666 #666 transparent transparent;
+                    }
+                    .tri-right.btm-right-in:after{
+	                    content: ' ';
+	                    position: absolute;
+	                    width: 0;
+	                    height: 0;
+                        left: auto;
+	                    right: 38px;
+	                    bottom: -20px;
+	                    border: 12px solid;
+	                    border-color: lightyellow lightyellow transparent transparent;
+                    }
+                </style>
+                <form method="post" action="/home/UpdatePart1startHeadings">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="heading1">Heading 1</label>
+                            </td>
+                            <td>
+                                <input type="text" class="button11" id="heading1" name="heading1" value="@Model.t1catefoodModel.heading1" /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="heading2">Heading 2</label>
+                            </td>
+                            <td>
+                                 <input type="text" class="button11" id="heading2" name="heading2" placeholder="Lör-Sön 10-22" value="@Model.t1catefoodModel.heading2" /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="opentimesmontofri">opentimesmontofri</label>
+                            </td>
+                            <td>
+                                 <input type="text" class="button11" id="opentimesmontofri" name="opentimesmontofri" placeholder="Mån-Fre 10-17" value="@Model.t1catefoodModel.opentimesmontofri" /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="opentimessattosun">opentimessattosun</label>
+                            </td>
+                            <td>
+                                 <input type="text" class="button11" id="opentimessattosun" name="opentimessattosun" placeholder="Lör-Sön 10-22" value="@Model.t1catefoodModel.opentimessattosun" /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="opentimeslunch">opentimeslunch</label>
+                            </td>
+                            <td>
+                                 <input type="text" class="button11" id="opentimeslunch" name="opentimeslunch" value="@Model.t1catefoodModel.opentimeslunch" /><br />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td style="text-align:right;">
+                                <input type="button" value="Background" class="button11" onclick="javascript:boxclose('box11');" style="cursor:pointer;">
+                                <input type="submit" value="Save" class="button11" onclick="javascript:boxclose('box11');" style="cursor:pointer;">
+                            </td>
+                        </tr>
+
+                    </table>
+                </form>
+
+               
+                
+            </div>
+            <!---->
+            
+            <!-- ====== Header Content ====== -->
+            <!--  style="border-bottom:1px solid #333333;" -->
+            <div class="wrapper-header-content flex">
+                <div class="header-content container">
+
+
+                    <i class="bi bi-gear-fill fa fa-spinner fa-spin" style="font-size: 30px; color:#808080; cursor: pointer;" onclick="javascript:boxopen('box11');"></i>
+                
+                    <!--
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-gear-fill aaaa" viewBox="0 0 16 16" onclick="javascript:boxopen('box11');" style="cursor: pointer;">
+                      <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                    </svg>
+                    -->
+                    
+                    <span class="suptitle">@Model.t1catefoodModel.heading1</span>
+                    <h1>@Model.t1catefoodModel.heading2</h1>
+<!--
+                    <span class="suptitle">La Forchetta</span>
+                    <h1>Italiensk Pizzeria  <br> & Restaurang</h1>
+-->
+                    <a class="btn" href="@Model.tellink" style="border-radius:10px; top:-10px; left:0; position:relative;">Ring @Model.website.phone</a>
+                    
+                    <div style="position:static; display:inline-block; padding-left:20px; margin-top:7px;z-index:10">
+                        <!--
+                            <span style="font-weight:bold;">Mån-Fre</span>
+                            <span style="font-weight: bold;">Lör-Sön</span>
+                        -->
+                        <span style="color:#ffffff; font-weight:bold !important;">Öppet</span> @Model.t1catefoodModel.opentimesmontofri,  @Model.t1catefoodModel.opentimessattosun<br />
+                        <span style="color:#ffffff; font-weight:bold !important;">Lunch</span> @Model.t1catefoodModel.opentimeslunch
+                    </div>
+
+                </div>
+                <!--/.header-content-->
+            </div>
+            <!-- ====== End Header Content ====== -->
+            <!-- ====== Services ====== -->
+            <section id="services" class="ptb" style="position:relative; top:-130px; border-radius:20px;">
+                <div class="container align-center" style="display:none;">
+                    <span class="suptitle">Our service</span>
+                    <h2>Catering for Every Taste</h2>
+                </div>
+                <div class="wrapper-services container flex align-center">
+                    <div>
+                        <img src="@baseurl/images/services-1.png" alt="">
+                        <h3>Bankett</h3>
+                        <p>Vi hjälper dig med </p>
+                    </div>
+                    <div>
+                        <img src="@baseurl/images/services-2.png" alt="">
+                        <h3>Catering</h3>
+                        <p>Vi erbjuder företagscatering för allt 
+                            från vinprovningar, 
+                            till matlagningskvällar och julbord. </p>
+                    </div>
+                    <div>
+                        <img src="@baseurl/images/services-3.png" alt="">
+                        <h3>Julbord</h3>
+                        <p>Ha ert julbord hos oss</p>
+                    </div>
+                    <div>
+                        <img src="@baseurl/images/services-4.png" alt="">
+                        <h3>Wedding Catering</h3>
+                        <p>Organization and catering for weddings</p>
+                    </div>
+                </div>
+                <!--/.wrapper-services-->
+            </section>
+            <!-- ====== End Services ====== -->
+            <!-- ====== About Us ====== -->
+            <section id="aboutus" class="ptb">
+                <div class="wrapper-aboutus container flex">
+                    <div class="aboutus-img">
+                        <img src="@baseurl/images/aboutus.png" alt="">
+                    </div>
+                    <!--/.aboutus-img-->
+                    <div class="aboutus-content">
+                        <span class="suptitle">Take Away</span>
+                        <h2>Beställ mat för avhämtning eller hemleverans från La Forchetta</h2>
+                        <p><a href="@Model.tellink" style="color:#cccccc;">Ring @Model.website.phone</a> om du vill beställa mat för avhämtning. Se vår <a href="/pdf/Restaurang_La-Forchetta_Avhamtningsmeny_TakeAway_2024.pdf" target="_blank" style="color:#cccccc;">avhämtningsmeny</a></p>
+                        <p>Det går även bra att beställa hemleverans från La Forchetta via <a href="https://www.foodora.se/restaurant/emzd/la-forchetta" target="_blank" style="color:#cccccc;">Foodora</a></p>
+
+                    </div>
+                    <!--/.aboutus-content-->
+                </div>
+            </section>
+            <!-- ====== End About Us ====== -->
+            <!-- ====== Portfolio ====== -->
+            <section id="portfolio" class="ptb">
+                <div class="container align-center">
+                    <span class="suptitle">Portolio</span>
+                    <h2>Work examples</h2>
+                </div>
+                <div class="wrapper-portfolio container">
+                    <div class="owl-carousel owl-theme portfolio-carousel">
+                        <div class="item flex single-portfolio">
+                            <div class="portfolio-img">
+                                <img src="@baseurl/images/portfolio-1.jpg" alt="">
+                                <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><i class="fa-solid fa-circle-play"></i></a>
+                            </div>
+                            <!--/.portfolio-img-->
+                            <div class="portfolio-content">
+                                <h3>BANQUET SERVICE</h3>
+                                <p class="address"><i class="fa-solid fa-location-dot"></i>2900 Lapeer Rd, Port Hurons, MI 49070</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quod aut quo placeat esse ratione omnis ab unde velit, incidunt magni deleniti impedit eos sed optio voluptate illum quos? Esse.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam unde enim voluptatem non aperiam a, atque eaque iste possimus obcaecati ut reiciendis, tempore perspiciatis hic mollitia accusantium aspernatur esse.</p>
+                            </div>
+                            <!--/.portfolio-content-->
+                        </div>
+                        <!--/single-portfolio-->
+                        <div class="item flex single-portfolio">
+                            <div class="portfolio-img">
+                                <img src="@baseurl/images/portfolio-2.jpg" alt="">
+                                <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><i class="fa-solid fa-circle-play"></i></a>
+                            </div>
+                            <!--/.portfolio-img-->
+                            <div class="portfolio-content">
+                                <h3>OFF-SITE CATERING</h3>
+                                <p class="address"><i class="fa-solid fa-location-dot"></i>2900 Lapeer Rd, Port Hurons, MI 49070</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quod aut quo placeat esse ratione omnis ab unde velit, incidunt magni deleniti impedit eos sed optio voluptate illum quos? Esse.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam unde enim voluptatem non aperiam a, atque eaque iste possimus obcaecati ut reiciendis, tempore perspiciatis hic mollitia accusantium aspernatur esse.</p>
+                            </div>
+                            <!--/.portfolio-content-->
+                        </div>
+                        <!--/single-portfolio-->
+                        <div class="item flex single-portfolio">
+                            <div class="portfolio-img">
+                                <img src="@baseurl/images/portfolio-3.jpg" alt="">
+                                <a class="popup-youtube" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><i class="fa-solid fa-circle-play"></i></a>
+                            </div>
+                            <!--/.portfolio-img-->
+                            <div class="portfolio-content">
+                                <h3>CORPORATE CATERING</h3>
+                                <p class="address"><i class="fa-solid fa-location-dot"></i>2900 Lapeer Rd, Port Hurons, MI 49070</p>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam quod aut quo placeat esse ratione omnis ab unde velit, incidunt magni deleniti impedit eos sed optio voluptate illum quos? Esse.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ullam unde enim voluptatem non aperiam a, atque eaque iste possimus obcaecati ut reiciendis, tempore perspiciatis hic mollitia accusantium aspernatur esse.</p>
+                            </div>
+                            <!--/.portfolio-content-->
+                        </div>
+                        <!--/single-portfolio-->
+                    </div>
+                    <!--/.portfolio-carousel-->
+                </div>
+                <!--/.wrapper-portfolio-->
+            </section>
+            <!-- ====== End Portfolio ====== -->
+            <!-- ====== Menu ====== -->
+            <section id="menu" class="ptb">
+                <div class="container align-center">
+                    <span class="suptitle">Meny</span>
+                    <h2>Italiensk mat för hela familjen</h2>
+                </div>
+                <div class="menu-list container flex">
+                    @{
+
+
+                    }
+                    <ul>
+                        @{
+                            int productcounter = 0;
+                            foreach (ProjectManagement2.Models.ProductCategoryModel pcm in Model.ProductCategories)
+                            {
+                                var tabId = "tab" + pcm.id;
+                                <li style="border-radius:10px !important;"><a href="#" data-link-id="@tabId">@pcm.name</a></li>
+                                productcounter++;
+                            }
+                        }
+
+                    </ul>
+                </div>
+                <!--/.menu-list-->
+                <div class="menu-item container">
+
+                    @{
+                        int pcmcounter = 0;
+                        foreach (var pcm in Model.ProductCategories)
+                        {
+                            var pcmname = "tab" + pcm.id;
+
+                            <div class="item-list flex" data-tab="@pcmname">
+                                @*.Where(x => x.productcategoryid == pcm.id)-->*@
+                                @*foreach (ProductModel pm in list).Where(x => x.productcategoryid == pcm.id)*@
+                                @foreach (var pm in new ProjectManagement2.Manager.ProductManager().GetProductListByProductCategoryId(Model.Products, pcm.id))
+                                {
+                                    <div class="item-product flex">
+                                        <div class="item-product-img">
+                                            <a class="image-popup-no-margins" href="@baseurl/images/product-big-1.jpg">
+                                                <img src="@baseurl/images/product-min-1.jpg" alt="">
+                                                <div class="icon-search flex">
+                                                    <i class="fas fa-search-plus"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="item-product-text">
+                                            <div class="menu-title flex">
+                                                <h3>@pm.name</h3>
+                                                <span>@pm.price:-</span>
+                                            </div>
+                                            <p>@pm.description</p>
+                                            <p class="menu-ingredients">@pm.description</p>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                            pcmcounter++;
+                        }
+                    }
+                </div>
+
+            </section>
+            <!-- ====== End Menu ====== -->
+            <!-- ====== Booking ====== -->
+            <section id="booking" class="ptb">
+                <div class="container align-center">
+                    <span class="suptitle">Välkommen att</span>
+                    <h2>Boka bord</h2>
+                </div>
+                <div class="wrapper-booking container">
+                    <form method="POST">
+                        <div class="wrapper-input flex" style="display:none;">
+                            <input type="text" name="name" placeholder="Namn">
+                            <input type="text" name="location" placeholder="Adress">
+                        </div>
+                        <!--/.wrapper-input-->
+                        <div class="wrapper-input flex" style="display:none;">
+                            <input type="text" name="phone" placeholder="Telefon">
+                            <input type="text" name="email" placeholder="Epost">
+                        </div>
+                        <!--/.wrapper-input-->
+                        <div class="wrapper-input flex" style="display:none;">
+                            <input type="text" name="date" placeholder="mm-dd-yy">
+                            <input type="text" name="time" placeholder="12:00">
+                        </div>
+                        <!--/.wrapper-input-->
+                        <div class="align-center">
+                            <!--<button class="btn" id="sendbook" type="button" onclick="tel:+4687120033" style="cursor:pointer; border-radius:10px;">Ring 08-712 00 33</button>-->
+                            <a class="btn" href="@Model.tellink" style="border-radius:10px; top:-10px; left:0; position:relative;">Ring @Model.website.phone</a>
+                        </div>
+                        <p class="res-booking"></p>
+                    </form>
+                </div>
+                <!--/.wrapper-booking-->
+            </section>
+            <!-- ====== End Booking ====== -->
+        </main>
+
+        <footer>
+
+            <!-- ====== Contacts ====== -->
+            <div id="contacts" class="ptb">
+                <div class="container">
+                    <span class="suptitle">Italiensk Restaurang</span>
+                    <h2>La Forchetta</h2>
+                </div>
+                <div class="container wrapper-contact flex">
+                    <div>
+                        <h3>Hitta hit</h3>
+                        <p style="font-weight:bold;">@Model.website.name</p>
+                        <p>@Model.website.address, @Model.website.zipcode @Model.website.city</p>
+                        <ul class="social-link flex">
+                            <li><a href="https://www.facebook.com/laForchettaSthlm"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fla_forchetta"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/LaForchetta_Sthlm"><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCiD1uX0VU5tYoQZsM41HuhQ"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                        <!--/.social-link-->
+                    </div>
+                    <div>
+                        <h3>Öppettider</h3>
+                        <p>Mån - Fre 11.00 - 22.00</p>
+                        <p>Lör - Sön 12.00 - 22.00</p>
+                    </div>
+                    <div>
+                        <h3>Telefon</h3>
+                        <p><a href="@Model.tellink">@Model.website.phone</a></p>
+                    </div>
+                    <div>
+                        <h3>Epost</h3>
+                        <p><a href="@Model.website.email">@Model.website.email</a></p>
+                    </div>
+                </div>
+                <!--/.wrapper-contact-->
+            </div>
+            <!-- ====== End Contacts ====== -->
+
+            <div class="wrapper-map">
+                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.8840785320544!2d-82.49493468465671!3d42.980715479150156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88259e93ea837f03%3A0x9eaf24e841d574ed!2zNDIzOSBMYXBlZXIgUmQsIFBvcnQgSHVyb24sIE1JIDQ4MDYwLCDQodCo0JA!5e0!3m2!1sru!2sua!4v1640107647193!5m2!1sru!2sua" style="border: 0; filter: grayscale(100%) invert(92%) contrast(83%);" allowfullscreen="" loading="lazy"></iframe>-->
+                <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10090254.980084253!2d3.115634694604372!3d51.871159288234075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f7ec51b91e89d%3A0xeb40a7c006816cf4!2sLa%20Forchetta!5e0!3m2!1ssv!2sse!4v1722522582644!5m2!1ssv!2sse" width="600" height="450" style="border: 0; filter: grayscale(100%) invert(92%) contrast(83%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4080.8239752748564!2d18.221206212419524!3d59.242556074466286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f7ec51b91e89d%3A0xeb40a7c006816cf4!2sLa%20Forchetta!5e0!3m2!1ssv!2sse!4v1722523118610!5m2!1ssv!2sse" style="border: 0; filter: grayscale(100%) invert(92%) contrast(83%);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <!--/.wrapper-map-->
+            <div class="copyright">
+                <p>@Model.website.copyright</p>
+            </div>
+            <!--/.copyright-->
+        </footer>
+        <!-- ====== End Footer ====== -->
+    </div>
+    <!--/.wrapper-->
+    <!-- ====== Scroll Top ====== -->
+    <a id="scroll-top" class="btn" href="#"><i class="fa-solid fa-arrow-up-long"></i></a>
+
+
+    <!-- ====== jQuery ====== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--<script src="js/jquery-3.4.1.min.js"></script>-->
+    <!-- ====== Magnific Popup ====== -->
+    <script src="@baseurl/js/jquery.magnific-popup.min.js"></script>
+    <!-- ====== Owl Carousel ====== -->
+    <script src="@baseurl/js/owl.carousel.min.js"></script>
+    <!-- ====== Custom js ======  -->
+    <script src="@baseurl/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+﻿@model _1w4w.CMS.Models.LayoutViewModel
+@{
+    string websiteid = System.Web.Configuration.WebConfigurationManager.AppSettings["websiteid"];
+    string baseurl = "/content/energy";
+    //var pageid = Request.QueryString["pageid"];
+    string pageid = (string)Url.RequestContext.RouteData.Values["id"];
+    if (string.IsNullOrEmpty(pageid))
+    {
+        pageid = "1"; // starpage
+    }
+
+
+    var usermodel = Model.usermodel as _1w4w.CMS.Models.UserModel;
+    var accesslevel = "";
+    if (usermodel != null)
+    {
+        accesslevel = usermodel.accesslevel ?? "";
+    }
+    if (pageid == null) { pageid = "1"; }
+    if (pageid == "undefined") { pageid = "1"; }
+    if (string.IsNullOrEmpty(pageid)) { pageid = "1"; }
+    _1w4w.CMS.Models.PageModel pagemodel = Model.PageModels.Where(x => x.id == Convert.ToInt32(pageid)).SingleOrDefault();
+    List<_1w4w.CMS.Models.PagePartModel> pagepartmodel = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid)).ToList();
+    var list1 = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid) && x.placementid == 1);
+    var list2 = Model.PagePartModels.Where(x => x.pageid == Convert.ToInt32(pageid) && x.placementid == 2);
+    var count1 = list1.Count();
+    var count2 = list2.Count();
+
+    
+}
+<!-- Start Page Title Section -->
+<div class="page-title-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="page-title-content">
+                    <h2>Dagens Lunch <span style="color:#00ffff;">130:-</span></h2>
+                    <ul>
+                        <!--<li><a href="index.html">Home</a></li>-->
+                        <li>
+                            inkl., nybakat bröd, salladsbuffé, dryck, kaffe och efterrätt
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Page Title Section -->
+<!-- Start Blog Details Section -->
+<section class="blog-details-area section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12">
+                <div class="blog-details-desc leftcolumn1">
+                    @*
+                        <div class="article-image"></div>
+                    *@
+                    <div class="article-content" style="margin-top:0 !important;">
+                        <!--
+                        <div style="float:right;">
+                            [x] aaaa sfff affaa sss ssssa
+                        </div>
+                        -->
+                        <!-- top:14px; left:30px; z-index:10;-->
+                        <div class="createcontentlinks" style="width:100%; position:relative !important; display:block;">
+                            <a href="javascript:showaddtextdiv(1);"><i class="fa-solid fa-align-center fa-1x wwfa" style="margin-right: 6px; border: 3px solid #00ffff; outline: 3px solid #00534c;" data-toggle="tooltip" data-placement="top" title="TEXT - Headings and text like you write it in Word"></i></a>
+                            <a href="javascript:showaddhtmldiv(1);"><i class="fa-solid fa-code fa-1x wwfa" style="margin-right: 6px; border: 3px solid #00ffff; outline: 3px solid #00534c; " data-toggle="tooltip" data-placement="top" title="HTML - You can use tags like <b>, <img src='/content/upload/image/'> and other like you did in the old website"></i></a>
+                            <a href="javascript:showaddimagediv(1);"><i class="fa-solid fa-image fa-1x wwfa" style="margin-right: 6px; border: 3px solid #00ffff; outline: 3px solid #00534c; " data-toggle="tooltip" data-placement="top" title="IMAGE - You can insert images and style them as you want"></i></a>
+                            <a href="javascript:showaddcateringdiv(1);"><i class="fa-solid fa-truck-utensils fa-1x wwfa" style="margin-right: 6px; border: 3px solid #00ffff; outline: 3px solid #00534c; " data-toggle="tooltip" data-placement="top" title="CATERING - Let your visitors order your catering items"></i></a>
+                            <a href="javascript:showaddtodayslunchdiv(1);"><i class="fa-solid fa-burger-soda fa-1x wwfa" style="margin-right: 6px; border: 3px solid #00ffff; outline: 3px solid #00534c; " data-toggle="tooltip" data-placement="top" title="TODAYS LUNCH - Show this weeks lunch"></i></a>
+                            <a href="javascript:showaddtodayslunchdiv(1);"><i class="fa-brands fa-youtube fa-1x wwfa" style="margin-right: 6px; border: 3px solid #00ffff; outline: 3px solid #00534c; " data-toggle="tooltip" data-placement="top" title="YOUTUBE VIDEO - Lets you insert Youtube videos"></i></a>
+                            <!-- fa-truck-utensils -->
+                        </div>
+                        <div style="clear:both"></div>
+                        @Html.Partial("~/Views/Shared/Energy/ColumnLeftAddPartPartialView.cshtml")
+                        @Html.Partial("~/Views/Shared/Energy/ColumnLeftPartialView.cshtml")
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <aside class="widget-area" id="secondary">
+                    <section class="widget widget_medicare_posts_thumb">
+                        @Html.Partial("~/Views/Shared/Energy/ColumnRightPartialView.cshtml")
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Blog Details Section -->
+<!-- Start Footer Copyright Section -->
+@*
+    <!--
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6">
+                    <p>© @DateTime.Now.Year - All Rights Reserved</p>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <ul>
+                        <li> <a href="terms-condition.html">Terms & Conditions</a></li>
+                        <li> <a href="privacy-policy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+*@
+<!-- End Footer Copyright Section -->
+<!-- Start Go Top Section -->
+<div class="go-top">
+    <i class="fas fa-chevron-up"></i>
+</div>
+<!-- End Go Top Section -->
+
+
+
+
+
+
+
+<script>
+    function selectthiscolor(element, colorcounter, id, imagetextdiv, color) {
+        // put a 3px black border on all colordivs
+        var currentcolorid2 = "";
+        for (let i = 1; i <= 15; i++) {
+            currentcolorid2 = "presetcolor" + id + "x" + i;
+            //document.getElementById(currentcolorid2).className = currentcolorid2;
+            document.getElementById(currentcolorid2).className = "presetcolor1";
+            //document.getElementById(currentcolorid2).border = "3px solid #000000";
+
+            document.getElementById(currentcolorid2).style.borderWidth = '3px';
+            document.getElementById(currentcolorid2).style.borderStyle = 'solid';
+            document.getElementById(currentcolorid2).style.borderColor = '#000000';
+            if (i == colorcounter) {
+                console.log("--> " + currentcolorid2);
+            }
+            else {
+                console.log(currentcolorid2);
+            }
+
+        }
+
+        // put a 3px lightblue border on the 1 selected color
+        var currentcolorid = "presetcolor" + id + "x" + colorcounter;
+        document.getElementById(currentcolorid).className += " presetcolor1active";
+        //document.getElementById(currentcolorid).border = "3px solid #ff00ff";
+        console.log('+++ selected ' + currentcolorid);
+
+        // set color of the imagetext to the color we clicked
+        document.getElementById(imagetextdiv).style.backgroundColor = color;
+
+
+        // select the correct color
+        //element.style.border = "3px solid #0000FF";;
+        // presetcolor1active
+        //document.getElementById(element).addClass('presetcolor1active');
+
+        //$('#tt').removeClass('className');
+        //$('#tt').toggleClass('className');
+    }
+</script>
+
+
+<style>
+    .addcontentdiv {
+        border: 2px dashed #00ffff;
+        border: 2px dashed #000000;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 20px;
+        color: #ffffff;
+        color: #000000 !important;
+        background-color: #555555;
+        background-color: #63ccc3;
+        background-color: #333333;
+    }
+
+    .addcontentbutton {
+        border: 1px solid #808080;
+        border-radius: 10px;
+        background-color: #333333;
+        padding: 10px;
+        color: #ffffff;
+    }
+
+        .addcontentbutton:hover {
+            border: 1px solid #a3a3a3;
+        }
+</style>
+<style>
+    #content23 {
+        position: relative;
+    }
+
+        #content23 .toolimg {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 50px;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #00ffff;
+            outline: 1px solid #000000;
+        }
+
+            #content23 .toolimg:hover {
+                border: 3px solid #00ffff;
+                outline: 1px solid #999999;
+            }
+
+    .bigimg1 {
+        -webkit-box-shadow: inset 0px 0px 0px 10px #f00;
+        -moz-box-shadow: inset 0px 0px 0px 10px #f00;
+        box-shadow: inset 0px 0px 0px 10px #f00;
+    }
+
+        .bigimg1:hover {
+            -webkit-box-shadow: inset 0px 0px 0px 10px #f00;
+            -moz-box-shadow: inset 0px 0px 0px 10px #f00;
+            box-shadow: inset 0px 0px 0px 10px #f00;
+        }
+
+        .bigimg1::after {
+            box-shadow: inset 3px 3px 10px 0 #000000;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+</style>
